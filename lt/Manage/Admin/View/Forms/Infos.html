@@ -1,0 +1,59 @@
+<include file="Public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="Public/left" />
+
+	<div class="layui-body">
+	<div class="layui-tab layui-tab-brief" lay-filter="tab">
+		<ul class="layui-tab-title">
+			<if condition="$Think.session.admin_id eq 99999999">
+				<li class="layui-this"><a href="{my:U('Forms/Index')}">表单管理</a></li>
+				<li><a href="{my:U(CONTROLLER_NAME.'/InfoAdd',"typeid=".I('request.typeid')."")}">数据添加</a></li>
+				<else />
+				<li class="layui-this"><a href="javascript:;">表单管理</a></li>
+			</if>
+		</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">
+				<form action="{my:U('Forms/InfoDel')}" method="post" id="contentForm" name="formlist" class="layui-form" onkeydown="if(event.keyCode==13) return false;">
+				<input type="hidden" name="typeid" value="{my:I('request.typeid')}">
+				<table class="layui-table">
+					<thead>
+					<tr>
+						<th>选择</th>
+
+						<volist name=":get_myfields_list(I('request.typeid'))" id="vs">
+							<th>{my$vs.title}</th>
+						</volist>
+						<th>操作</th>
+					</tr>
+					</thead>
+					<tbody>
+					<volist name="list" id="v">
+						<tr>
+							<td><input type="checkbox" class="checkbox checkitem" lay-ignore name="checkid[]" value="{my$v.id}"></td>
+							<volist name=":get_myfields_list(I('request.typeid'))" id="vs">
+								<td>{my$v[$vs['Field']]}</td>
+							</volist>
+							<td>
+								<a href='jxadmin.php?m=Admin&c=Forms&a=Del&id={my$v.id}&typeid={my:I("request.typeid")}' onclick='return confirm("您确定要删除吗？\n\n删除后不可恢复!")' class='layui-btn layui-btn-xs layui-btn-danger' title='删除'>删除</a>
+							</td>
+						</tr>
+					</volist>
+					</tbody>
+				</table>
+				<button type="submit" name="act" value="alldel" onClick="return checkData();" class="layui-btn">批量删除</button>
+				</form>
+				<div class="page">
+					{my$page}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<include file="Public/footer" />
+
+</div>
+
+</body>
+</html>

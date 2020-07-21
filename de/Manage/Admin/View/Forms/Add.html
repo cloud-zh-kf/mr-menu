@@ -1,0 +1,48 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+		<div class="layui-tab layui-tab-brief" lay-filter="tab">
+			<ul class="layui-tab-title">
+				<li><a href="{my:U('Forms/Index')}">表单管理</a></li>
+				<li class="layui-this"><a href="{my:U('Forms/Add')}">表单添加</a></li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<form action="__ACTION__" method="post" class="layui-form" onSubmit="return check_forms(this);">
+						<input type="hidden" name="id" value="{my$v['id']}">
+						<div class="layui-form-item">
+							<label class="layui-form-label">名称</label>
+							<div class="layui-input-inline">
+								<input type="text" name="title" value="{my$v['title']}" lay-verify="required" placeholder="请输入中文名称" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">表名</label>
+							<div class="layui-input-inline">
+								<input type="text" name="tablename" value="{my$v['tablename']}" lay-verify="required" placeholder="请输入只支持字母" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit name="dosave">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

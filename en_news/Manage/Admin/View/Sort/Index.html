@@ -1,0 +1,70 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+	<div class="layui-tab layui-tab-brief" lay-filter="tab">
+		<ul class="layui-tab-title">
+			<li class="layui-this"><a href="{my:U('Sort/Index')}">栏目列表</a></li>
+			<if condition="$Think.session.admin_id eq 99999999">
+				<li><a href="{my:U('Sort/Add')}">栏目添加</a></li>
+			</if>
+		</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">
+				<form action="__ACTION__" method="post" id="sortForm" name="sortForm">
+				<table class="layui-table">
+					<thead>
+					<tr>
+						<th>序号|ID</th>
+						<th>栏目名称</th>
+						<th>所属模型</th>
+						<th>排序</th>
+						<th>状态</th>
+						<th>添加时间</th>
+						<th>操作</th>
+					</tr>
+					</thead>
+					<tbody>
+					<volist name="list" id="v">
+						<tr>
+							<td>{my$i}|{my$v['id']}</td>
+							<td>{my:str_repeat("&nbsp;&nbsp;└",$v['level'])}{my$v['catname']}</td>
+							<td>{my:get_model_zd($v['model_id'])}</td>
+							<td class="table-input">
+								<input type="hidden" name="checkid[]" value="{my$v['id']}">
+								<input type="text" name="sorting[]" value="{my$v['disorder']}" class="layui-input"></td>
+							<td>
+								<?php if($v['status']==1){?>
+								<a href='{my:get_url($v['id'],'Sort','Audit')}'><i class='fa fa-toggle-on' title="点击关闭"></i></a>
+								<?php }else{?>
+								<a href='{my:get_url($v['id'],'Sort','Audit')}'><i class='fa fa-toggle-off' title="点击开启"></i></a>
+								<?php }?>
+							</td>
+							<td>{my:get_time($v['sendtime'],'Y-m-d')}</td>
+							<td>
+
+								<?php if($v['isopen']==1||session('admin_id')==99999999){?>
+									<a href="{my:U(CONTROLLER_NAME.'/Add',"pid=".$v['id']."")}" class='layui-btn layui-btn-xs'>添加子栏目</a>
+									<a href='{my:get_url($v['id'],'Sort','Del')}' onclick='return confirm("您确定要删除吗？")' class='layui-btn layui-btn-xs layui-btn-danger' title='删除'>删除</a>
+								<?php }?>
+								<a href='{my:get_url($v['id'],'Sort','Add')}'  class='layui-btn layui-btn-xs layui-btn-danger'>修改</a>
+							</td>
+						</tr>
+					</volist>
+					</tbody>
+				</table>
+				<button type="submit" name="act" value="sorting" class="layui-btn">保存排序</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

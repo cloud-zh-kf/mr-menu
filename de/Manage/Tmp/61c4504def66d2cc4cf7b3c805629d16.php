@@ -1,0 +1,64 @@
+<?php
+//000000000001a:1:{i:0;a:30:{s:2:"id";s:2:"70";s:3:"fid";s:1:"0";s:3:"pid";s:1:"1";s:2:"ty";s:2:"34";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:24:"MOBILE ONLINE-BESTELLUNG";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";s:240:"Scannen Sie den Code mit Ihrem Smartphone ein und erhalten Sie alle drei Funktionen - Lieferung, Takeout und Dine-in. 
+Für internationale Gäste, die kein Englisch sprechen, stellen wir sogar einen 
+AI Dine-in-Assistenten zur Verfügung.";s:7:"content";s:4046:"&lt;p&gt;
+	&lt;strong&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;QR-Code für einen einfachen Scan&lt;/span&gt;&lt;/strong&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;span style=&quot;font-size:14px;&quot;&gt;Kunden müssen jetzt nur noch den QR-Code auf dem Marketingflyer des Restaurants scannen, um die Bestellung aufzugeben, ohne eine App herunterladen zu müssen.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;Als Shortcut auf Smartphone speichern&lt;/span&gt;&lt;/strong&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;span style=&quot;font-size:14px;&quot;&gt;Nach der ersten Ansicht können Benutzer den Code als Shortcut auf ihrem Smartphone speichern, um ihn in Zukunft schneller abrufen zu können.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;Geokodierte Zustellung&lt;/span&gt;&lt;/strong&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;span style=&quot;font-size:14px;&quot;&gt;Mit geokodierten Lieferungskarten können Sie eindeutig feststellen, wo Ihre Lieferungsgrenzen liegen. Das System ordnet Kunden automatisch dem richtigen Standort zu. Kunden, die sich nicht innerhalb eines Liefergebiets befinden, können von jedem beliebigen Standort aus &quot;Take out&quot; wählen.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;Ermäßigungen, Combos, Sonderangebote und Pakete&lt;/span&gt;&lt;/strong&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;span style=&quot;font-size:14px;&quot;&gt;Ermäßigungen: Wählen Sie entweder einen Prozentsatz oder einen Betrag in Dollar für die gesamte Bestellung. Kann kodiert werden. Legen Sie einen Mindestbetrag fest, ab dem die Ermäßigung Gültig wird. Kann durch Tage und Uhrzeiten eingeschränkt werden. Diese Artikel erscheinen auf der Checkout-Seite. Pakete: Sind einzelne Boxen, die herausstechen, um für Ihre Angebote zu werben! Sie können einen Code verlangen, bevor die Kunden sie sehen können. Sie können nach Tageszeit oder Wochentagen eingeschränkt werden. Beschränken Sie sie nur für die Lieferung oder zur Abholung. Legen Sie den Mindestkaufbetrag fest. Kann so eingestellt werden, dass nur eines der gleichen Pakete in Ihren Warenkorb gelegt werden kann. Sonderangebote: Beispiel; “Eines kaufen und ein Gratisprodukt erhalten”&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;Modifikatoren&lt;/span&gt;&lt;/strong&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;span style=&quot;font-size:14px;&quot;&gt;Kunden können wählen, welche Beläge sie hinzufügen oder entfernen möchten, so dass sie immer genau das bekommen, was sie wollen.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;Urlaubsplan mit automatischer Schließung&lt;/span&gt;&lt;/strong&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;span style=&quot;font-size:14px;&quot;&gt;Teilen Sie uns mit, an welchen Tagen des Jahres Sie schließen werden, und wir werden sie so voreinstellen, dass an diesen Tagen keine Online-Bestellungen möglich sind, um Bestellungen zu verhindern. Sie geben diese Informationen selbst in unserem Admin ein und können die Nachricht an Ihre Kunden anpassen.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;Erweiterte Bestellung&lt;/span&gt;&lt;/strong&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;span style=&quot;font-size:14px;&quot;&gt;Ihre Kunden können jetzt eine Bestellung zur Abholung oder Lieferung zu einem späteren Zeitpunkt aufgeben. Dieses System verhindert, dass die Küche fehlerhafte Bestellungen erhält, gewährleistet die Genauigkeit der Buchhaltung und eine 24/7 Online-Bestellung. Die vom Kunden gewünschte Bestellzeit muss während der normalen Geschäftszeiten liegen.&lt;/span&gt;
+&lt;/p&gt;";s:4:"img1";s:44:"/Uploads/image/20200617/2020061708062069.png";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:43:"/Uploads/file/20200617/2020061707474079.mp4";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:2:"24";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1593053791";}}
+?>

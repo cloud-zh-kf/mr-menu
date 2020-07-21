@@ -1,0 +1,44 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+        <div class="wp">
+            <h4 class="i_tit tc">List of Cooperative Restaurants
+            </h4>
+            <div class="cooRes">
+                <ul class="cooResul cle">
+                    <volist name=":get_news_fy(6,$vpid,$vty)" id="v">
+                        <li>
+                            <a href="{my:get_url($v['id'],'List','details')}" class="tp"><img src="{my$v.img1}" alt="" class="tp">
+                                <h4 class="tit">{my$v.title}</h4>
+                            </a>
+                        </li>
+                    </volist>
+                    
+                </ul>
+                <!-- turnpage -->
+                <div class="turnpage">
+                    
+                    {my:get_news_fym(6,$vpid,$vty)}
+
+                    <em class="go">To
+                        <input type="text" name="page" value="<?php echo $_GET['p'] ? $_GET['p']:1;?>" class="num">page</em>
+                    <input type="submit" class="tj fytj" value="确定">
+                </div>
+                <script type="text/javascript">
+                    $('.fytj').click(function(){
+                        var page=$(':input[name="page"]').val();
+                        // alert();
+                        var sl=$('.turnpage .sl').size();
+                        if(page>sl){
+                            page=sl;
+                        }
+                        window.location.href='List-caselist.html?Home-List-caselist_html=&pid='+{my:$vpid}+'&ty='+{my:$vty}+'&tty='+{my:$vtty}+'&Home-List-caselist-pid-'+{my:$vpid}+'-ty-'+{my:$vty}+'-tty-'+{my:$vtty}+'_html=&p='+page;
+
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <!--i_main end-->
+
+<include file='public/footer' />

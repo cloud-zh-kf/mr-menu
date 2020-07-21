@@ -1,0 +1,17 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+        <div class="wp">
+            <volist name=":get_news(23,30,0,0,'*',1)" id="v">
+                <h4 class="i_tit tc">{my$v.title}</h4>
+                <div class="videoDel tc">
+                    <video class="videoBox rd10" controls>
+                        <source src="{my$v.file1}" type="video/mp4">
+                        Your browser does not support video tags. Please upgrade your browser
+                    </video>
+                </div>
+            </volist>
+        </div>
+    </div>
+    <!--i_main end-->
+<include file='public/footer' />

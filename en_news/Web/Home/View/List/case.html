@@ -1,0 +1,105 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+        <div class="wp">
+            <div class="amCase">
+                <h4 class="i_tit tc">{my:get_sort_zd($vty)}</h4>
+                <div class="wrap cle">
+                    <div class="item1">
+
+                        <ul class="item1aul cle">
+                            <volist name=":get_sort_list($vty)" id='v'>
+                                <li><a href="{my:get_sort_url($vpid,$v['pid'],$v['id'],caselist)}" class="acItem bcover"
+                                    style="background-image: url({my$v.img1});">
+                                    <!-- <div class="cityName">Boston</div> -->
+                                </a></li>
+                            </volist>
+                            <!-- <li><a href="" class="acItem bcover"
+                                    style="background-image: url(./images/amCase02.jpg);"></a></li>
+                            <li><a href="" class="acItem bcover"
+                                    style="background-image: url(./images/amCase03.jpg);"></a></li> -->
+                        </ul>
+                        <!-- <ul class="item1bul cle">
+                            <li><a href="" class="acItem bcover"
+                                    style="background-image: url(./images/amCase05.jpg);"></a></li>
+                            <li><a href="" class="acItem bcover"
+                                    style="background-image: url(./images/amCase06.jpg);"></a></li>
+                            <li><a href="" class="acItem bcover"
+                                    style="background-image: url(./images/amCase10.jpg);"></a></li>
+                            <li><a href="" class="acItem bcover"
+                                    style="background-image: url(./images/amCase11.jpg);"></a></li>
+                        </ul>
+                        <div class="item1c">
+                           <a href="" class="acItem bcover"
+                                    style="background-image: url(./images/amCase07.jpg);"></a>
+                        </div> -->
+                    </div>
+                    <!-- <div class="item2">
+                        <div class="item2a">
+                            <a href="" class="acItem bcover" style="background-image: url(./images/amCase04.jpg);"></a>
+                        </div>
+                        <ul class="item2bul cle">
+                                <li><a href="" class="acItem bcover"
+                                        style="background-image: url(./images/amCase08.jpg);"></a></li>
+                                <li><a href="" class="acItem bcover"
+                                        style="background-image: url(./images/amCase09.jpg);"></a></li>
+                                <li><a href="" class="acItem bcover"
+                                        style="background-image: url(./images/amCase12.jpg);"></a></li>
+                                <li><a href="" class="acItem bcover"
+                                        style="background-image: url(./images/amCase13.jpg);"></a></li>
+                            </ul>
+                    </div>
+                    <div class="item3 cle">
+                            <div class="item3a">
+                                    <a href="" class="acItem bcover" style="background-image: url(./images/amCase14.jpg);"></a>
+                                </div>
+                            <div class="item3b">
+                                    <a href="" class="acItem bcover" style="background-image: url(./images/amCase15.jpg);"></a>
+                                </div>
+                            <div class="item3c">
+                                    <a href="" class="acItem bcover" style="background-image: url(./images/amCase16.jpg);"></a>
+                                </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <h4 class="i_tit tc">List of Cooperative Restaurants
+            </h4>
+            <div class="cooRes">
+                <ul class="cooResul cle">
+                    <volist name=":get_news_fy(6,$vpid,$vty)" id="v">
+                        <li>
+                            <a href="{my:get_url($v['id'],'List','details')}" class="tp"><img src="{my$v.img1}" alt="" class="tp">
+                                <h4 class="tit">{my$v.title}</h4>
+                            </a>
+                        </li>
+                    </volist>
+                    
+                </ul>
+                <!-- turnpage -->
+                <div class="turnpage">
+                    
+                    {my:get_news_fym(6,$vpid,$vty)}
+
+                    <em class="go">to<input type="text" name="page" value="<?php echo $_GET['p'] ? $_GET['p']:1;?>" class="num">page</em>
+                    <input type="submit" class="tj fytj" value="OK
+">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('.fytj').click(function(){
+            var page=$(':input[name="page"]').val();
+            // alert();
+            var sl=$('.turnpage .sl').size();
+            if(page>sl){
+                page=sl;
+            }
+            window.location.href='List-case.html?Home-List-case_html=&pid='+{my:$vpid}+'&ty='+{my:$vty}+'&tty='+{my:$vtty}+'&Home-List-case-pid-'+{my:$vpid}+'-ty-'+{my:$vty}+'-tty-'+{my:$vtty}+'_html=&p='+page;
+
+        });
+    </script>
+    <!--i_main end-->
+<include file='public/footer' />

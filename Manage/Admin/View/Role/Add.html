@@ -1,0 +1,86 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+		<div class="layui-tab layui-tab-brief" lay-filter="tab">
+			<ul class="layui-tab-title">
+				<li><a href="{my:U('Model/Index')}">角色列表</a></li>
+				<li class="layui-this"><a href="{my:U('Model/Add')}">角色添加</a></li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<form action="" method="post" class="layui-form">
+						<input type="hidden" name="id" value="{my$v['id']}">
+						<div class="layui-form-item">
+							<label class="layui-form-label">角色名称</label>
+							<div class="layui-input-inline">
+								<input type="text" name="role_name" value="{my$v['role_name']}" required lay-verify="required" placeholder="请输入角色名称" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">角色权限</label>
+							<div class="layui-input-block" id="selectitem">
+
+								<volist name=":get_table_list('sort',' AND pid=0','id,catname')" id='v1'>
+								<div class='layui-row'>
+									<div class='layui-col-md3 layui-col-lg2 checkboxs' style='margin-top:10px;'>　　
+										<i class='fa fa-folder-o' aria-hidden='true'></i> {my$v1['catname']}
+									</div>
+
+									<div class='layui-col-md9 auth_rules'>
+										<volist name=":get_table_list('sort',' AND pid='.$v1['id'].'','id,catname','')" id='v2'>
+										<input type="checkbox" <if condition="in_array($v2['id'],$v['role_auth_ids'])"> checked</if> class="checkbox" lay-skin="primary" name="role_auth_ids[]" value="{my$v2['id']}" title='{my$v2['catname']}'>
+										</volist>
+									</div>
+								</div>
+								</volist>
+
+								<div class='layui-row'>
+									<div class='layui-col-md3 layui-col-lg2' style='margin-top:10px;'>　　
+										<i class='fa fa-folder-o' aria-hidden='true'></i>系统管理</div>
+									<div class='layui-col-md9'>
+										<input type='checkbox' class='checkbox' lay-skin='primary' name='role_auth_ids[]' value='9901' title='系统设置' <if condition="in_array(9901,$v['role_auth_ids'])"> checked</if>>
+										<input type='checkbox' class='checkbox' lay-skin='primary' name='role_auth_ids[]' value='9902' title='模型管理' <if condition="in_array(9902,$v['role_auth_ids'])"> checked</if>>
+										<input type='checkbox' class='checkbox' lay-skin='primary' name='role_auth_ids[]' value='9903' title='栏目管理' <if condition="in_array(9903,$v['role_auth_ids'])"> checked</if>>
+										<input type='checkbox' class='checkbox' lay-skin='primary' name='role_auth_ids[]' value='9904' title='系统角色' <if condition="in_array(9904,$v['role_auth_ids'])"> checked</if>>
+										<input type='checkbox' class='checkbox' lay-skin='primary' name='role_auth_ids[]' value='9905' title='系统用户' <if condition="in_array(9905,$v['role_auth_ids'])"> checked</if>>
+										<input type='checkbox' class='checkbox' lay-skin='primary' name='role_auth_ids[]' value='9906' title='系统日志' <if condition="in_array(9906,$v['role_auth_ids'])"> checked</if>>
+										<input type='checkbox' class='checkbox' lay-skin='primary' name='role_auth_ids[]' value='9907' title='数据库备份' <if condition="in_array(9907,$v['role_auth_ids'])"> checked</if>>
+										<input type='checkbox' class='checkbox' lay-skin='primary' name='role_auth_ids[]' value='9908' title='更新缓存' <if condition="in_array(9908,$v['role_auth_ids'])"> checked</if>>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">状态</label>
+							<div class="layui-input-block">
+								<input type="radio" name="status" value="1" title="启用"  {my:get_my_checked($v['status'],1)}>
+								<input type="radio" name="status" value="0" title="禁用"  {my:get_my_checked($v['status'],0)}>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit name="dosave">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+        <div class="wp">
+           <div class="cooDel">
+               <ul class="cooDelul">
+                    <volist name=":get_case($id,$vty,$vtty,0,'*',1000)" id="v">
+                     <li>
+                         <div class="tparea"><img src="{my$v.img1}" alt="" class="tp"></div>
+                         <div class="des">
+                             <h4 class="tit">{my$v.title}</h4>
+                             <div class="nr">{my:get_html($v['content'])}</div>
+                         </div>
+                     </li>
+                    </volist>
+               </ul>
+           </div>
+        </div>
+    </div>
+    <!--i_main end-->
+
+<include file='public/footer' />

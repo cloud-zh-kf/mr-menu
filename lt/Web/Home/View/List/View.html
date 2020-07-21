@@ -1,0 +1,23 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main">
+       <div class="wp">
+            <div class="location">
+                <a href="javascript:;" onClick="window.history.go(-1)" >{my:get_sort_zd($vty)}</a><i class="cutline">/</i><a class="act_loca" href="">Details of Article
+            </a>
+            </div>
+            <div class="newDel">
+                <volist name=":get_view($id)" id='v'>
+                    <div class="n_tit">
+                        <h4 class="tit">{my$v.title}</h4>
+                        <div class="time">{my:get_time($v['sendtime'])}</div>
+                    </div>
+                    <div class="n_del">
+                        {my:get_html($v['content'])}
+                    </div>
+                </volist>
+            </div>
+       </div>
+    </div>
+    <!--i_main end-->
+<include file='public/footer' />

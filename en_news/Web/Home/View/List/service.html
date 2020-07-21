@@ -1,0 +1,18 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main">
+       <div class="wp">
+           <div class="imainWrap">
+               <div class="policy">
+                   <h4 class="i_tit2 tc b">{my:get_sort_zd($vty)}</h4>
+                   <div class="nr">
+                        <volist name=":get_news($vpid,$vty,0,0,'*',6)" id="v">
+                             {my:get_html($v['content'])}
+                        </volist>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </div>
+    <!--i_main end-->
+<include file='public/footer' />

@@ -1,0 +1,148 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+        <div class="wp">
+            <div class="solu mt60">
+                <div class="lm">
+                    <volist name=':get_sort_list($vpid)' id='v'>
+                        <if condition='$vty eq $v["id"]'>
+                                <a class="act_lm" href="{my:get_sort_url($v['pid'],$v['id'],0,$v['linkurl'])}">{my$v.catname}</a>
+                            <else />
+                                <a href="{my:get_sort_url($v['pid'],$v['id'],0,$v['linkurl'])}">{my$v.catname}</a>
+                        </if>
+                    </volist>
+                    <!-- <a href="" class="act_lm">点餐小程序</a> -->
+                    <!-- <a href="">Mr.Menu APP</a> -->
+                </div>
+                <if condition='$vty eq 5'>
+                    <div class="soluArea mt20">
+                        <ul class="sa_tit sa_tit2">
+                            <?php $j=0;?>
+                            <volist name=":get_news($vpid,$vty,0,0,'*',5)" id="v">
+                                <if condition='$i eq 3'>
+                                    <?php $i++;?>
+                                </if>
+                                <?php $j++;?>
+                                <if condition='$i eq 1'>
+                                    <li class="li0{my:$i} act_sa">
+                                        <div class="box rd10">
+                                            <div class="nr">
+                                                <h4 class="tit">{my$v.title}</h4>
+                                                <div class="des">{my:get_nl2br($v['introduce'])}</div>
+                                            </div>
+                                            <span class="rdhalf num">0{my:$j}</span>
+                                        </div>
+                                    </li>
+                                    <else/>
+                                    <li class="li0{my:$i}">
+                                        <div class="box rd10">
+                                            <div class="nr">
+                                                <h4 class="tit">{my$v.title}</h4>
+                                                <div class="des">{my:get_nl2br($v['introduce'])}</div>
+                                            </div>
+                                            <span class="rdhalf num">0{my:$j}</span>
+                                        </div>
+                                    </li>
+                                </if>
+                                
+                            </volist>
+                            
+                        </ul>
+                        <div class="sa_con">
+                            <volist name=":get_news($vpid,$vty,0,0,'*',5)" id="v">
+                                <img src="./images/solu_bg.png" alt="" class="phoneRim">
+                                <if condition='$i eq 1'>
+                                    
+                                    <div class="sabox" style="display: block;"><img src="{my$v.img1}" alt="" class="tp"></div>
+                                <else/>
+                                    <div class="sabox"><img src="{my$v.img1}" alt="" class="tp"></div>
+                                </if>
+                                
+                            </volist>
+                            
+                        </div>
+                    </div>
+                    <div class="sDown2 tc mt40">
+                        <img src="{my:sys('sys_img6')}" alt="" class="tp">
+                        <p class="tit">Scan QR code to experience
+                        </p>
+                    </div>
+                <else />
+                    <div class="soluArea mt20">
+                        <ul class="sa_tit sa_tit1">
+                            <volist name=":get_news($vpid,$vty,0,0,'*',6)" id="v">
+                                <if condition='$i eq 1'>
+                                    <li class="li0{my:$i} act_sa">
+                                        <div class="box rd10">
+                                            <div class="nr">{my:get_nl2br($v['introduce'])}</div>
+                                            <span class="rdhalf num">0{my:$i}</span>
+                                        </div>
+                                    </li>
+                                <else/>
+                                    <li class="li0{my:$i}">
+                                        <div class="box rd10">
+                                            <div class="nr">{my:get_nl2br($v['introduce'])}</div>
+                                            <span class="rdhalf num">0{my:$i}</span>
+                                        </div>
+                                    </li>
+                                </if>
+                            </volist>
+                        </ul>
+                        <div class="sa_con">
+                            <volist name=":get_news($vpid,$vty,0,0,'*',6)" id="v">
+                                    <img src="./images/solu_bg.png" alt="" class="phoneRim">
+                                <if condition='$i eq 1'>
+                                    <div class="sabox" style="display: block;"><img src="{my$v.img1}" alt="" class="tp"></div>
+                                <else/>
+                                    <div class="sabox"><img src="{my$v.img1}" alt="" class="tp"></div>
+                                </if>
+                            </volist>
+                        </div>
+                    </div>
+                    <div class="sDown tc mt40">
+                        <volist name=":get_news(23,32,0,0,'*',3)" id="v">
+                            <if condition='$i eq 1'>
+                                <a href="{my$v.file1}" download="{my$v.file1}" class="rd10 btn">
+                                    <i class="iconfont icon-apple"></i>
+                                    <span class="val">
+                                        <p class="p1">Download on the</p>
+                                        <p class="p2">App store</p>
+                                    </span>
+                                    <div class="downLay">
+                                            <img src="{my$v.img2}" alt="" class="tp">
+                                            <p class="tit">Scan QR code</p>
+                                        </div>
+                                </a>
+                                <elseif condition='$i eq 2'>
+                                    <a href="{my$v.file1}" download="{my$v.file1}" class="rd10 btn">
+                                        <i class="iconfont icon-anzhuo"></i>
+                                        <span class="val">
+                                            <p class="p1">Download on the</p>
+                                            <p class="p2">Android</p>
+                                        </span>
+                                        <div class="downLay">
+                                                <img src="{my$v.img2}" alt="" class="tp">
+                                                <p class="tit">Scan QR code</p>
+                                            </div>
+                                    </a>
+                                <elseif condition='$i eq 3'>
+                                    <a href="{my$v.file1}" download="{my$v.file1}" class="rd10 btn">
+                                        <i class="iconfont icon-Google-Play"></i>
+                                        <span class="val">
+                                            <p class="p1">Download on the</p>
+                                            <p class="p2">Google Play</p>
+                                        </span>
+                                        <div class="downLay">
+                                            <img src="{my$v.img2}" alt="" class="tp">
+                                            <p class="tit">Scan QR code</p>
+                                        </div>
+                                    </a>
+                            </if>
+                        </volist>
+                    </div>
+                </if>
+            </div>
+        </div>
+    </div>
+    <!--i_main end-->
+<include file='public/footer' />

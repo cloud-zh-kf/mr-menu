@@ -1,0 +1,33 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main wp">
+         <div class="features">
+             <div class="fItem mobileF">
+                 <h4 class="fea_tit tc">{my:get_sort_zd(38)}</h4>
+                 <ul class="mobileFul cle">
+                    <volist name=":get_news(1,38,0,0,'*')" id="v">
+                     <li>
+                         <a href="{my$v.linkurl}">
+                             <div class="tparea"><img src="{my$v.img1}" alt="" class="tp"></div>
+                             <div class="des">
+                                 <h4 class="tit">{my$v.title}</h4>
+                             </div>
+                         </a>
+                     </li>
+                    </volist>
+                 </ul>
+             </div>
+             <div class="fItem">
+                <volist name=":get_news(1,34,0,0,'*',1)" id="v">
+                 <h4 class="fea_tit tc">{my$v.title}</h4>
+                 <div class="mobileIntro">
+                    {my:get_html($v['content'])}
+                 </div>
+                </volist>
+             </div>
+         </div>
+    </div>
+
+
+    <!--i_main end-->
+<include file='public/footer' />

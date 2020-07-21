@@ -1,0 +1,99 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+       <div class="wp">
+            <h4 class="i_tit tc">{my:get_sort_zd($vty)}</h4>
+            <div class="feedback form1">
+                
+
+                <form method="post" action="index.php?m=Home&c=List&a=message">
+                    <input type="hidden" name="typeid" value="2">
+                    <div class="item" id="wordCount">
+                        <textarea name="message" required="" oninvalid="setCustomValidity('Please enter your feedback / cooperation intention\n')" oninput="setCustomValidity('')" id="" placeholder="Please enter your feedback / cooperation intention
+" class="textarea rd10"></textarea>
+                        <span class="lastNum"><span class="word">1000</span>/1000</span>
+
+                    </div>
+                    <div class="item">
+                        <input type="text" required="" oninvalid="setCustomValidity('Please enter a name')" oninput="setCustomValidity('')" name="name" placeholder="Name
+" class="text rd10">
+                    </div>
+                    <div class="item">
+                        <input type="number" required="" oninvalid="setCustomValidity('Please enter contact information')" oninput="setCustomValidity('')" placeholder="Contact information
+" id="tel" name="tel" class="text rd10">
+                        <!-- 默认不显示提示 -->
+                        <div class="msg"></div>
+                    </div>
+                    <div class="item">
+                        <input type="text" required="" oninvalid="setCustomValidity('Please enter email')" oninput="setCustomValidity('')" name="email" id="email" placeholder="Mailbox
+" class="text rd10">
+                        <div class="msg"></div>
+                    </div>
+                    <div class="item tj tc">
+                        <input type="submit" value="Submit
+" class="sbtn btn rd40 sbtn_green">
+                    </div>
+                </form>
+            </div>
+            <script>
+                    // 问题反馈
+                    var wordCount = $("#wordCount"),
+                    textArea = wordCount.find("textarea"),
+                    word = wordCount.find(".word");
+                    //调用
+	                statInputNum(textArea,word);
+                    function statInputNum(textArea,numItem) {
+     
+                        var max = numItem.text(),
+    
+                            curLength;
+    
+                        textArea[0].setAttribute("maxlength", max);
+    
+                        curLength = textArea.val().length;
+    
+                        numItem.text(max - curLength);
+    
+                        textArea.on('input propertychange', function () {
+    
+                            numItem.text(max - $(this).val().length);
+    
+                        });
+    
+                        }
+                </script>
+                <script type="text/javascript">
+                   $('.btn').click(function(){
+                         tel = $('.form1 #tel');
+                         name=$('.form1 #name').val();
+                         type=$('.form1 #type').val();
+                         add=$('.form1 #add').val();
+                         var email=$("#email").val();
+                         var zz = /^[0-9][0-9][0-9]{4,9}$/;
+                         var dh=/^[0-9][0-9][0-9]{11}$/;
+                            if(tel.val()){
+
+                                if (!(zz.test(tel.val()) || dh.test(tel.val()))) {
+                                    $('.form1 #tel').focus();
+                                    $('.form1 #tel').next('.msg').html('The format of your mobile number is incorrect！');
+                                    return false;
+                                  }else{
+                                    $('.form1 #tel').next('.msg').html('');
+                                  }
+
+                                if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/))
+                                {
+                                   $('.form1 #email').next('.msg').html('Incorrect format! Please re-enter');
+                                   $(".form1 #email").focus();
+                                    return false;
+                                }else{
+                                   $('.form1 #email').next('.msg').html('');
+                                }
+                                
+                            }
+                    });
+             </script>
+       </div>
+    </div>
+    <!--i_main end-->
+<include file='public/footer' />

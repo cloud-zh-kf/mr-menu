@@ -1,0 +1,81 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="//g.alicdn.com/tb/tracker/index.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no, email=no">
+  
+  <script>
+    window.globalConfig = {
+  "buName": "youku",
+  "spmId": "a2hau.14262578,a2o71.14262579,a21b3.14262580"
+};
+  </script>
+  
+  <script type="text/javascript" src="//g.alicdn.com/hollywood/hlw-pi-script/index.js"></script>
+  <meta name="description" content="">
+  <meta name="keyword" content="">
+  <meta name="aplus-both-request" content="1" />
+  <meta name="uc-biz-native-gallery" content="no">
+  <style>
+    body {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      min-height: 100vh;
+    }
+    
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-overflow-scrolling: touch;
+      }
+    
+  </style>
+</head>
+<body style="margin: 0; padding: 0;">
+  
+    <script src="//g.alicdn.com/hollywood/web-rax-framework/1.0.1/index.js"></script>
+  
+  <script src="//g.alicdn.com/??mtb/lib-windvane/2.1.13/windvane.cmd.js,mtb/lib-promise/3.1.3/polyfillB.js,mtb/lib-mtop/2.5.1/mtop.cmd.js"></script>
+  <script src='//g.alicdn.com/rax-pkg/??universal-env/3.0.0/index.js,rax/1.0.15/index.js,rax-image/1.1.0/index.js,rax-view/1.0.1/index.js,rax-picture/1.1.7/index.js,rax-find-dom-node/1.0.0/index.js,rax-refreshcontrol/1.0.0/index.js,rax-text/1.2.0/index.js,rax-scrollview/1.1.4/index.js,rax-children/1.0.0/index.js,rax-proptypes/1.0.0/index.js,rax-recyclerview/1.1.2/index.js,style-unit/2.0.0/index.js,universal-transition/1.0.5/index.js,object-assign/4.1.2/index.js'></script>
+<script src='//g.alicdn.com/code/npm/??@ali/universal-mtop/4.0.7/index.cmd.js,@ali/universal-planet-messager/1.0.3/index.cmd.js,@ali/universal-windvane/1.2.0/index.cmd.js,@ali/universal-goldlog/6.1.1/index.cmd.js,@ali/universal-tracker/2.2.9/index.cmd.js,@ali/universal-param/1.0.6/index.cmd.js,@ali/hlw-v1-driver-universal/1.0.4/index.cmd.js,@ali/hlw-yk-lottie/2.0.0/index.cmd.js,@ali/universal-yk-goldlog/0.1.23/index.cmd.js,@ali/universal-spm/1.2.8/index.cmd.js,@ali/rax-base/2.1.2/index.cmd.js'></script>
+<script src='//g.alicdn.com/code/npm/??@ali/rax-div/2.0.6/index.cmd.js,@ali/rax-img/2.0.6/index.cmd.js,@ali/hlw-rax-text/2.0.4/index.cmd.js,universal-env/0.6.6/index.cmd.js'></script>
+  <script src='//g.alicdn.com/code/npm/??@ali/hlw-v1-yk-single-picture/1.0.11/pc.cmd.js,@ali/rax1-pi-hollywood/0.0.30/index.cmd.js'></script>
+  <script>
+    define('@page/data', [], function(require, exports, module) {
+      module.exports = {
+        page:  {"assignModules":[{"package":"@ali/rax-base","version":"2.1.2"},{"package":"@ali/rax-div","version":"2.0.6"},{"package":"@ali/rax-img","version":"2.0.6"},{"package":"@ali/hlw-rax-text","version":"2.0.4"},{"package":"@ali/hlw-v1-damai-utils","version":"1.0.6"},{"package":"universal-env","version":"0.6.6"}],"excludeModules":[],"pi":"@ali/rax1-pi-hollywood","officalModules":["rax-text","rax-view","rax-textinput","rax-link","rax-icon","rax-image","rax-picture","rax-video","rax-button","rax-scrollview","rax-recyclerview","rax-waterfall","rax-embed","rax-countdown","rax-canvas","rax-refreshcontrol","rax-slider","rax-modal","rax-gesture-view","rax-xslider","rax-tab-panel","rax-qrcode","rax-barcode","rax-find-dom-node","rax-create-portal","rax-set-native-props","rax-get-element-by-id","rax-unmount-component-at-node","rax-clone-element","rax-create-factory","rax-is-valid-element","rax-children","rax-touchable","universal-action-sheet","universal-background","universal-keyboard","universal-animation","universal-transition","universal-toast","universal-alert","universal-confirm","universal-loading","universal-navigate","universal-choose-image","universal-image","universal-request","universal-network","universal-file","universal-env","universal-device","universal-clipboard","universal-appstate","universal-asyncstorage","universal-accelerometer"],"moduleDeps":[{"version":"1.0.11","key":"hlw-v1-yk-single-picture","group":"hollywood-mod"},{"version":"0.0.30","key":"rax1-pi-hollywood","group":"youku-pi"}],"mainVersion":1,"config":{"shareConfig":{"shareTitle":"","shareImage":"","shareUrl":"","shareDescription":"","showShareButton":true},"outsideConfig":{"referPubArr":[{"refer":"","pub":""}],"backToAppList":[{"android":"taobao://","text":"返回淘宝","callappback":"taobao","ios":"taobao://"}]},"themeConfig":{"refreshBackgroundColor":"rgba(37,40,45,1)","backgroundColor":"rgba(37,40,45,1)","devConfig":{"setRootHeight":false,"flexRootWidth":false,"firstScreenComponentSize":10,"disableRefreshControl":false,"rootHeight":1000,"listType":"default"},"offlineUrl":"https://www.youku.com","refreshImage":{"refreshImageWidth":285,"refreshImageUrl":""},"pageTitle":"深切哀悼","backgroundImage":"","backgroundImageHeight":0,"hideBackToTopButton":false,"isTimingOffline":false,"theme":0,"offlineTime":4102416000000}},"base":{"actpage":"0474673739184c28a593cea528ae7c9b","spma":"a2hau","containerType":"phone","longtermOnline":1,"spmb":"14262578","actid":"52d9529919ea41d3af11160698b2dd38","pageName":"spyyb3uzon","spm":"a2hau.14262578","enableStaticData":true,"globalConfig":"{\"buName\":\"youku\",\"spmId\":\"a2hau.14262578,a2o71.14262579,a21b3.14262580\"}","offlineUrl":"https://www.youku.com","domain":"https://t.youku.com/yep/page/m/","offlineTime":4102416000000,"staticData":"{\"msg\":\"SUCCESS\",\"code\":0,\"moduleList\":[{\"data\":[{\"padCommonData\":{\"moreStyle\":{\"noLazyload\":false,\"backgroundColor\":\"\",\"paddingBottom\":0,\"borderRadius\":0,\"backgroundImage\":\"\",\"paddingRight\":0,\"paddingTop\":0,\"paddingLeft\":0},\"img\":\"//liangcang-material.alicdn.com/activity/upload/ded9c9cd81c24fa3943bb9c8b2edb3c2.jpg\",\"bizString\":\"{}\",\"height\":560},\"pcCommonData\":{\"moreStyle\":{\"noLazyload\":false,\"backgroundColor\":\"\",\"paddingBottom\":0,\"borderRadius\":0,\"backgroundImage\":\"\",\"paddingRight\":0,\"paddingTop\":0,\"paddingLeft\":0},\"img\":\"//liangcang-material.alicdn.com/activity/upload/ded9c9cd81c24fa3943bb9c8b2edb3c2.jpg\",\"bizString\":\"{}\",\"height\":420},\"commonData\":{\"moreStyle\":{\"noLazyload\":false,\"backgroundColor\":\"\",\"paddingBottom\":0,\"borderRadius\":0,\"backgroundImage\":\"\",\"paddingRight\":0,\"paddingTop\":0,\"paddingLeft\":0},\"img\":\"//liangcang-material.alicdn.com/activity/upload/f8be3d5c53124875b9eba105de7779ed.jpg\",\"bizString\":\"{}\",\"height\":1580}}],\"modInsId\":211423,\"modInsName\":\"单图模块_v7bta8\",\"type\":\"内容展示\",\"config\":[{\"deliveryRuleIds\":\"\",\"refers\":\"\",\"timing\":false,\"filterReferOrFrom\":false,\"deviceData\":[{\"visible\":true,\"type\":\"commonData\"},{\"visible\":true,\"type\":\"padCommonData\"},{\"visible\":true,\"type\":\"pcCommonData\"}],\"online\":true,\"startTime\":\"\",\"endTime\":\"\",\"froms\":\"\",\"spmcText\":\"默认策略\"}],\"key\":\"hlw-v1-yk-single-picture\",\"modVerId\":10649,\"order\":1}],\"staticPage\":true}","taskid":"52d9529919ea41d3af11160698b2dd38"}} 
+      }
+    });
+    require('npm/@ali/rax1-pi-hollywood/index');
+  </script>
+  <script type="text/javascript">
+    var host = window.location.host;
+    var pathname = window.location.pathname
+    if (host.indexOf('damai.cn') >= 0 && (pathname.indexOf('/m/') >= 0 || pathname.indexOf('/m_pre/') >= 0)) {
+        document.write('<script type="text/javascript" id="beacon-aplus" src="//g.alicdn.com/alilog/mlog/aplus_wap.js" exparams="clog=v2&aplus&sidx=aplusSidx&ckx=aplusCkx"><\/script>');
+    }else{
+      document.write('<script type="text/javascript" id="beacon-aplus" src="//g.alicdn.com/alilog/mlog/aplus_o.js" exparams="clog=v2&aplus&sidx=aplusSidx&ckx=aplusCkx"><\/script>');
+    }
+  </script>
+</body>
+</html>

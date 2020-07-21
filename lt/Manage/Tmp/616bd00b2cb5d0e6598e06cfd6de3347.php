@@ -1,0 +1,64 @@
+<?php
+//000000000001a:13:{i:0;a:30:{s:2:"id";s:2:"99";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:49:"1.Come funziona l'ordinazione online di Mr. Menu?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:295:"&lt;p&gt;
+	Mr.Menu converte i visitatori del vostro sito web in clienti paganti; Inoltre generiamo un codice QR unico solo per il vostro negozio, e potete stampare sul vostro volantino di marketing, poi cliente e utilizzare il loro smartphone con una facile scansione e fare ordini.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592987961";}i:1;a:30:{s:2:"id";s:3:"100";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:50:"2.Come posso essere informato degli ordini online?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:497:"&lt;p&gt;
+	Per la nostra versione lite, il nostro agente installerà il nostro plugin Agent 5.0 nel vostro computer e i vostri ordini saranno ricevuti attraverso una stampante termica che si collega al vostro PC. E' facile da installare e stampa gli ordini solo una volta che le operazioni di ordinazione sono state completate.
+&lt;/p&gt;
+&lt;p&gt;
+	Per il sistema POS integrato, è possibile ricevere una notifica sul dispositivo POS e stamparla con la stampante collegata al POS.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592895625";}i:2;a:30:{s:2:"id";s:3:"101";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:47:"3.Mr.Menu può essere integrato con il mio POS?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:555:"&lt;p&gt;
+	Mr.Menu si è integrato con Aldelo Express, Aldelo pro, MacroSale, Maitre'D, rPower e alcuni altri sistemi POS. Così ogni ordine online viene visualizzato sullo schermo del vostro dispositivo POS e può essere stampato sulle stampanti della vostra cucina. Non è quindi necessario scrivere a mano i biglietti. Risparmiate tempo e aumentate la precisione dell'ordine. &amp;nbsp;(Per ulteriori aziende di integrazione POS, ci terremo aggiornati sul nostro sito web, si prega di visitare &quot;Integrazione POS&quot; sul nostro sito)
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592987995";}i:3;a:30:{s:2:"id";s:3:"102";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:20:"4.Come vengo pagato?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:215:"Mr.Menu lavora con i principali elaboratori di pagamento Authorize.net, Square e così via, garantendo un deposito diretto sul vostro conto commerciale entro lo standard di settore accettato di 24-48 ore&lt;br /&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592895679";}i:4;a:30:{s:2:"id";s:3:"103";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:25:"5.Devo avere un sito web?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:425:"&lt;p&gt;
+	&lt;p&gt;
+		Il vostro sito web è una via di accesso per i vostri clienti online per trovarvi su Internet ed effettuare ordini direttamente online. Se avete bisogno di un sito web, Mr.Menu può aiutarvi a creare un bel sito web responsive con la possibilità di ordinare online per la vostra attività di ristorazione. Per saperne di più, visitate il sito web Ordini per saperne di più
+	&lt;/p&gt;
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592988042";}i:5;a:30:{s:2:"id";s:3:"104";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:39:"6.Mr.Menu ha l'opzione di autoconsegna?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:227:"&lt;p&gt;
+	&lt;p&gt;
+		Sì, se avete i vostri autisti, Mr.Menu Ordinazione online dispone già di un'opzione di autoconsegna integrata che vi permette di preimpostare le zone di consegna e le tariffe.
+	&lt;/p&gt;
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592988094";}i:6;a:30:{s:2:"id";s:3:"105";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:60:"7.Sono necessarie immagini e descrizioni delle voci di menu?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:250:"&lt;p&gt;
+	No. Per facilitare l'impostazione si consiglia di aggiungere immagini e descrizioni in un secondo momento. Anche se l'aggiunta di queste in un secondo momento migliorerà il vostro menu, non sono necessarie per l'impostazione.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592988122";}i:7;a:30:{s:2:"id";s:3:"106";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:86:"8.Che dimensioni devono avere le immagini delle voci di menu e il logo del ristorante?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:332:"&lt;p&gt;
+	Le vostre immagini dovrebbero seguire queste linee guida:
+&lt;/p&gt;
+&lt;p&gt;
+	• &amp;nbsp;Logo del ristorante - Quadrato, 114X114px (minimo)
+&lt;/p&gt;
+&lt;p&gt;
+	• &amp;nbsp;Immagini del ristorante - meno di 2M
+&lt;/p&gt;
+&lt;p&gt;
+	Nota: Tutte le immagini devono essere in un file .PNG o JPG
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592988167";}i:8;a:30:{s:2:"id";s:3:"107";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:87:"9.Per quanto tempo un ristorante può essere visto in Mr. Menu dopo essersi registrati?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:176:"&lt;p&gt;
+	Dopo l'iscrizione, il ristorante fornisce a Mr.Menu menu e immagini, quindi il lavoro di integrazione online sarà completato entro 10 giorni lavorativi
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592988209";}i:9;a:30:{s:2:"id";s:3:"108";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:45:"10.Come fa un ristorante a uscire da Mr.Menu?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:137:"&lt;p&gt;
+	&lt;p&gt;
+		Il ristorante deve informare Mr.Menu per iscritto o via e-mail con tre mesi di anticipo
+	&lt;/p&gt;
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592988237";}i:10;a:30:{s:2:"id";s:3:"109";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:61:"11.Cosa fare con i problemi quotidiani quando si usa Mr.Menu?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:261:"&lt;p&gt;
+	Potete consultare Mr.Menu senza esitazioni per telefono o per e-mail
+&lt;/p&gt;
+&lt;p&gt;
+	Giappone：yosuke.natsume@mr-menu.com
+&lt;/p&gt;
+&lt;p&gt;
+	USA：bryan@greedycatusa.com
+&lt;/p&gt;
+&lt;p&gt;
+	EUROPA:daiyuan@mr-menu.com
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592988260";}i:11;a:30:{s:2:"id";s:3:"110";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:71:"12.Mr.menu supporta la modifica delle lingue dopo essere andato online?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:362:"&lt;p&gt;
+	&lt;p&gt;
+		È possibile aggiungere o ridurre le lingue in qualsiasi momento.
+	&lt;/p&gt;
+	&lt;p&gt;
+		Aggiunta di lingue: da quando il contratto è stato confermato, la nuova lingua sarà online entro 5-7 giorni.
+	&lt;/p&gt;
+	&lt;p&gt;
+		Riduzione della lingua - Mr.Menu deve essere informato con tre mesi di anticipo
+	&lt;/p&gt;
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592988301";}i:12;a:30:{s:2:"id";s:3:"111";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:53:"13.Come può un cliente pagare la fattura di Mr.Menu?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:334:"&lt;p&gt;
+	&lt;p&gt;
+		I clienti possono scegliere il pagamento in contanti, ma anche PayPal, Sofortüberweisung e carta di credito. Se i consumatori pagano online, ci collegheremo direttamente al vostro conto personale. I profitti pagati online confluiranno sul vostro conto, non saranno gestiti da Mr.Menu
+	&lt;/p&gt;
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592988336";}}
+?>

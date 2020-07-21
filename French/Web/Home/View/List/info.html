@@ -1,0 +1,84 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+        <div class="wp">
+            <h4 class="i_tit tc">{my:get_sort_zd(2)}</h4>
+            <div class="feeInfo tc mt50">
+                <ul class="feeInfoul cle">
+                    <volist name=":get_news($vpid,$vty,0,0,'*',5)" id="v">
+                        <if condition='$v["istop"] eq 1'>
+                            <li class="act_feeInfo">
+                                <div class="area rd14">
+                                    <!-- <h4 class="version">进阶版</h4>
+                                    <div class="price">
+                                        <div class="div1">
+                                            <span class="unit">$</span>
+                                            <span class="num">549</span>
+                                            <span class="type">入驻费用</span>
+                                        </div>
+                                        <div class="div2">
+                                            <span class="unit">$</span>
+                                            <span class="num">59.99</span>
+                                            <span class="type">月租费用</span>
+                                        </div>
+                                    </div>
+                                    <div class="intro">
+                                            <div class="box1">
+                                                <h4 class="tit">1.费用内包含的服务权益</h4>
+                                                <div class="nr">菜单翻译：4种语言版本 <br><br><span class="font14">（8选4 : 英语、法语、西班牙语、阿拉伯语、 俄语、德语、中文、日文、韩文）</span> <br><br>菜品拍摄美化：基础设备拍摄美化 <br><br>菜单追加及更新：60次/年 <br><br>桌牌or桌贴：40张 <br><br>门贴：2张   </div>
+                                            </div>
+                                            <div class="box2">
+                                                <h4 class="tit">2.额外追加服务（不包含在费用内）</h4>
+                                                <div class="nr">
+                                                     <div class="list">语音扩充与新增：每增加1种语言，收取<span class="green">$150</span></div>
+                                                     <div class="list">菜单追加/更新：超出5次免费额度后  <span class="green">$10/次</span></div>
+                                                     <div class="list">专业摄影师专业单反设备上门拍摄  <span class="green">$200/次</span></div>
+                                                </div>
+                                            </div>
+                                    </div> -->
+                                    {my:get_html($v['content'])}
+                                </div>
+                            </li>
+                        <else/>
+                            <li>
+                                <div class="area rd14">
+                                    <!-- <h4 class="version">基础版</h4>
+                                    <div class="price">
+                                        <div class="div1">
+                                            <span class="unit">$</span>
+                                            <span class="num">399</span>
+                                            <span class="type">入驻费用</span>
+                                        </div>
+                                        <div class="div2">
+                                            <span class="unit">$</span>
+                                            <span class="num">49.99</span>
+                                            <span class="type">月租费用</span>
+                                        </div>
+                                    </div>
+                                    <div class="intro">
+                                            <div class="box1">
+                                                <h4 class="tit">1.费用内包含的服务权益</h4>
+                                                <div class="nr">菜单翻译：4种语言版本 <br><br><span class="font14">（8选4 : 英语、法语、西班牙语、阿拉伯语、 俄语、德语、中文、日文、韩文）</span> <br><br>菜品拍摄美化：基础设备拍摄美化 <br><br>菜单追加及更新：60次/年 <br><br>桌牌or桌贴：40张 <br><br>门贴：2张   </div>
+                                            </div>
+                                            <div class="box2">
+                                                <h4 class="tit">2.额外追加服务（不包含在费用内）</h4>
+                                                <div class="nr">
+                                                     <div class="list">语音扩充与新增：每增加1种语言，收取<span class="green">$150</span></div>
+                                                     <div class="list">菜单追加/更新：超出5次免费额度后  <span class="green">$10/次</span></div>
+                                                     <div class="list">专业摄影师专业单反设备上门拍摄  <span class="green">$200/次</span></div>
+                                                </div>
+                                            </div>
+                                    </div> -->
+                                    {my:get_html($v['content'])}
+                                </div>
+                            </li>
+                        </if>
+                    </volist>
+                </ul>
+
+    
+            </div>
+        </div>
+    </div>
+    <!--i_main end-->
+<include file='public/footer' />

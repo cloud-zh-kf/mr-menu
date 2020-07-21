@@ -1,0 +1,95 @@
+<?php $Custitle="注册"?>
+<include file="public/header" />
+<div class="signwp">
+     <div class="wp">
+          <div class="signbox">
+               <div class="signTop clearfix">
+                    <a href="/User-Reg-pid-5-ty-19.html" class="on">新用户注册</a>
+                    <a href="/User-Login-pid-5-ty-19.html">用户登录</a>
+               </div>
+               <div class="signcon">
+                    <form action="__ACTION__" method="post" name="form1" onsubmit="return check_reg(this)">
+                    <div class="signtxtm">
+                         <input type="text" name="username" id="tel" class="signtxt signph" placeholder="请输入手机号码">
+                    </div>
+                    <div class="signtxtm">
+                         <input type="password" name="userpwd" class="signtxt signps" placeholder="请输入密码">
+                    </div>
+                    <div class="signtxtm">
+                         <input type="password" name="userpwd2" class="signtxt signps" placeholder="请重新输入密码">
+                    </div>
+                    <div class="signtxtm clearfix">
+                         <input type="text" name="yzm" class="signtxt signyz fl" placeholder="请输入图片验证码">
+                         <a href="javascript:change_yzm()" class="fr yamImg"><img style="width: 150px;" src="{my:U('User/Yzm')}" onClick="this.src=this.src+'?'" id="vdimgck"></a>
+                    </div>
+                    <div class="signtxtm clearfix">
+                         <input type="text" name="tel_code" class="signtxt signpd fl" placeholder="请输入短信验证码">
+                         <input type="button" value="获取验证码" onclick="get_mobile_code()" id="countdown" class="fr hqyzm"  style="background: #bc0707;padding: 0 30px;border-radius: 3px;line-height: 36px;text-align: center;color: #fff;"  />
+                    </div>
+                    <div class="signtxtm">
+                         <button class="siglobtn">注册</button>
+                    </div>
+                    </form>
+               </div>
+          </div>
+     </div>
+</div>
+
+<script type="text/javascript">
+    function get_mobile_code() {
+        var tel = $("#tel").val();
+        if (tel == '')
+        {
+            alert("请输入手机号码！");
+            return false;
+        }
+        var telcode = new RegExp(/^\d{11}$/);
+        if (!document.getElementById('tel').value.match(telcode)) {
+            alert("请输入正确的手机号码!");
+            $("#tel").focus();
+            return false;
+        }
+        $.post('/List-Send', {mobile: jQuery.trim($('#tel').val()),typeid:'1'}, function (msg) {
+            if(msg=='手机短信验证码发送成功!'){
+                alert(msg);
+                RemainTime();
+            }
+        });
+    }
+    ;
+    var iTime = 59;
+    var Account;
+    function RemainTime() {
+        document.getElementById('countdown').disabled = true;
+        var iSecond, sSecond = "", sTime = "";
+        if (iTime >= 0) {
+            iSecond = parseInt(iTime % 60);
+            iMinute = parseInt(iTime / 60)
+            if (iSecond >= 0) {
+                if (iMinute > 0) {
+                    sSecond = iMinute + "分" + iSecond + "秒";
+                } else {
+                    sSecond = iSecond + "秒";
+                }
+            }
+            sTime = sSecond;
+            if (iTime == 0) {
+                clearTimeout(Account);
+                sTime = '获取验证码';
+                iTime = 59;
+                document.getElementById('countdown').disabled = false;
+            } else {
+                Account = setTimeout("RemainTime()", 1000);
+                iTime = iTime - 1;
+            }
+        } else {
+            sTime = '没有倒计时';
+        }
+        document.getElementById('countdown').value = sTime;
+    }
+</script>
+
+<include file="public/footer" />
+</body>
+</html>
+

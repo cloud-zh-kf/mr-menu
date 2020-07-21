@@ -1,0 +1,1 @@
+s:21:"./images/qrcode02.jpg";

@@ -1,0 +1,98 @@
+<div class="layui-header">
+    <div class="layui-logo">
+        <a href="/jxadmin/admin.php" title="{my:sys('sys_sitename')}后台管理系统">
+            {my:sys('sys_sitename')}后台管理
+        </a>
+    </div>
+
+    <ul class="menu">
+        <li class="menu-ico" title="显示或隐藏侧边栏"><i class="fa fa-bars" aria-hidden="true"></i></li>
+    </ul>
+
+    <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item layui-hide-xs">
+             您好，{my$Think.session.admin_username}
+        </li>
+        <?php $qxid=explode(",",session('admin_role_auth_ids'));?>
+
+        <li class="layui-nav-item layui-hide-xs">
+            <a href="javascript:;">
+                <i class="fa fa-cog" aria-hidden="true"></i> 系统配置</a>
+                <dl class="layui-nav-child">
+
+                    <if condition="$Think.session.admin_role_auth_ids eq 0">
+                        <dd><a href="{my:U('Settings/Index')}"><i class="fa fa-sliders" aria-hidden="true"></i>系统设置</a></dd>
+                        <dd ><a href="{my:U('Sort/Index')}"><i class="fa fa-bars" aria-hidden="true"></i>栏目管理</a></dd>
+                        <dd ><a href="{my:U('Role/Index')}"><i class="fa fa-hand-stop-o" aria-hidden="true"></i>系统角色</a></dd>
+                        <dd ><a href="{my:U('Manager/Index')}"><i class="fa fa-users" aria-hidden="true"></i>系统用户</a></dd>
+                        <dd ><a href="{my:U('Backup/Index')}"><i class="fa fa-database" aria-hidden="true"></i>数据备份</a></dd>
+                        <dd ><a href="{my:U('Logs/Index')}"><i class="fa fa-history" aria-hidden="true"></i>系统日志</a></dd>
+                        <dd ><a href="{my:U('Sort/Make')}"><i class="fa fa-database" aria-hidden="true"></i>更新缓存</a></dd>
+                    <else/>
+                        <if condition="in_array(9901,$qxid)"><dd><a href="{my:U('Settings/Index')}"><i class="fa fa-sliders" aria-hidden="true"></i>系统设置</a></dd></if>
+                        <if condition="in_array(9903,$qxid)"><dd><a href="{my:U('Sort/Index')}"><i class="fa fa-bars" aria-hidden="true"></i>栏目管理</a></dd></if>
+                        <if condition="in_array(9904,$qxid)"><dd><a href="{my:U('Role/Index')}"><i class="fa fa-hand-stop-o" aria-hidden="true"></i>系统角色</a></dd></if>
+                        <if condition="in_array(9905,$qxid)"><dd><a href="{my:U('Manager/Index')}"><i class="fa fa-users" aria-hidden="true"></i>系统用户</a></dd></if>
+                        <if condition="in_array(9907,$qxid)"><dd><a href="{my:U('Backup/Index')}"><i class="fa fa-database" aria-hidden="true"></i>数据备份</a></dd></if>
+                        <if condition="in_array(9906,$qxid)"><dd><a href="{my:U('Logs/Index')}"><i class="fa fa-history" aria-hidden="true"></i>系统日志</a></dd></if>
+                        <if condition="in_array(9908,$qxid)"><dd><a href="{my:U('Sort/Make')}"><i class="fa fa-database" aria-hidden="true"></i>更新缓存</a></dd></if>
+                    </if>
+
+
+                    <if condition="$Think.session.admin_id eq 99999999">
+                        <dd ><a href="{my:U('Model/Index')}"><i class="fa fa-codepen" aria-hidden="true"></i>模型管理</a></dd>
+                        <dd ><a href="{my:U('Forms/Index')}"><i class="fa fa-database" aria-hidden="true"></i>表单管理</a></dd>
+                    </if>
+
+
+                </dl>
+        </li>
+
+
+        <li class="layui-nav-item layui-hide-xs">
+            <a href="javascript:;">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i> {my$Think.session.admin_role_name}</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="/" target="_blank"><i class="fa fa-home" aria-hidden="true"></i> 网站首页</a></dd>
+                    <dd><a href="{my:U('Manager/Person')}"><i class="fa fa-address-card-o" aria-hidden="true"></i> 密码修改</a></dd>
+                    <dd><a href="{my:U('Admin/Logout')}" onClick="return confirm('确定退出系统吗？\n退出后自动关闭窗口！');"><i class="fa fa-sign-out" aria-hidden="true"></i> 退出登陆</a></dd>
+                </dl>
+        </li>
+    </ul>
+</div>
+
+<div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+        <!-- 左侧导航区域 -->
+        <ul class="layui-nav layui-nav-tree" id="nav" lay-shrink="all">
+            <volist name=":get_mytable_list('sort',' AND pid=0','id,catname')" id='v1'>
+            <li class="layui-nav-item nav-item<?php if($v1['id']==I('get.pid',0)){?> layui-nav-itemed<?php }?>">
+                <a class="" href="javascript:;"><i class="fa fa-globe" aria-hidden="true"></i>{my$v1['catname']}</a>
+
+                <volist name=":get_mytable_list('sort',' AND pid='.$v1['id'].'','id,catname')" id='v2'>
+                    <?php
+                        $count2=get_count("sort",'status=1 AND pid='.$v2['id'].'');
+                        if($count2) $url2="javascript:;";elseif($v2['sort_url'])$url2=$v2['sort_url'];else $url2=U("{$v2['sort_c']}/{$v2['sort_a']}","pid=".$v1['id']."&ty=".$v2['id']."");
+                    ?>
+                    <dl class="layui-nav-child ">
+                        <dd <?php if($v2['id']==I('get.ty',0)){?>class="layui-nav-itemed"<?php }?>>
+                            <a href="<?php echo $url2;?>"><i class="fa fa-file-text-o" aria-hidden="true"></i>{my$v2['catname']}</a>
+                        <?php if($count2){?>
+                            <volist name=":get_table_list('sort',' AND pid='.$v2['id'].'','id,catname,sort_a,sort_c')" id='v3'>
+                            <dl class="layui-nav-child">
+                                <dd <?php if($v3['id']==I('get.tty',0)){?>class="layui-nav-itemed"<?php }?>>
+                                    <a href="<?php echo U("{$v3['sort_c']}/{$v3['sort_a']}","pid=".$v1['id']."&ty=".$v2['id']."&tty=".$v3['id']."")?>"><i class="fa fa-file-text-o" aria-hidden="true"></i>{my$v3['catname']}</a>
+                                </dd>
+                            </dl>
+                            </volist>
+                        <?php }?>
+                        </dd>
+                    </dl>
+
+                </volist>
+            </li>
+            </volist>
+
+        </ul>
+    </div>
+</div>

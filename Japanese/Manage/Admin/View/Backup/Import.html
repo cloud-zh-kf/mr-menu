@@ -1,0 +1,51 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+		<div class="layui-tab layui-tab-brief" lay-filter="tab">
+			<input type="hidden" id="url" value="Admin-Backup">
+			<ul class="layui-tab-title">
+				<a href="{my:U('Backup/Index')}" class="btachs"><li>数据备份</li></a>
+				<li><a href="{my:U('Backup/Import')}" class="layui-this btachs">还原数据</a></li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<table class="layui-table">
+						<form action="" method="post" name="formlist" class="layui-form">
+							<thead>
+							<tr>
+								<th>文件名称</th>
+								<th>大小</th>
+								<th>创建时间</th>
+								<th>操作</th>
+							</tr>
+							</thead>
+							<tbody>
+							<volist name="list" id="v">
+								<tr>
+									<td>{my$v[0]}</td>
+									<td>{my$v[2]}</td>
+									<td>{my$v[1]|date='Y-m-d H:i:s',###}</td>
+									<td>
+										<a href="javascript:;" data-name="{my$v[0]}" go-url="Admin-Backup-Import" class='import layui-btn layui-btn-xs layui-btn-danger' title='还原'>还原</a>
+										<a href="javascript:;" data-url="{my:U(CONTROLLER_NAME.'/Del',"key=".$v[0]."")}" go-url="{my:U(CONTROLLER_NAME.'/Import')}" class='del layui-btn layui-btn-xs' title='删除'>删除</a>
+									</td>
+								</tr>
+							</volist>
+							</tbody>
+						</form>
+					</table>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

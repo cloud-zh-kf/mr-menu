@@ -1,0 +1,188 @@
+<include file='public/header' />
+     <!--main-->
+     <!-- 产品功能 -->
+     <div class="h_man">
+          <div class="wp">
+               <div class="h_tit">
+                    <h4 class="tit tc">Product features
+                    </h4>
+               </div>
+               <ul class="hmanul cle">
+                    <volist name=":get_news(23,33,0,0,'*',100)" id="v">
+                         <li>
+                              <a>
+                                   <span class="tparea"><img alt="" class="tp" src="{my$v.img1}"></span>
+                                   <div class="des">
+                                        <h4 class="tit">{my$v.title}</h4>
+                                        <p class="nr">{my:get_nl2br($v['introduce'])}</p>
+                                   </div>
+                              </a>
+                         </li>
+                    </volist>
+               </ul>
+          </div>
+     </div>
+     <!-- 扫码试用 -->
+     <div class="h_scan bcover" style="background-image: url(./images/h_san_bg.png);">
+          <div class="wp">
+               <div class="h_tit h_tit_w">
+                    <h4 class="tit tc">Scan code to try
+                    </h4>
+               </div>
+               <div class="wrap tc">
+                    <img src="{my:sys('sys_img4')}" alt="" class="tp rd5">
+                    <p class="p1">【Welcome to click the "About cooperation" below to join Mr.Menu after trial
+                         】</p>
+                    <div class="mandiv tc">
+                         <a href="javascript:;" class="hscanBtn rd40 sbtn sbtn_green">About cooperation
+                         </a>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- 如何入驻Mr. Menu? -->
+     <div class="h_settled mt10">
+          <div class="wp">
+               <volist name=":get_news(23,27,0,0,'*',1)" id="v">
+                    <div class="h_tit">
+                         <h4 class="tit tc">{my$v.title}</h4>
+                    </div>
+                    <div class="wrap tc">
+                         {my:get_html($v['content'])}
+                    </div>
+               </volist>
+          </div>
+     </div>
+     <!-- 用自己的数字菜单打动您的客户 -->
+     <div class="h_data">
+          <div class="wp">
+               <div class="h_tit">
+                    <h4 class="tit tc">{my:get_sort_zd(28)}</h4>
+                    <p class="tip tc">{my:get_sort_zd(28,'seotitle')}</p>
+               </div>
+               <div class="wrap tc">
+                    <ul class="hdataul cle">
+                         <volist name=":get_news(23,28,0,0,'*',4)" id="v">
+                              <li>
+                                   <p class="p1"><span  class="indexNum">{my$v.title}</span></p>
+                                   <p class="p2">{my$v.tags}</p>
+                              </li>
+                         </volist>
+                    </ul>
+               </div>
+          </div>
+     </div>
+     <!-- 好评案例 -->
+     <div class="h_case bg_f9">
+          <div class="wp">
+               <div class="h_tit">
+                    <h4 class="tit tc">{my:get_sort_zd(29)}</h4>
+               </div>
+               <div class="wrap ">
+                    <ul class="hcaseul cle">
+                         <volist name=":get_news(23,29,0,0,'*',4)" id="v">
+                              <li>
+                                   <a href="">
+                                        <div class="intro cle">
+                                             <img src="{my$v.img1}" alt="" class="tp rd14">
+                                             <div class="des">
+                                                  <p class="p1">{my$v.title}</p>
+                                                  <p class="p2">{my$v.content}</p>
+                                             </div>
+                                        </div>
+                                        <div class="level">
+
+                                             {my:get_xunhuan($v['tags'])}
+
+                                        </div>
+                                        <div class="nr">
+                                             {my:get_nl2br($v['introduce'])}
+                                        </div>
+                                   </a>
+                              </li>
+                         </volist>
+                    </ul>
+               </div>
+          </div>
+     </div>
+     <!-- 支持城市 -->
+     <div class="h_supp">
+          <div class="wp">
+               <div class="h_tit">
+                    <h4 class="tit tc">Cities supported
+                    </h4>
+               </div>
+               <style type="text/css">
+                    .hsbox .area1{width:1230px;}
+               </style>
+               <div class="wrap">
+                    <div class="hstab">
+                         <div class="hstit">
+                              <volist name=":get_sort_list(3,8)" id='v'>
+                                   <if condition='$i eq 1'>
+                                        <span class="act_hs">{my$v.catname}</span>
+                                   <else />
+                                        <span>{my$v.catname}</span>
+                                   </if>
+                              </volist>
+                         </div>
+                         <div class="hscon">
+                              <volist name=":get_sort_list(3,8)" id='v'>
+                                   <if condition='$i eq 1'>
+                                        <div class="hsbox" style="display: block;">
+                                             <div class="area1">
+                                                  <ul class="area1ul cle">
+                                                       <volist name=":get_sort_list($v['id'])" id='vv'>
+                                                            <li>
+                                                                 <a href="{my:get_sort_url($v['pid'],$v['id'],$vv['id'],caselist)}" class="bcover hsItem"
+                                                                      style="background-image: url({my$vv.img1});">
+                                                                      <!-- <div class="cityName">Boston</div> -->
+                                                                      <div class="shade">
+                                                                           <span class="tag">{my$vv.catname}</span>
+                                                                           <div class="nr">
+                                                                                {my:get_html($vv['introduce'])}
+                                                                           </div>
+                                                                      </div>
+                                                                 </a>
+                                                            </li>
+                                                       </volist>
+                                                  </ul>
+                                             </div>
+                                        </div>
+                                   <else />
+                                        <div class="hsbox">
+                                             <div class="area1">
+                                                  <ul class="area1ul cle">
+                                                       <volist name=":get_sort_list($v['id'])" id='vv'>
+                                                            <li>
+                                                                 <a href="{my:get_sort_url($v['pid'],$v['id'],$vv['id'],caselist)}" class="bcover hsItem"
+                                                                      style="background-image: url({my$vv.img1});">
+                                                                      <!-- <div class="cityName">Boston</div> -->
+                                                                      <div class="shade">
+                                                                           <span class="tag">{my$vv.catname}</span>
+                                                                           <div class="nr">
+                                                                                {my:get_html($vv['introduce'])}
+                                                                           </div>
+                                                                      </div>
+                                                                 </a>
+                                                            </li>
+                                                       </volist>
+                                                  </ul>
+                                             </div>
+                                        </div>
+                                   </if>
+                              </volist>
+                              
+                              <!-- <div class="hsbox">2</div>
+                              <div class="hsbox">3</div> -->
+                         </div>
+                    </div>
+               </div>
+               <div class="morediv mt30 tc">
+                    <a href="index.php?m=&c=List&a=case&pid=3&ty=0&tty=0" class="sbtn sbtn_green_s btn"><span class="val">more</span><i
+                              class="iconfont icon-round-arrow_right_al"></i></a>
+               </div>
+          </div>
+     </div>
+     <!--i_main end-->
+<include file='public/footer' />

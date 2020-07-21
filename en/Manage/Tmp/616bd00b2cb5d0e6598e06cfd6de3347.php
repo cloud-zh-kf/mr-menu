@@ -1,0 +1,64 @@
+<?php
+//000000000001a:13:{i:0;a:30:{s:2:"id";s:3:"114";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:38:"1·How Mr. Menu online ordering works?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:825:"&lt;p class=&quot;MsoNormal&quot; align=&quot;left&quot; style=&quot;margin:0cm 0cm 0.0001pt;font-size:10.5pt;font-family:等线;white-space:normal;line-height:21pt;&quot;&gt;
+	&lt;span style=&quot;font-family:&amp;quot;&quot;&gt; &lt;/span&gt; 
+&lt;/p&gt;
+&lt;p style=&quot;white-space:normal;&quot;&gt;
+	&lt;span style=&quot;font-size:14px;font-family:Verdana;&quot;&gt; &lt;/span&gt; 
+&lt;/p&gt;
+&lt;p style=&quot;margin-top:0px;margin-bottom:0px;font-stretch:normal;font-size:13px;line-height:normal;font-family:&amp;quot;&quot;&gt;
+	&lt;p&gt;
+		Mr.Menu&amp;nbsp;converts your website visitors to paying customers; Also we generate an unique QR code just for your store, and you can print on your marketing flyer, then customer and use their smartphone with an easy scan and place orders.
+	&lt;/p&gt;
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591614310";}i:1;a:30:{s:2:"id";s:3:"115";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:42:"2·How do I get notified of online orders?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:501:"&lt;p style=&quot;white-space:normal;&quot;&gt;
+	For our lite version, our agent will install our Agent 5.0 plugin in your computer and your orders are received through a thermal printer which linked with your PC. It is easy to install and only prints the orders once the ordering transactions are completed.
+&lt;/p&gt;
+&lt;p style=&quot;white-space:normal;&quot;&gt;
+	For integrated POS system, you can get notified on your POS device and print it out with your POS connected Printer.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591614373";}i:2;a:30:{s:2:"id";s:3:"116";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:57:"3·Can Mr.Menu online ordering be integrated with my POS?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:457:"&lt;p&gt;
+	Mr.Menu now has integrated with Aldelo Express, Aldelo pro, MacroSale, Maitre’D, rPower and some other POS systems. So every online order is displayed on your POS device screen and can be printed to your kitchen printers. Hence, no hand-writing tickets required. Save time and increase order accuracy. &amp;nbsp;(For more POS integration company, we will keep updated on our Website, please visit “POS Integration” on our site)
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591614428";}i:3;a:30:{s:2:"id";s:3:"117";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:21:"4·How do I get paid?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:215:"&lt;p&gt;
+	Mr.Menu works with leading payment processor Authorize.net, Square and so on, ensuring a smooth direct deposit into your merchant account within the accepted industry standard of 24-48 hours.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591614841";}i:4;a:30:{s:2:"id";s:3:"118";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:31:"5·Do I need to have a website?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:336:"&lt;p&gt;
+	Your website is a gateway for your online customers to find you on the Internet and place orders online directly. If you need a website, Mr.Menu can help you create a beautiful responsive website with online ordering capability for your restaurant business. Please visit &amp;nbsp;Website Ordering to learn more.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591614937";}i:5;a:30:{s:2:"id";s:3:"119";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:58:"6·Does Mr.Menu online ordering have Self-Delivery option?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:177:"&lt;p&gt;
+	Yes! If you have your own drivers, Mr.Menu Online Ordering already has a self-delivery option built in that allows you to preset delivery zones and fees.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591614999";}i:6;a:30:{s:2:"id";s:3:"120";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:50:"7·Are menu item images and descriptions required?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:194:"&lt;p&gt;
+	No. To make setup easier we recommend adding images and descriptions at a later time. While adding these later on will enhance your menu, they are not required for setup.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591615052";}i:7;a:30:{s:2:"id";s:3:"121";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:60:"8·What size should menu item images and restaurant logo be?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:298:"&lt;p&gt;
+	Your images should follow these guidelines:
+&lt;/p&gt;
+&lt;p&gt;
+	• &amp;nbsp;Restaurant Logo - Square, 114X114px (Minimum)
+&lt;/p&gt;
+&lt;p&gt;
+	• &amp;nbsp;Restaurant Images – less than2M
+&lt;/p&gt;
+&lt;p&gt;
+	Note: All images must be in a .PNG or JPG file.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591615181";}i:8;a:30:{s:2:"id";s:3:"122";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:46:"9·After signing，How long can menu go online";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:196:"&lt;p&gt;
+	After signing up, the restaurant provides menu and pictures, Mr.Menu After getting the menu and pictures of the restaurant, complete the online work within 10 working days.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591615233";}i:9;a:30:{s:2:"id";s:3:"123";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:31:"10·Mr.Menu Termination process";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:96:"&lt;p&gt;
+	Three month in advance, restaurant notice Mr.Menu in writing or by email
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591615297";}i:10;a:30:{s:2:"id";s:3:"124";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:73:"11·What should you do ，if you encounter unclear problems in daily use?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:252:"&lt;p&gt;
+	You can consult with our Mr. Menu directly by phone or email
+&lt;/p&gt;
+&lt;p&gt;
+	Japan：yosuke.natsume@mr-menu.com
+&lt;/p&gt;
+&lt;p&gt;
+	USA：bryan@greedycatusa.com
+&lt;/p&gt;
+&lt;p&gt;
+	EUROPE：daiyuan@mr-menu.com
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592815130";}i:11;a:30:{s:2:"id";s:3:"125";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:84:"12·Can increase or decrease the number of languages at any time after going online?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:315:"&lt;p&gt;
+	You can increase or decrease the language at any time.
+&lt;/p&gt;
+&lt;p&gt;
+	Increased language-once the contract is confirmed, the new language will be online for 5 to 7 days depending on the language.
+&lt;/p&gt;
+&lt;p&gt;
+	Reduce language-need to be notified three months in advance.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591615431";}i:12;a:30:{s:2:"id";s:3:"126";s:3:"fid";s:1:"0";s:3:"pid";s:1:"4";s:2:"ty";s:2:"16";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:62:"13·What payment methods can Mr.Menu provide for dining users?";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:311:"&lt;p&gt;
+	Dining users can choose to provide cash payment as well as PayPal, Sofortüberweisung and credit card payment. For online payments, we link your store to the payment service provider's account. Payments for online transactions go directly to your account and are not managed by Mr. Menu.
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1591615459";}}
+?>

@@ -1,0 +1,162 @@
+<include file='public/header' />
+     <!-- Product introduction -->
+     <div class="h_man">
+          <div class="wp">
+               <div class="h_tit">
+                    <h4 class="tit tc green">Einführung in das Produkt
+                    </h4>
+               </div>
+               <!-- MOBILE ONLINE ORDER -->
+               <volist name=":get_news(1,34,0,0,'*',1)" id="v">
+                    <div class="hmItem hmItem1">
+                         <h4 class="hm_tit tc">{my$v.title}</h4>
+                         <div class="wrap">
+                              <div class="tparea"><img src="{my$v.img1}" alt="" class="tp"></div>
+                              <div class="des">
+                                   <div class="nr tc">
+                                        {my:get_nl2br($v['introduce']);}
+                                   </div>
+                                   <div class="mandiv">
+                                        <!-- popupVideo1 -->
+                                        <a href="{my:get_url($v['id'],'List','video')}" class="hsbtn sbtn  btn sbtn_orange rd40"><span
+                                                  class="val">AI DINE-IN ASSISTANT
+</span>
+                                             <span class="icon iconfont icon-play_go"></span></a>
+                                        <a href="index.php?m=&c=List&a=Mobile&pid=1&ty=34&tty=0" class="hsbtn sbtn sbtn_green rd40">Probieren Sie die Demo
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </volist>
+               <!-- WEBSITE ONLINE ORDER -->
+               <volist name=":get_news(35,37,0,0,'*',1)" id="v">
+               <div class="hmItem hmItem2">
+                    <h4 class="hm_tit tc">{my$v.title}</h4>
+                    <div class="wrap">
+                         <img src="{my$v.img1}" alt="" class="tp">
+                         <div class="mandiv mt10">
+                              <a href="index.php?m=&c=List&a=Website&pid=35&ty=37&tty=0" class="hsbtn sbtn sbtn_green rd40">Demo ausprobieren
+                              </a>
+                         </div>
+                    </div>
+               </div>
+               </volist>
+               <!-- APP Introduction -->
+
+               <div class="hmItem hmItem3">
+                    <h4 class="hm_tit tc">{my:get_sort_zd(39)}</h4>
+                    <div class="wrap">
+                         <ul class="hmItem3ul">
+                              <volist name=":get_news(39,40,0,0,'*')" id="v">
+                              <li>
+                                   <div class="tparea"><img src="{my$v.img2}" alt="" class="tp"></div>
+                              </li>
+                              </volist>
+                         </ul>
+                         <div class="tip">{my:get_sort_zd(39,'encatname')}</div>
+                         <div class="mandiv mt30 tc">
+                              <a href="#xz" class="hsbtn sbtn sbtn_orange rd40">App herunterladen</a>
+                              <a href="index.php?m=&c=List&a=App&pid=39&ty=40&tty=0" class="hsbtn sbtn sbtn_green rd40">Mehr erfahren</a>
+                         </div>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+     <!-- 用自己的数字菜单打动您的客户 -->
+     <div class="h_data">
+          <div class="wp">
+               <div class="h_tit">
+                    <h4 class="tit tc green">{my:get_sort_zd(28)}</h4>
+                    <p class="tip tc">{my:get_sort_zd(28,'encatname')}</p>
+               </div>
+               <div class="wrap tc">
+                    <ul class="hdataul cle">
+                         <volist name=":get_news(23,28,0,0,'*')" id="v">
+                         <li>
+                              <p class="p1"><span class="indexNum">{my$v.title}</span></p>
+                              <p class="p2">{my$v.tags}</p>
+                         </li>
+                         </volist>
+                    </ul>
+               </div>
+          </div>
+     </div>
+     <!-- 好评案例 -->
+     <div class="h_case bg_w">
+          <div class="wp">
+               <div class="h_tit">
+                    <h4 class="tit green tc">{my:get_sort_zd(29)}</h4>
+               </div>
+               <div class="wrap ">
+                    <ul class="hcaseul cle">
+                         <volist name=":get_news(23,29,0,0,'*')" id="v">
+                              <li>
+                                   <a href="javascript:;">
+                                        <div class="intro cle">
+                                             <img src="{my$v.img1}" alt="" class="tp rd14">
+                                             <div class="des">
+                                                  <p class="p1">{my$v.title}</p>
+                                                  <p class="p2">{my$v.content}</p>
+                                             </div>
+                                        </div>
+                                        <div class="level">
+
+                                             {my:get_xunhuan($v['tags'])}
+
+                                        </div>
+                                        <div class="nr">
+                                             {my:get_nl2br($v['introduce'])}
+                                        </div>
+                                   </a>
+                              </li>
+                         </volist>
+                         
+                    </ul>
+                    <div class="morediv tc">
+                         <a href="index.php?m=&c=List&a=favorabl&pid=23&ty=29&tty=0" class="sbtn sbtn_green_s btn"><span class="val">mehr</span><i
+                                   class="iconfont icon-round-arrow_right_al"></i></a>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- Join us -->
+     <div class="h_join bcover" style="background-image: url(./images/h_join_Bg.jpg);">
+          <div class="wp">
+               <volist name=":get_news(43,44,0,0,'*',1)" id="v">
+               <div class="h_tit h_tit_w">
+                    <h4 class="tit tc">{my:get_sort_zd($v['ty'])}</h4>
+                    <div class="tip2 tc">{my$v.introduce}</div>
+               </div>
+               <div class="wrap mt100">
+                    <div class="mandiv">
+                         <a href="javascript:;" class="messbtn hsbtn sbtn sbtn_green rd40">Konsultation zur Zusammenarbeit</a>
+                    </div>
+               </div>
+               </volist>
+          </div>
+     </div>
+     <!-- POS INTEGRATION/PARTNER -->
+     <div class="h_pos">
+          <div class="wp">
+               <div class="h_tit">
+                    <h4 class="tit green tc">{my:get_sort_zd(45)}</h4>
+               </div>
+               <div class="wrap">
+                    <ul class="hposul cle">
+                         <volist name=":get_news_good(45,46,0,0,'*',8)" id="v">
+                              <li><a ><img src="{my$v.img1}" alt="" class="tp"></a></li>
+                         </volist>
+                    </ul>
+                    <div class="mandiv tc">
+                         <a href="index.php?m=&c=List&a=Partner&pid=45&ty=46&tty=0" class="sbtn sbtn_green_s btn"><span class="val">mehr</span><i
+                              class="iconfont icon-round-arrow_right_al"></i></a>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+
+     <!--i_main end-->
+<include file='public/footer' />

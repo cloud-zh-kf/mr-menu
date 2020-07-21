@@ -1,0 +1,38 @@
+<?php
+//000000000001a:1:{i:0;a:30:{s:2:"id";s:1:"1";s:3:"fid";s:1:"0";s:3:"pid";s:1:"1";s:2:"ty";s:2:"10";s:3:"tty";s:2:"33";s:4:"ttty";s:1:"0";s:5:"title";s:12:"中百介绍";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";N;s:7:"content";s:1116:"&lt;p&gt;
+	&lt;strong&gt;雷兹介绍:&lt;/strong&gt; 
+&lt;/p&gt;
+&lt;p&gt;
+	雷兹工业集团创建于1945年的德国汉堡,创始人为”雷兹基金会”的汉斯·雷兹博士及其夫人。
+&lt;/p&gt;
+&lt;p&gt;
+	70年来，雷兹集团凭借着以客户需求为导向的技术创新和不懈进取的企业精神，发展成为电能测量技术方面的世界权威型工业集团,与全球各大顶级的电气企业有着紧密且长期的合作，是互感器世界首屈一指的品牌。
+&lt;/p&gt;
+&lt;p&gt;
+	集团的业务主要涉及中/低压领域的供电系统和输配电系统,主打产品有:
+&lt;/p&gt;
+&lt;p&gt;
+	1.电流互感器
+&lt;/p&gt;
+&lt;p&gt;
+	2.电压互感器
+&lt;/p&gt;
+&lt;p&gt;
+	3.树脂浇注的全绝缘的母线系统
+&lt;/p&gt;
+&lt;p&gt;
+	4.树脂浇注的全绝缘的电力变压器
+&lt;/p&gt;
+&lt;p&gt;
+	5.树脂浇注绝缘件
+&lt;/p&gt;
+&lt;p&gt;
+	6.低压元器件和传感器等
+&lt;/p&gt;
+&lt;h4&gt;
+	集团旗下的知名品牌有:
+&lt;/h4&gt;
+&lt;p&gt;
+	&lt;img src=&quot;static/picture/about-pic2.jpg&quot; /&gt; 
+&lt;/p&gt;";s:4:"img1";s:0:"";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1585993999";}}
+?>

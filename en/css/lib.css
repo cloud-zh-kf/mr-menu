@@ -1,0 +1,151 @@
+/*-----------------[初始化]--------------*/
+*{ outline:none;}
+body{color: #333;font-size: 14px;font-family:Arial, Helvetica, sans-serif; line-height: 1.6;}
+a{color: #333; outline:none; text-decoration:none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); transition:0.3s; -webkit-transition:0.3s; -moz-transition:0.3s; -o-transition:0.3s}
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+a:hover{ text-decoration:none;}
+a:focus{outline:none;}
+img{max-width: 100%; vertical-align: middle;}
+img,.ani{
+	transition: .3s;
+	-ms-transition: .3s;
+	-moz-transition: .3s;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+}
+input,textarea,select,button{font-size: 14px;font-family:"微软雅黑","Microsoft Yahei",Arial, Helvetica, sans-serif;
+    outline: 0; background: none; border: none;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input:focus::-webkit-contacts-auto-fill-button{
+    opacity: 0;
+}
+input[type='text'],input[type='number'],textarea,input[type='submit'],input[type='reset'],input[type='button'],button{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+input[type='submit'],input[type='reset'],input[type='button'],button{cursor: pointer;}
+/* input[type='text']:focus,textarea:focus,select:focus{ border-color: #7e7f0b !important;} */
+input[type='radio'],input[type='checkbox']{ display: inline-block; vertical-align: middle;}
+input[type='radio'],input[type='checkbox']{ width:20px; height:20px;  border: 1px solid #cdcdcd; background-color: #fff; -o-background-size: 100% 100%; background-size: 100% 100%; background-position: center center; -moz-appearance: none; appearance: none; -webkit-appearance: none; outline: 0; -moz-box-sizing: border-box; box-sizing: border-box;}
+input[type='radio']{ border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%; }
+input[type='checkbox']{ border-radius:4px ; -webkit-border-radius:4px ; -moz-border-radius:4px ; -ms-border-radius:4px ; -o-border-radius:4px ; }
+input[type='radio']:checked{ border-color: #7e7f0b; background-color: #fff;background-image: url(../images/icon/checked_radio.png);}
+input[type='checkbox']:checked{ background-image: url(../images/icon/checked.png); background-color: #7e7f0b; border-color: #7e7f0b;}
+.tc{text-align:center;}
+.tl{text-align:left}
+.tr{text-align:right}
+.fl{float: left;}
+.fr{float: right;}
+/*布局*/
+/* 清理浮动 */
+.cle:after {
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+	height:0;
+}
+.cle:after{zoom:1;}
+.clear{clear: both;}
+
+.rd2{border-radius:2px;}
+.rd3{border-radius:3px;}
+.rd4{border-radius:4px;}
+.rd5{border-radius:5px;}
+.rd6{border-radius:6px;}
+.rd7{border-radius:7px;}
+.rd8{border-radius:8px;}
+.rd9{border-radius:9px;}
+.rd10{border-radius:10px;}
+.rd11{border-radius:11px;}
+.rd12{border-radius:12px;}
+.rd13{border-radius:13px;}
+.rd14{border-radius:14px;}
+.rd15{border-radius:15px;}
+.rd20{border-radius:20px;}
+.rd24{border-radius:24px;}
+.rd28{border-radius:28px;}
+.rd30{border-radius:30px;}
+.rd40{border-radius:40px;}
+.rd50{border-radius:50px;}
+.rd60{border-radius:60px;}
+.rd70{border-radius:70px;}
+.rd80{border-radius:80px;}
+.rd90{border-radius:90px;}
+.rdhalf{border-radius:50%;}
+.rdwhole{ /* Firefox */ /* Safari 和 Chrome */border-radius:  100%; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */} 
+
+.mt10{ margin-top: 10px;}
+.mt15{ margin-top: 15px;}
+.mt20{ margin-top: 20px;}
+.mt25{ margin-top: 25px;}
+.mt30{ margin-top: 30px;}
+.mt35{ margin-top: 35px;}
+.mt40{ margin-top: 40px;}
+.mt50{ margin-top: 50px;}
+.mt60{ margin-top: 60px;}
+.mt70{ margin-top: 70px;}
+.mt80{ margin-top: 80px;}
+.mt90{ margin-top: 90px;}
+.mt100{ margin-top:100px;}
+
+.white{ color: #fff;}
+.black{ color: #333;}
+.blackc{ color: #ccc;}
+.black9{ color: #999;}
+.black6{ color: #666;}
+.black3{ color: #333;}
+.b{ font-weight: bold;}
+.bg_g{ background-color: #efefef;}
+.bg_w{ background-color: #fff;}
+.bcover{ -ms-background-size: cover; -o-background-size: cover; background-size: cover;}
+.pcshow{ display:block;}
+.wapshow{ display:none;}
+.wp{width: 100%; max-width:1200px;margin: 0 auto; }
+
+.btn{ display: inline-block;}
+.btn .icon,.btn .iconfont,.btn .val,.btn .mc{ display: inline-block; vertical-align: middle;}
+.ibvm{display: inline-block; vertical-align: middle;}
+
+@-webkit-keyframes zoomin_out{
+0%{-webkit-transform:scale(1);}
+50%{-webkit-transform:scale(1.1);}
+100%{-webkit-transform:scale(1);}
+}
+@-moz-keyframes zoomin_out{
+0%{-moz-transform:scale(1);}
+50%{-moz-transform:scale(1.1);}
+100%{-moz-transform:scale(1);}
+}
+@keyframes zoomin_out{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+/* .banner .swiper-slide-active .banimg{-webkit-animation: zoomin_out 20s infinite ease-in-out;-moz-animation: zoomin_out 20s infinite ease-in-out;-ms-animation: zoomin_out 20s infinite ease-in-out;-o-animation: zoomin_out 20s infinite ease-in-out;} */
+.footer_wap{background:#333; display:none;}
+.footerWapul{ margin-bottom:0;}
+.footerWapul li{ width:25%; float:left; text-align:center; border-right:1px solid #f9c7ce; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; padding:4px 0;}
+.footerWapul li span{display:block; width:32%; margin:6% auto 0; font-size:0;}
+.footerWapul li img{ width:24px; height:auto}
+.footerWapul li p{ width:100%; height:22px; line-height:22px; text-align:center; font-size:14px; color:#fff;}
+.footerWapul li p a{color:#fff;}
+
+
+.sbtn{font-size:14px; display: inline-block; padding: 6px 20px; border: 1px solid transparent; -moz-box-sizing: border-box; box-sizing: border-box; text-align: center;}
+.sbtn_w100{ width: 100%; padding-left: 0; padding-right: 0;}
+.sbtn_green{ color: #fff; background:#40976d;  }
+.sbtn_green:hover{ background:#329c3c;}
+.sbtn_green_s{ color: #4a9c74;text-transform: uppercase;}
+.sbtn_green_s .val{ margin-right: 10px;}
+.sbtn_green_s:hover{ color: #329c3c;}
+.sbtn_orange{ color: #fff; background:#f63;  }
+.sbtn_orange .iconfont{ font-size: 20px; margin-left: 20px;}
+.sbtn_orange:hover{ background:#ff7633;}
+/*.sbtn_red_rim{  border: 1px solid #cc3333; background-color: #fff;color: #cc3333;}
+.sbtn_red_rim:hover{ background-color: #cc3333; color: #ffffff;} */

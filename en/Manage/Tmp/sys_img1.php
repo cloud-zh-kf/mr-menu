@@ -1,0 +1,1 @@
+s:22:"./images/icon/logo.png";

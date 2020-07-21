@@ -1,0 +1,135 @@
+<include file='public/header' />
+
+<body class="bg_fa">
+    <style>
+        html,body{ height: 100%; }
+    </style>
+   <div class="imain2 bcover" style="background-image: url(./images/cooG_bg.png);">
+        <div class="h20"></div>
+        <div class="wrap">
+                <div class="wrap2">
+                        <div class="cooGrasp">
+                             <div class="i_tit3 tc">
+                                 <h4 class="tit">Mr.Menu와 합작하기</h4>
+                                 <p class="tip">
+                                     아래 의 양식 을 작성 해 주 십시오. 저 희 는 당신 의 요 구 를 받 은 후에 바로 대답 하 겠 습 니 다.
+                                 </p>
+                             </div>
+                            
+                             <form method="post" action="index.php?m=Home&c=List&a=message" >
+                             <div class="form">
+                                
+                                 <div class="item">
+                                     <div class="attrmc">뭐 공부 해요?<i class="require">*</i></div>
+                                     <div class="attrval">
+                                         <div class="seltype" id="seltype">
+                                             <div class="list"><input type="radio" value="3" name="typeid" class="radio" id="">
+                                                <span class="ibvm">Mr. menu에 가입하기</span>
+                                             </div>
+                                             <div class="list"><input type="radio" value="4" name="typeid" class="radio" id="">
+                                                <span class="ibvm">기타</span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="field1">
+                                    <div class="item">
+                                        <div class="attrmc">레스토랑 이름<i class="require">*</i></div>
+                                        <div class="attrval">
+                                            <input type="text" name="name" id="name" required oninvalid="setCustomValidity('식당 이름 을 입력 하 세 요.')" oninput="setCustomValidity('')"  class="text rd10">
+                                            <!-- <div class="msg" style="display:none;">Please enter the correct restaurant name</div> -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">레스토랑 타입을 입력하세요<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="type" id="type" oninvalid="setCustomValidity('식당 유형 입력')" oninput="setCustomValidity('')"   required  class="text rd10">
+                                            <!-- <div class="msg">Please enter the correct restaurant type</div> -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">주소<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="add" id="add" oninvalid="setCustomValidity('식당 주 소 를 입력 하 세 요.')" oninput="setCustomValidity('')"   required  class="text rd10">
+                                            <!-- <div class="msg">Please enter the correct contact address</div> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="field2">
+                                    <div class="item">
+                                        <div class="attrmc">이메일<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="email" id="email" oninvalid="setCustomValidity('메 일 박스 를 입력 하 세 요.')" oninput="setCustomValidity('')"  required class="text rd10">
+                                            <div class="msg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">연락처<i class="require">*</i></div>
+                                        <div class="attrval"><input type="number" name="tel" id="tel" oninvalid="setCustomValidity('전화 번 호 를 입력 하 세 요.')" oninput="setCustomValidity('')"  required class="text rd10">
+                                            <div class="msg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">이름<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="username" required  id="" oninvalid="setCustomValidity('연락처 이름 입력')" oninput="setCustomValidity('')"  class="text rd10">
+                                            <!-- <div class="msg">Please enter the correct contact</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="item tj tc">
+                                     <input type="submit" value="접속하기" class="rd10 sbtn sbtn_green btn rd40">
+
+                                 </div>
+                                 
+                             </div></form>
+                             <script type="text/javascript">
+                                   $('.btn').click(function(){
+                                         tel = $('.form #tel');
+                                         name=$('.form #name').val();
+                                         type=$('.form #type').val();
+                                         add=$('.form #add').val();
+                                         var email=$("#email").val();
+                                        var zz = /^[0-9][0-9][0-9]{4,10}$/;
+                                        var dh=/^[0-9][0-9][0-9]{11}$/;
+                                            if(email){
+
+                                                if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/))
+                                                {
+                                                   $('.form #email').next('.msg').html('잘못된 형식 입 니 다!다시 입력 하 세 요');
+                                                   $(".form #email").focus();
+                                                    return false;
+                                                }else{
+                                                   $('.form #email').next('.msg').html('');
+                                                }
+
+                                                if (!(zz.test(tel.val()) || dh.test(tel.val()))) {
+                                                    $('.form #tel').focus();
+                                                    $('.form #tel').next('.msg').html('핸드폰 번호 형식 이 잘못 되 었 습 니 다.');
+                                                    return false;
+                                                  }else{
+                                                    $('.form #tel').next('.msg').html('');
+                                                  }
+                                            }
+                                    });
+                             </script>
+                        </div>
+                        <script>
+                            $(function(){
+                                $('#seltype input[type=radio][name=typeid]').change(function() {
+                                        if (this.value == '3') {
+                                           $('.field1,.field2').slideDown();
+                                           $(':input[name="name"]').attr('required','required');
+                                           $(':input[name="type"]').attr('required','required');
+                                           $(':input[name="add"]').attr('required','required');
+                                        }
+                                        else if (this.value == '4') {
+                                            $('.field1').slideUp();
+                                            $('.field2').slideDown();
+                                            $(':input[name="name"]').removeAttr('required');
+                                            $(':input[name="type"]').removeAttr('required');
+                                            $(':input[name="add"]').removeAttr('required');
+                                        }
+                                    });
+                                })
+                        </script>
+                </div>
+        </div>
+   </div>
+<include file='public/footer' />

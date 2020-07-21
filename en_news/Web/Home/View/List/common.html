@@ -1,0 +1,29 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+       <div class="wp">
+            <h4 class="i_tit tc">{my:get_sort_zd($vty)}</h4>
+            <div class="join wp">
+                <dl class="joindl">
+                    <volist name=":get_news($vpid,$vty,0,0,'*',6)" id="v">
+                        <dt>{my$v.title}<em class="status"><i class="iconfont icon-down2"></i></em></dt>
+                        <dd>
+                            <div class="joinnr clearfix">
+                                {my:get_html($v['content'])}
+                            </div>
+                        </dd>
+                    </volist>
+                    <!-- <dt>如何入驻？<em class="status"><i class="iconfont icon-down2"></i></em></dt>
+                    <dd>
+                        <div class="joinnr clearfix">
+                            2
+                        </div>
+                    </dd> -->
+                </dl>
+            </div>
+            
+       </div>
+    </div>
+    <!--i_main end-->
+
+<include file='public/footer' />

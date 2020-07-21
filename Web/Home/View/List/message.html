@@ -1,0 +1,136 @@
+<include file='public/header' />
+
+<body class="bg_fa">
+    <style>
+        html,body{ height: 100%; }
+    </style>
+   <div class="imain2 bcover" style="background-image: url(./images/cooG_bg.png);">
+        <div class="h20"></div>
+        <div class="wrap">
+                <div class="wrap2">
+                        <div class="cooGrasp">
+                             <div class="i_tit3 tc">
+                                 <h4 class="tit">Mr.Menu合作
+                                 </h4>
+                                 <p class="tip">
+                                     请您填写以下表单，我们会在收到您的需求后尽快回复
+                                 </p>
+                             </div>
+                            
+                             <form method="post" action="index.php?m=Home&c=List&a=message" >
+                             <div class="form">
+                                
+                                 <div class="item">
+                                     <div class="attrmc">您的需求是什么?<i class="require">*</i></div>
+                                     <div class="attrval">
+                                         <div class="seltype" id="seltype">
+                                             <div class="list"><input type="radio" value="3" name="typeid" class="radio" id="">
+                                                <span class="ibvm">餐厅合作</span>
+                                             </div>
+                                             <div class="list"><input type="radio" value="4" name="typeid" class="radio" id="">
+                                                <span class="ibvm">其他</span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="field1">
+                                    <div class="item">
+                                        <div class="attrmc">餐厅名字<i class="require">*</i></div>
+                                        <div class="attrval">
+                                            <input type="text" name="name" id="name" required oninvalid="setCustomValidity('请输入餐厅名字')" oninput="setCustomValidity('')"  class="text rd10">
+                                            <!-- <div class="msg" style="display:none;">Please enter the correct restaurant name</div> -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">餐厅类型<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="type" id="type" oninvalid="setCustomValidity('请输入餐厅类型')" oninput="setCustomValidity('')"   required  class="text rd10">
+                                            <!-- <div class="msg">Please enter the correct restaurant type</div> -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">餐厅地址<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="add" id="add" oninvalid="setCustomValidity('请输入餐厅地址')" oninput="setCustomValidity('')"   required  class="text rd10">
+                                            <!-- <div class="msg">Please enter the correct contact address</div> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="field2">
+                                    <div class="item">
+                                        <div class="attrmc">邮箱<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="email" id="email" oninvalid="setCustomValidity('请输入邮箱')" oninput="setCustomValidity('')"  required class="text rd10">
+                                            <div class="msg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">电话<i class="require">*</i></div>
+                                        <div class="attrval"><input type="number" name="tel" id="tel" oninvalid="setCustomValidity('请输入电话')" oninput="setCustomValidity('')"  required class="text rd10">
+                                            <div class="msg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">联系人姓名<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="username" required  id="" oninvalid="setCustomValidity('请输入联系人姓名')" oninput="setCustomValidity('')"  class="text rd10">
+                                            <!-- <div class="msg">Please enter the correct contact</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="item tj tc">
+                                     <input type="submit" value="提交" class="rd10 sbtn sbtn_green btn rd40">
+
+                                 </div>
+                                 
+                             </div></form>
+                             <script type="text/javascript">
+                                   $('.btn').click(function(){
+                                         tel = $('.form #tel');
+                                         name=$('.form #name').val();
+                                         type=$('.form #type').val();
+                                         add=$('.form #add').val();
+                                         var email=$("#email").val();
+                                        var zz = /^[0-9][0-9][0-9]{4,10}$/;
+                                        var dh=/^[0-9][0-9][0-9]{11}$/;
+                                            if(email){
+
+                                                if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/))
+                                                {
+                                                   $('.form #email').next('.msg').html('格式不正确！请重新输入');
+                                                   $(".form #email").focus();
+                                                    return false;
+                                                }else{
+                                                   $('.form #email').next('.msg').html('');
+                                                }
+
+                                                if (!(zz.test(tel.val()) || dh.test(tel.val()))) {
+                                                    $('.form #tel').focus();
+                                                    $('.form #tel').next('.msg').html('您的手机号码格式不正确');
+                                                    return false;
+                                                  }else{
+                                                    $('.form #tel').next('.msg').html('');
+                                                  }
+                                            }
+                                    });
+                             </script>
+                        </div>
+                        <script>
+                            $(function(){
+                                $('#seltype input[type=radio][name=typeid]').change(function() {
+                                        if (this.value == '3') {
+                                           $('.field1,.field2').slideDown();
+                                           $(':input[name="name"]').attr('required','required');
+                                           $(':input[name="type"]').attr('required','required');
+                                           $(':input[name="add"]').attr('required','required');
+                                        }
+                                        else if (this.value == '4') {
+                                            $('.field1').slideUp();
+                                            $('.field2').slideDown();
+                                            $(':input[name="name"]').removeAttr('required');
+                                            $(':input[name="type"]').removeAttr('required');
+                                            $(':input[name="add"]').removeAttr('required');
+                                        }
+                                    });
+                                })
+                        </script>
+                </div>
+        </div>
+   </div>
+<include file='public/footer' />

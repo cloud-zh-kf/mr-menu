@@ -1,0 +1,214 @@
+<!--own js-->
+<link rel="stylesheet" href="css/animate.min.css" />
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="swiper/swiper5.js"></script>
+<script type="text/javascript" src="swiper/swiper.animate.min.js"></script>
+<script src="js/js.js"></script>
+<!--滚动数字-->
+<!-- <script src="js/scrollnum.js"></script> -->
+<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="js/jquery.countup.min.js"></script>
+<script type="text/javascript">
+     $('.indexNum').countUp();
+</script>
+<!-- 视频弹窗 -->
+<link rel="stylesheet" type="text/css" href="dist/magnific-popup.css">
+<script src="dist/jquery.magnific-popup.js"></script>
+<script type="text/jscript">
+    $(document).ready(function() {
+          $('.popupVideo1').magnificPopup({
+               disableOn:false,
+               type: 'iframe',
+               mainClass: 'mfp-fade',
+               removalDelay: 160,
+               preloader: false,
+               fixedContentPos: false
+          });
+     });
+</script>
+     <!--底部-->
+     <!--pc footer-->
+     <div class="footer" <?php echo empty($vpid) ? 'id="xz"':'';?>>
+          <div class="f_t">
+               <div class="wp">
+                    <div class="fdown cle">
+                         <h4 class="tit">点击按钮下载Mr.Menu应用程序</h4>
+                         <div class="nr">
+                              <volist name=":get_news(23,32,0,0,'*',3)" id="v">
+                              <a download="{my$v.file1}" href="{my$v.file1}"><img src="{my$v.img1}" alt="" class="tp rd6">
+                                   <div class="hdownLay">
+                                        <img src="{my$v.img2}" alt="" class="tp">
+                                        <h4 class="tit2">扫码下载</h4>
+                                   </div>
+                              </a>
+                              </volist>
+                         </div>
+                    </div>
+                    <div class="fnav">
+                         <ul class="fnavul cle">
+                              <volist name=":get_news(23,31,0,0,'*',3)" id="v">
+                              <li>
+                                   <h4 class="ftit b">{my$v.title}</h4>
+                                   <div class="nr1">
+                                        <!-- <p class="p1">Greedy Cat Japan株式会社</p>
+                                        <p class="p1">Greedy Cat Japan株式会社</p>
+                                        <p class="p1">Greedy Cat Japan株式会社</p>
+                                        <p class="p1">Greedy Cat Japan株式会社</p> -->
+                                        {my:get_2explode($v['introduce'])}
+                                   </div>
+                              </li>
+                            </volist>
+                              <li>
+                                   <h4 class="ftit b">客户支持</h4>
+                                   <div class="nr2">
+                                        <volist name=":get_sort_list(18)" id='v'>
+                                           <a href="{my:get_sort_url($v['pid'],$v['id'],0,$v['linkurl'])}">{my$v.catname}</a>
+
+                                        </volist>
+                                   </div>
+                              </li>
+                              <li>
+                                   <h4 class="ftit"><img src="./images/icon/f_logo.png" alt="" class="tp"></h4>
+                                   <div class="nr1">
+                                        <p class="p1">合作：{my:sys('sys_gz')}</p>
+                                        <p class="p1">招聘：{my:sys('sys_zp')}</p>
+                                   </div>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+          <div class="f_b">
+               <div class="copyright tc">{my:sys('sys_copyright')}
+                    <a href="http://beian.miit.gov.cn" style="margin-left:5px;color:#fff" target="_blank">{my:sys('sys_icp')}</a>
+                    <a href="http://www.9-xin.com" style="margin-left:5px;color:#fff" target="_blank">技术支持：久鑫网络</a>
+               </div>
+          </div>
+     </div>
+     <!--底部-->
+          <div class="floatpart">
+               <ul class="floatpartul">
+                    <li class="gotop"><a href="javascript:;"><img src="./images/icon/side01.png" alt="" class="tp"></a></li>
+                    <li ><a href="javascript:;" class="messbtn"><img src="./images/icon/side02.png" alt="" class="tp"></a>
+                         <div class="messlay">
+                                   <form class="hmform" method="post" action="index.php?m=Home&c=List&a=message"><h4 class="tit">合作了解
+                                          </h4>
+                                        <input type="hidden" name="typeid" value="5">
+                                        <div class="item">
+                                             <div class="attrmc">姓名
+                                                            <i class="require">*</i></div>
+                                             <div class="attrval"><input placeholder="姓名
+" required oninvalid="setCustomValidity('请输入正确的联系人')" oninput="setCustomValidity('')" type="text" name="username" id="username" class="text rd10">
+                                                  <!-- <div class="msg"></div> -->
+                                             </div>
+                                        </div>
+                                        <div class="item">
+                                             <div class="attrmc">联系方式
+                                                            <i class="require">*</i></div>
+                                             <div class="attrval"><input placeholder="联系方式
+" required oninvalid="setCustomValidity('请输入正确的联系方式')" oninput="setCustomValidity('')" type="number" name="tel" id="tel" class="text rd10">
+                                                  <div class="msg"></div>
+                                             </div>
+                                        </div>
+                                        <div class="item">
+                                             <div class="attrmc">国家
+                                                            <i class="require">*</i></div>
+                                             <div class="attrval">
+                                                  <select name="guojia" id="guojia" class="selCountry rd10" >
+                                                       <option value="中国">中国
+                                                                   </option>
+                                                       <option value="美国">美国
+                                                                   </option>
+                                                       <option value="英国">英国
+                                                                   </option>
+                                                       <option value="德国">德国
+                                                                   </option>
+                                                       <option value="日语">日语
+                                                                   </option>
+                                                       <option value="西班牙">西班牙</option>
+                                                  </select>
+                                             </div>
+                                        </div>
+                                        <div class="item">
+                                             <div class="attrmc">餐厅名称
+                                                            <i class="require">*</i></div>
+                                             <div class="attrval"><input placeholder="餐厅名称
+" required oninvalid="setCustomValidity('请输入正确的餐厅名字')" oninput="setCustomValidity('')" type="text" name="name" id="name" class="text rd10">
+                                                  <!-- <div class="msg">Please enter the correct surname restaurant name</div> -->
+                                             </div>
+                                        </div>
+                                        <div class="item">
+                                             <div class="attrmc">餐厅地址
+                                                            <i class="require">*</i></div>
+                                             <div class="attrval">
+                                                  <textarea  class="textarea" name="add" required oninvalid="setCustomValidity('请输入正确的餐厅地址')" oninput="setCustomValidity('')" placeholder="餐厅地址
+" id="add" cols="30" rows="10"></textarea>
+                                                  <!-- <div class="msg">Please enter the correct Restaurant Address</div> -->
+                                             </div>
+                                        </div>
+                                        <div class="item tj tc"><input class="sbtn rd40 btn sbtn_green hmformBtn" type="submit" value="提交
+" /></div>
+                                   </form>
+                                   <script type="text/javascript">
+                                        $('.hmformBtn').click(function(){
+                                             tel = $('.hmform #tel');
+                                             username=$('.hmform #username').val();
+                                             var zz = /^[0-9][0-9][0-9]{4,10}$/;
+                                             var dh=/^[0-9][0-9][0-9]{11}$/;
+                                             if(tel.val() && username){
+                                                  if (!(zz.test(tel.val()) || dh.test(tel.val()))) {
+                                                    $('.hmform #tel').focus();
+                                                    $('.hmform #tel').next('.msg').html('您的手机号码格式不正确');
+                                                    return false;
+                                                  }else{
+                                                    $('.hmform #tel').next('.msg').html('');
+                                                  }
+                                             }
+                                        });
+                                        $('input[type="text"]').click(function(){
+                                             $('.msg').html('');
+                                        });
+                                        $('.textarea').click(function(){
+                                             $('.msg').html('');
+                                        });
+                                   </script>
+                                   <div class="subAchieve">
+                                        <h4 class="tit">合作了解
+                                                </h4>
+                                        <div class="nr">
+                                             <div class="tp"><i class="iconfont icon-jinakangbaoicons17"></i></div>
+                                             <p class="p1">提交成功
+                                                            <br>我们会尽快联系您
+                                                            ～</p>
+                                        </div>
+                                        <div class="tj tc">
+                                             <input class="sbtn rd40 btn sbtn_green subAchieveBtn" type="submit" value="Ok" />
+                                        </div>
+                                   </div>
+                              </div>
+                    </li>
+                    <li class="codeBtn"><a href="javascript:;"><img src="./images/icon/side03.png" alt="" class="tp"></a>
+                         <div class="codeLay">
+                              <img src="{my:sys('sys_img9')}" alt="" class="tp">
+                              <p class="tit">Mr.Menu公众号
+                                    </p>
+                         </div>
+                    </li>
+                    <li class="codeBtn"><a href="javascript:;"><img src="./images/icon/side04.png" alt="" class="tp"></a>
+                         <div class="codeLay">
+                                   <img src="{my:sys('sys_img8')}" alt="" class="tp">
+                                   <p class="tit">Mr.Menu微博
+                                          </p>
+                              </div>
+                    </li>
+                    <li class="codeBtn"><a href="javascript:;"><img src="./images/icon/side05.png" alt="" class="tp"></a>
+                         <div class="codeLay">
+                                   <img src="{my:sys('sys_img7')}" alt="" class="tp">
+                                   <p class="tit">Mr.Menu抖音
+                                          </p>
+                              </div>
+
+               </ul>
+          </div>
+</body>
+</html>

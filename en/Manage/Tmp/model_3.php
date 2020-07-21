@@ -1,0 +1,1 @@
+a:8:{s:2:"id";s:1:"3";s:10:"model_name";s:21:"[列表]标题+文件";s:12:"model_fields";s:7:"1,10,11";s:7:"model_c";s:4:"News";s:7:"model_a";s:5:"Index";s:5:"ispic";s:1:"1";s:8:"disorder";s:1:"0";s:6:"status";s:1:"1";}

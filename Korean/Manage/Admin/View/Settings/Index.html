@@ -1,0 +1,267 @@
+<include file="public/header" />
+<link href="{my$Think.const.ADMIN_PUBLIC}/myeditor/themes/default/default.css" rel="stylesheet" type="text/css" />
+<script charset="utf-8" src="{my$Think.const.ADMIN_PUBLIC}/myeditor/kindeditor-min.js"></script>
+<script charset="utf-8" src="{my$Think.const.ADMIN_PUBLIC}/myeditor/lang/zh_CN.js"></script>
+<script>
+    KindEditor.ready(function(K) {
+        var editor = K.editor({
+            allowFileManager : true
+        });
+    <volist name="list6" id="v6">
+            K('#{my$v6.varname}_btn').click(function() {
+                editor.loadPlugin('image', function() {
+                    editor.plugin.imageDialog({
+                        imageUrl : K('#{my$v6.varname}').val(),
+                        clickFn : function(url, title, width, height, border, align) {
+                            K('#{my$v6.varname}').val(url);
+                            editor.hideDialog();
+                        }
+                    });
+                });
+            });
+    </volist>
+    });
+</script>
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+		<div class="layui-tab layui-tab-brief" lay-filter="tab">
+			<ul class="layui-tab-title">
+				<li class="layui-this" lay-id="t1">基本信息</li>
+				<li  lay-id="t2">首页SEO</li>
+				<li  lay-id="t3">百度地图</li>
+				<li  lay-id="t4">第三方代码</li>
+				<if condition="$Think.session.admin_id eq 99999999"><li  lay-id="t5">添加新变量</li></if>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<form action="{my:U('Settings/Update')}" method="post" class="layui-form" name="myform1">
+						<volist name="list1" id="v1">
+							<div class="layui-form-item">
+								<label class="layui-form-label">{my$v1.varinfo}</label>
+									<if condition="$v1['vartype'] eq 0">
+										<div class="layui-input-inline">
+											<input name="{my$v1.varname}" type="text" value="{my$v1.varvalue}" class="layui-input"/>
+										</div>
+									<elseif condition="$v1['vartype'] eq 1"/>
+										<div class="layui-input-inline" style="width: 50%">
+											<textarea name="{my$v1.varname}"  style="width:520px;height:100px;" class="layui-textarea">{my$v1.varvalue}</textarea>
+										</div>
+									<elseif condition="$v1['vartype'] eq 2"/>
+										<div class="layui-input-inline">
+											<input type="text" name="{my$v1.varname}" id="{my$v1.varname}" value="{my$v1.varvalue}" class="layui-input">
+										</div>
+										<input type="button" id="{my$v1.varname}_btn" value="选择图片" class="layui-btn"/>
+									<elseif condition="$v1['vartype'] eq 3"/>
+										<div class="layui-input-inline">
+											<select name="{my$v1.varname}">
+												<option value="">请选择</option>
+												<php>
+													$arr1=explode("|",$v1['varoption']);
+													for($i=0;$i<count($arr1);$i++){
+													$value1=$arr1[$i];
+													if($v1['varvalue']==$value1) $s=" selected";else $s="";
+													echo "<option value=\"$value1\"$s>$value1</option>";
+													}
+												</php>
+											</select>
+										</div>
+									</if>
+								<font color="red">{my$v1.varoption}</font> <if condition="$Think.session.admin_id eq 99999999">调用字段&nbsp;my:sys('{my$v1.varname}')</if>
+							</div>
+						</volist>
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit name="submit" value="basic" name="dosave">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="layui-tab-item">
+					<form action="{my:U('Settings/Update')}" method="post" class="layui-form" name="myform2" >
+						<volist name="list2" id="v1">
+							<div class="layui-form-item">
+								<label class="layui-form-label">{my$v1.varinfo}</label>
+								<if condition="$v1['vartype'] eq 0">
+									<div class="layui-input-inline">
+										<input name="{my$v1.varname}" type="text" value="{my$v1.varvalue}" class="layui-input"/>
+									</div>
+									<elseif condition="$v1['vartype'] eq 1"/>
+									<div class="layui-input-inline" style="width: 50%">
+										<textarea name="{my$v1.varname}"  style="width:520px;height:100px;" class="layui-textarea">{my$v1.varvalue}</textarea>
+									</div>
+									<elseif condition="$v1['vartype'] eq 2"/>
+
+									<elseif condition="$v1['vartype'] eq 3"/>
+									<div class="layui-input-inline">
+										<select name="{my$v1.varname}">
+											<option value="">请选择</option>
+											<php>
+												$arr1=explode("|",$v1['varoption']);
+												for($i=0;$i<count($arr1);$i++){
+												$value1=$arr1[$i];
+												if($v1['varvalue']==$value1) $s=" selected";else $s="";
+												echo "<option value=\"$value1\"$s>$value1</option>";
+												}
+											</php>
+										</select>
+									</div>
+								</if>
+								<font color="red">{my$v1.varoption}</font> <if condition="$Think.session.admin_id eq 99999999">调用字段&nbsp;my:sys('{my$v1.varname}')</if>
+							</div>
+						</volist>
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit name="submit" value="basic" name="dosave">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="layui-tab-item">
+					<form action="{my:U('Settings/Update')}" method="post" class="layui-form" name="myform3">
+						<volist name="list3" id="v1">
+							<div class="layui-form-item">
+								<label class="layui-form-label">{my$v1.varinfo}</label>
+								<if condition="$v1['vartype'] eq 0">
+									<div class="layui-input-inline">
+										<input name="{my$v1.varname}" type="text" value="{my$v1.varvalue}" class="layui-input"/>
+									</div>
+									<elseif condition="$v1['vartype'] eq 1"/>
+									<div class="layui-input-inline" style="width: 50%">
+										<textarea name="{my$v1.varname}"  style="width:520px;height:100px;" class="layui-textarea">{my$v1.varvalue}</textarea>
+									</div>
+									<elseif condition="$v1['vartype'] eq 2"/>
+
+									<elseif condition="$v1['vartype'] eq 3"/>
+
+									</if>
+								<font color="red">{my$v1.varoption}</font> 
+								<?php if($v1['varname']=='sys_ll'){?><a href="{my:U('Settings/Map')}" style="color:blue" target="_blank">获取经纬度</a><?php }?>
+								<if condition="$Think.session.admin_id eq 99999999"> 调用字段&nbsp;my:sys('{my$v1.varname}')</if>
+							</div>
+						</volist>
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit name="submit" value="basic" name="dosave">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+
+					<div class="layui-tab-item">
+						<form action="{my:U('Settings/Update')}" method="post" class="layui-form" name="myform3">
+							<volist name="list4" id="v1">
+								<div class="layui-form-item">
+									<label class="layui-form-label">{my$v1.varinfo}</label>
+									<if condition="$v1['vartype'] eq 0">
+										<div class="layui-input-inline">
+											<input name="{my$v1.varname}" type="text" value="{my$v1.varvalue}" class="layui-input"/>
+										</div>
+										<elseif condition="$v1['vartype'] eq 1"/>
+										<div class="layui-input-inline" style="width: 50%">
+											<textarea name="{my$v1.varname}"  style="width:520px;height:100px;" class="layui-textarea">{my$v1.varvalue}</textarea>
+										</div>
+										<elseif condition="$v1['vartype'] eq 2"/>
+
+										<elseif condition="$v1['vartype'] eq 3"/>
+
+									</if>
+									<font color="red">{my$v1.varoption}</font>
+									<?php if($v1['varname']=='sys_ll'){?><a href="{my:U('Settings/Map')}" style="color:blue" target="_blank">获取经纬度</a><?php }?>
+									<if condition="$Think.session.admin_id eq 99999999"> 调用字段&nbsp;my:sys('{my$v1.varname}')</if>
+								</div>
+							</volist>
+							<div class="layui-form-item">
+								<div class="layui-input-block">
+									<button class="layui-btn" lay-submit name="submit" value="basic" name="dosave">立即提交</button>
+									<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				<if condition="$Think.session.admin_id eq 99999999">
+
+					<div class="layui-tab-item">
+					<form action="{my:U('Settings/Add')}" method="post" class="layui-form" name="myform4" >
+						<input type="hidden" name="send" value="add">
+						<div class="layui-form-item">
+							<label class="layui-form-label">参数说明</label>
+							<div class="layui-input-inline">
+								<input type="text" name="varinfo" value="" placeholder="请输入参数说明" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">参数值</label>
+							<div class="layui-input-inline">
+								<input type="text" name="varvalue" value="" placeholder="请输入参数值" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">字段名(英文)</label>
+							<div class="layui-input-inline">
+								<input type="text" name="varname" value="" placeholder="请输入字段名(英文) 必须以sys_开头"  class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">字段类型</label>
+							<div class="layui-input-block">
+								<input type="radio" lay-filter="vartype" name="vartype" value="0" class="myvartype" checked="checked" title="单行文本">
+								<input type="radio" lay-filter="vartype" name="vartype" value="1" class="myvartype" title="多行文本">
+								<input type="radio" lay-filter="vartype" name="vartype" value="2" class="myvartype" title="图片文本">
+								<input type="radio" lay-filter="vartype" name="vartype" value="3" class="myvartype" title="下拉框">
+							</div>
+						</div>
+
+						<div class="layui-form-item myoption">
+							<label class="layui-form-label">下拉框</label>
+							<div class="layui-input-inline">
+								<input type="text" name="varoption" value="" placeholder="请输入下拉框 多个用|分割"  class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit name="submit" value="api">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+				</if>
+			</div>
+		</div>
+	</div>
+
+	<include file="public/footer" />
+
+</div>
+<script>
+    layui.use('form', function(){
+        var form = layui.form;
+        form.on('radio(vartype)', function(data){
+           // console.log(data.elem); //得到radio原始DOM对象
+            var v=data.value;
+            if(v==3){
+                $(".myoption").show();
+			}else{
+                $(".myoption").hide();
+			}
+        });
+    });
+
+</script>
+
+</body>
+</html>

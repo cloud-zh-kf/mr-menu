@@ -1,0 +1,66 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+
+	<include file="public/left" />
+
+	<div class="layui-body">
+		<div class="layui-tab layui-tab-brief" lay-filter="tab">
+			<ul class="layui-tab-title">
+				<li class="layui-this">密码修改</li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<form action="__ACTION__" method="post" class="layui-form" onSubmit="return check_person(this);">
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">姓名</label>
+							<div class="layui-input-inline">
+								<input type="text" name="realname" value="{my$v.realname}" placeholder="请输入姓名" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">用户名</label>
+							<div class="layui-input-inline">
+								<input type="text" name="realname" value="{my$v.username}" class="layui-input" readonly>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">原密码</label>
+							<div class="layui-input-inline">
+								<input type="password" name="oldpwd" required lay-verify="required" placeholder="请输入原密码" autocomplete="off" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">新密码</label>
+							<div class="layui-input-inline">
+								<input type="password" name="newpwd" required lay-verify="required" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">确认密码</label>
+							<div class="layui-input-inline">
+								<input type="password" name="renewpwd" required lay-verify="required" placeholder="确认密码" autocomplete="off" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit name="dosave">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="public/footer" />
+</div>
+
+</body>
+</html>

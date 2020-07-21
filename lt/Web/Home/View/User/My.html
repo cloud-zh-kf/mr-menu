@@ -1,0 +1,357 @@
+<?php $Custitle="填写报名表"?>
+<include file="public/header" />
+<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="My97DatePicker/calendar.js"></script>
+
+<div class="wp">
+    <div class="clearfix membelst">
+        <include file="public/uleft" />
+        <div class="memberfr fl">
+            <div class="membfrtit">申请入学信息表<span>请完善您的报名信息，提高录取成功率</span></div>
+            <div class="bmxxtxwp">
+                <table>
+                    <form action="/Home-User-Write" method="post" name="form1" enctype="multipart/form-data" onsubmit="return check_write(this)">
+                        <tr>
+                            <td>
+                                <div class="bmxkb">
+                                    <span><i>*</i> 姓名:</span>
+                                    <input type="text" name="xs_realname" value="{my$vs.xs_realname}" class="bmxktxt">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bmxkb">
+                                    <span><i>*</i> 性别:</span>
+                                    <select class="baxxsel gender" name="sex">
+                                        <option value="男" <?php if($vs['sex']=='男') echo 'selected';?>>男</option>
+                                        <option value="女" <?php if($vs['sex']=='女') echo 'selected';?>>女</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bmxkb">
+                                    <span><i>*</i> 民族:</span>
+                                    <input type="text" name="mz" class="bmxktxt" value="{my$vs.mz}">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bmxkb">
+                                    <span><i>*</i> 出生年月:</span>
+                                    <input type="text" name="csrq" id="d4311" value="{my$vs.csrq}" class="Wdate bmxktxt" placeholder="" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',})">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="bmxkb">
+                                    <span><i>*</i> 国籍:</span>
+                                    <input type="text" name="gj" class="bmxktxt" value="{my$vs.gj}">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bmxkb">
+                                    <span><i>*</i> 证件类型:</span>
+                                    <select class="baxxsel" name="zjlx">
+                                        <option value="身份证" <?php if($vs['zjlx']=='身份证') echo 'selected';?>>身份证</option>
+                                        <option value="户口簿" <?php if($vs['zjlx']=='户口簿') echo 'selected';?>>户口簿</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td colspan="2">
+                                <div class="bmxkb">
+                                    <span><i>*</i> 证件号码:</span>
+                                    <input type="text" name="zjhm" class="bmxktxt" value="{my$vs.zjhm}">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="bmxkb bamxkco">
+                                    <span><i>*</i> 家庭住址:</span>
+                                    <textarea class="bamktar" name="jtzz">{my$vs.jtzz}</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="bmxkb">
+                                    <span><i>*</i> 毕业学校全称:</span>
+                                    <input type="text" name="byxx" class="bmxktxt" value="{my$vs.byxx}">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bmxkb">
+                                    <span><i>*</i> 班级:</span>
+                                    <input type="text" name="bj" class="bmxktxt" value="{my$vs.bj}">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bmxkb">
+                                    <span>班主任:</span>
+                                    <input type="text" name="bzr" class="bmxktxt" value="{my$vs.bzr}">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bmxkb">
+                                    <span>班主任联系方式：</span>
+                                    <input type="text" name="bzrlxfs" class="bmxktxt" value="{my$vs.bzrlxfs}">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="bmxkb">
+                                    <span><i>*</i>毕业学校所在地：</span>
+                                    <input type="text" name="city" class="bmxktxt" value="{my$vs.city}">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bmxkb">
+                                    <input type="text" name="area" class="bmxktxt" value="{my$vs.area}" placeholder="区">
+                                </div>
+                            </td>
+                            <td colspan="2">
+                                <div class="bmxkb">
+                                    <span>其他地区：</span>
+                                    <input type="text" name="qtarea" class="bmxktxt" value="{my$vs.qtarea}">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <table class="lxtable">
+                                    <tr>
+                                        <th>联系人</th>
+                                        <th>姓名</th>
+                                        <th>与学生关系</th>
+                                        <th>文化程度</th>
+                                        <th>工作单位</th>
+                                        <th>职务名称</th>
+                                        <th>工作单位地址</th>
+                                        <th>联系电话</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bmxkb"><span><i>*</i>父亲</span></div>
+                                        </td>
+                                        <td><input type="text" name="fq_realname" value="{my$vs.fq_realname}" class="bmxktxt"></td>
+                                        <td><input type="text" name="fq_gx" value="{my$vs.fq_gx}" class="bmxktxt mxgn"></td>
+                                        <td><input type="text" name="fq_whcd" value="{my$vs.fq_whcd}" class="bmxktxt"></td>
+                                        <td><input type="text" name="fq_gzdw" value="{my$vs.fq_gzdw}" class="bmxktxt"></td>
+                                        <td><input type="text" name="fq_zwmc" value="{my$vs.fq_zwmc}" class="bmxktxt"></td>
+                                        <td><input type="text" name="fq_gzdwdz" value="{my$vs.fq_gzdwdz}" class="bmxktxt"></td>
+                                        <td><input type="text" name="fq_lxdh" value="{my$vs.fq_lxdh}" class="bmxktxt"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bmxkb"><span><i>*</i>母亲</span></div>
+                                        </td>
+                                        <td><input type="text" name="mq_realname" value="{my$vs.mq_realname}" class="bmxktxt"></td>
+                                        <td><input type="text" name="mq_gx" value="{my$vs.mq_gx}" class="bmxktxt mxgu"></td>
+                                        <td><input type="text" name="mq_whcd" value="{my$vs.mq_whcd}" class="bmxktxt"></td>
+                                        <td><input type="text" name="mq_gzdw" value="{my$vs.mq_gzdw}" class="bmxktxt"></td>
+                                        <td><input type="text" name="mq_zwmc" value="{my$vs.mq_zwmc}" class="bmxktxt"></td>
+                                        <td><input type="text" name="mq_gzdwdz" value="{my$vs.mq_gzdwdz}" class="bmxktxt"></td>
+                                        <td><input type="text" name="mq_lxdh" value="{my$vs.mq_lxdh}" class="bmxktxt"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bmxkb"><span>其他联系人</span></div>
+                                        </td>
+                                        <td><input type="text" name="qt_realname" value="{my$vs.qt_realname}" class="bmxktxt"></td>
+                                        <td><input type="text" name="qt_gx" value="{my$vs.qt_gx}" class="bmxktxt"></td>
+                                        <td><input type="text" name="qt_whcd" value="{my$vs.qt_whcd}" class="bmxktxt"></td>
+                                        <td><input type="text" name="qt_gzdw" value="{my$vs.qt_gzdw}" class="bmxktxt"></td>
+                                        <td><input type="text" name="qt_zwmc" value="{my$vs.qt_zwmc}" class="bmxktxt"></td>
+                                        <td><input type="text" name="qt_gzdwdz" value="{my$vs.qt_gzdwdz}" class="bmxktxt"></td>
+                                        <td><input type="text" name="qt_lxdh" value="{my$vs.qt_lxdh}" class="bmxktxt"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <div class="bmxkb">
+                                                <span><i>*</i>优先联系人</span>
+                                                <input type="text" name="yxlxr" value="{my$vs.yxlxr}" class="bmxktxt">
+                                            </div>
+                                        </td>
+                                        <td colspan="4">
+                                            <div class="bmxkb">
+                                                <span><i>*</i>主要监护人姓名</span>
+                                                <input type="text" name="zyjhrxm" value="{my$vs.zyjhrxm}" class="bmxktxt">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="bmxkb bamxkco">
+                                    <span><i>*</i> 兴趣爱好:</span>
+                                    <textarea class="bamktar" name="xqah">{my$vs.xqah}</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="bmxkb">
+                                    <span><i>*</i> 最擅长的学习方式</span>
+                                    <ul class="bmradio clearfix">
+                                        <li>
+                                            <input type="radio" name="xxfs" value="听" class="inbk" <?php if($vs['xxfs']=='听') echo 'checked';?>>
+                                            <label>听</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="xxfs" value="读"  lass="inbk" <?php if($vs['xxfs']=='读') echo 'checked';?>>
+                                            <label>读</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="xxfs" value="写" class="inbk" <?php if($vs['xxfs']=='写') echo 'checked';?>>
+                                            <label>写</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="xxfs" value="讨论" class="inbk" <?php if($vs['xxfs']=='讨论') echo 'checked';?>>
+                                            <label>讨论</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="xxfs" value="体验" class="inbk" <?php if($vs['xxfs']=='体验') echo 'checked';?>>
+                                            <label>体验</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="bmxkb bamxkco">
+                                    <span>特长及其水平</span>
+                                    <textarea class="bamktar" name="tc">{my$vs.tc}</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="bmxkb bamxkco">
+                                    <span>获奖情况</span>
+                                    <textarea class="bamktar" name="hj">{my$vs.hj}</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="clzm perinfor">
+                                    <span>上传证明材料:</span>
+                                    <div class="tp">
+                                        <img id="img1" src="{my$vs.img1}">
+                                        <div class="opa">
+                                            <input class="wfile btn1" type="file" name="img1" onchange="PreviewImage(this,'img1','divPreview1')">
+                                        </div>
+                                    </div>
+                                    <div class="tp">
+                                        <img id="img2" src="{my$vs.img2}">
+                                        <div class="opa">
+                                            <input class="wfile btn1" type="file" name="img2" onchange="PreviewImage(this,'img2','divPreview2')">
+                                        </div>
+                                    </div>
+                                    <div class="tp">
+                                        <img id="img3" src="{my$vs.img3}">
+                                        <div class="opa">
+                                            <input class="wfile btn1" type="file" name="img3" onchange="PreviewImage(this,'img3','divPreview3')">
+                                        </div>
+                                    </div>
+                                    <div class="tp">
+                                        <img id="img4" src="{my$vs.img4}">
+                                        <div class="opa">
+                                            <input class="wfile btn1" type="file" name="img4" onchange="PreviewImage(this,'img4','divPreview4')">
+                                        </div>
+                                    </div>
+                                    <div class="tp">
+                                        <img id="img5" src="{my$vs.img5}">
+                                        <div class="opa">
+                                            <input class="wfile btn1" type="file" name="img5" onchange="PreviewImage(this,'img5','divPreview5')">
+                                        </div>
+                                    </div>
+                                    <div class="tp">
+                                        <img id="img6" src="{my$vs.img6}">
+                                        <div class="opa">
+                                            <input class="wfile btn1" type="file" name="img6" onchange="PreviewImage(this,'img6','divPreview6')">
+                                        </div>
+                                    </div>
+                                    <div class="tp">
+                                        <img id="img7" src="{my$vs.img7}">
+                                        <div class="opa">
+                                            <input class="wfile btn1" type="file" name="img7" onchange="PreviewImage(this,'img7','divPreview7')">
+                                        </div>
+                                    </div>
+                                    <div class="tp">
+                                        <img id="img8" src="{my$vs.img8}">
+                                        <div class="opa">
+                                            <input class="wfile btn1" type="file" name="img8" onchange="PreviewImage(this,'img8','divPreview8')">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="bmxkb">
+                                    <span><i>*</i> 您是通过何种渠道获知我校信息</span>
+                                    <ul class="bmradio clearfix">
+                                        <li>
+                                            <input type="radio" name="qd" value="微信公众号" class="inbk" <?php if($vs['qd']=='微信公众号') echo 'checked';?>>
+                                            <label>微信公众号</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="qd" value="线下广告" class="inbk" <?php if($vs['qd']=='线下广告') echo 'checked';?>>
+                                            <label>线下广告</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="qd" value="老师推荐" class="inbk" <?php if($vs['qd']=='老师推荐') echo 'checked';?>>
+                                            <label>老师推荐</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="qd" value="通过网络广告" class="inbk" <?php if($vs['qd']=='通过网络广告') echo 'checked';?>>
+                                            <label>通过网络广告</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="qd" value="通过朋友介绍" class="inbk" <?php if($vs['qd']=='通过朋友介绍') echo 'checked';?>>
+                                            <label>通过朋友介绍</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="qd" value="其他" class="inbk" <?php if($vs['qd']=='其他') echo 'checked';?>>
+                                            <label>其他</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="bmxkb bamxkco">
+                                    <span><i>*</i>您在为孩子选择学校时最关心哪些方面:</span>
+                                    <textarea class="bamktar" name="gx">{my$vs.gx}</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="bmxkb bamxkco">
+                                    <span>备注:</span>
+                                    <textarea class="bamktar" name="bz">{my$vs.bz}</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="tc">
+                                <button class="bmxttj">修改</button>
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<include file="public/footer" />
+</body>
+</html>
+

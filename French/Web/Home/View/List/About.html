@@ -1,0 +1,19 @@
+<include file='public/header' />
+    <!--头部-->
+    <!--main-->
+    <div class="i_main">
+        <volist name=":get_news(43,44,0,0,'*',1)" id="v">
+        <div class="vision bcover" style="background-image: url(./images/vision_bg.jpg);">
+             <div class="wp">
+                <h4 class="tit">{my$v.title}</h4>
+                <div class="nr">
+                   {my:get_html($v['content'])}
+                </div>
+             </div>
+        </div>
+        </volist>
+    </div>
+
+
+    <!--i_main end-->
+<include file='public/footer' />

@@ -1,0 +1,462 @@
+@charset "utf-8";
+/*width:1200+*/
+@media only screen and (min-width: 1024px){
+	.inav{ display: none !important;}
+		}
+@media only screen and (max-width: 1365px){
+}
+@media only screen and (max-width: 1279px){
+	.lanLay{ right: 0; left: auto;}
+}
+/** max-width:1200 **/
+@media only screen and (max-width: 1199px){
+.wp{ width:96%;}
+.hsbox .area1{ width: 100%;}
+.area1ul,.area1ul2,.area2ul{ margin-right: -2%;}
+.area1ul li{ width: 31.33%; margin-right: 2%;}
+.area1ul2{ margin-top: 2%;}
+.area1ul2 .li01{ width: 56%;margin-right: 2%;}
+.area1ul2 .li02{ width: 40%;margin-right: 2%;}
+.hsbox .area2{ width: 100%;margin: 2% 0;}
+.area2ul li{ float: left;}
+.area2ul .li01{width: 40%;margin-right: 2%;}
+.area2ul .li02{width: 56%;margin-right: 2%;}
+.area2ul .li01 a{height: 282px;}
+.area2ul .li02 a{height: 282px;}
+}
+/** max-width:1024 **/
+@media only screen and (max-width: 1023px) {
+.nav{ display:none;}
+.menubtn{ display:block;} 
+
+.loarea{ height:60px; }
+.loarea .wp{ width: 100%;}
+.loarea .logo{ width:90px; left: 10px;  }
+.loarea .logo img{ height:14px; padding-top: 18px;}
+.chooseLan{ right: 54px; top: 10px; }
+.curLan .val{ font-size: 12px;}
+.chooseLan:hover .lanLay{ display: none;}
+.banner .swiper-pagination{ display:none;}
+.banner .swiper-button-prev,.banner .swiper-button-next{ display:inline-block; width:20px; height:28px;margin-top:-14px;}
+.banner .swiper-button-prev::after,.banner .swiper-button-next::after{ font-size: 24px;}
+.sbtn_ban{padding:2px 20px}
+.sbtn_ban .val{ font-size: 12px; margin-right: 6px;}
+.sbtn_ban .icon{ font-size: 16px;}
+.banIntro .des .mandiv{ margin-top: 5px; }
+.footer_wap{ display:block;}
+.pcshow{ display:none;}
+.wapshow{ display:inline-block;}
+
+.h_tit .tit{font-size:40px;}
+.hmanul li{ width: 50%;}
+.hdataul li .p1{ font-size:40px;}
+.hdataul li .p2{ font-size: 24px;}
+.fdown{ display:block;}
+.fdown .tit{ width: 100%; text-align: center;}
+.fdown .nr{ margin-top: 10px; text-align: center;}
+.fdown .nr a{ margin:0 5px;}
+.fdown .nr a img{ height: 40px;}
+.cityName{ font-size:20px;}
+}
+/** max-width:960 **/
+@media only screen and (max-width: 959px) {
+
+}
+/** max-width:768 **/
+@media only screen and (max-width: 767px) {
+body,input,textarea,select,button{ font-size: 0.22rem;}
+body{ background-color:#fff; filter:alpha(opacity=0); -moz-opacity:0; -khtml-opacity: 0; opacity: 0;}
+.mt10{ margin-top: 0.10rem;}
+.mt15{ margin-top: 0.15rem;}
+.mt20{ margin-top: 0.20rem;}
+.mt25{ margin-top: 0.25rem;}
+.mt30{ margin-top: 0.30rem;}
+.mt35{ margin-top: 0.35rem;}
+.mt40{ margin-top: 0.40rem;}
+.mt50{ margin-top: 0.50rem;}
+.mt60{ margin-top: 0.60rem;}
+.mt70{ margin-top: 0.70rem;}
+.mt80{ margin-top: 0.80rem;}
+.mt90{ margin-top: 0.9rem;}
+.mt100{ margin-top: 1rem;}
+/* .rd10{border-radius:0.10rem;}
+.rd11{border-radius:0.11rem;}
+.rd12{border-radius:0.12rem;}
+.rd13{border-radius:0.13rem;}
+.rd14{border-radius:0.14rem;}
+.rd15{border-radius:0.15rem;}
+.rd20{border-radius:0.20rem;}
+.rd24{border-radius:0.24rem;}
+.rd28{border-radius:0.28rem;}
+.rd30{border-radius:0.30rem;}
+.rd40{border-radius:0.40rem;} 
+.rd50{border-radius:0.50rem;}
+.rd60{border-radius:0.60rem;}
+.rd70{border-radius:0.70rem;}
+.rd80{border-radius:0.80rem;}
+.rd90{border-radius:0.90rem;}*/
+.banner .slick-dots{ bottom:10px;}
+.banIntro { top: 56%;}
+.sbtn_ban{padding:0rem 0.16rem 0.02rem}
+.sbtn_ban .val{ font-size: 0.16rem; margin-right: 0.04rem;}
+.sbtn_ban .icon{ font-size: 0.18rem;}
+
+.lanul li a{width:70px; font-size: 12px;}
+
+.h_tit{ padding: 0.4rem 0;}
+.h_tit .tit{font-size:0.45rem;}
+.h_tit .tip{font-size:0.22rem; }
+.h_man{ padding: 0.6rem 0 0.2rem}
+.h_man .h_tit{ padding: 0.1rem 0;}
+/* .h_man{ padding: 40px 0;}
+.h_man .wp{ overflow: hidden;}
+.h_man .h_tit{ padding: 10px 0;} */
+.hm_tit{ font-size: 0.3rem; padding: 0.2rem 0; }
+.hmItem1 .wrap{ display: block; ;}
+.hmItem1 .tparea,.hmItem1 .des{  width:100%;}
+.hmItem1 .tparea{ text-align: center;}
+.hmItem1 .tparea .tp{ width: auto; max-width: 80%;}
+.hmItem1 .des{ margin-top: 0.3rem;}
+.hmItem1 .des .nr{ font-size: 0.26rem; height:1.66rem; }
+.hmItem1 .des .mandiv{ margin-top: 0.6rem;}
+.hmItem1 .des .mandiv .hsbtn{ margin-bottom: 0.3rem; height: auto; line-height: 0.76rem;}
+.hsbtn{ width: 3rem; font-size: 0.2rem;  height: 0.8rem; line-height: 0.8rem; margin:0 auto;}
+.hsbtn .iconfont{ font-size: 0.26rem; margin-left: 0.1rem;}
+
+.hmItem2 .wrap{ margin-top: 0.2rem;}
+.hmItem{ margin-bottom: 0.4rem;}
+.hmItem3ul li{ width: 47%; margin: 0 2% 0.3rem 0;}
+.hmItem3 .tip{ font-size: 0.26rem; }
+.hmItem3 .mandiv .sbtn{  margin: 0 0.2rem 0.3rem;}
+
+
+.h_scan{ padding: 0 0 0.6rem;}
+.h_scan .wrap .tp{ width: 2rem;}
+.h_scan .wrap .p1{ font-size: 0.24rem;  margin-top: 0.1rem;}
+.h_scan .wrap .mandiv{ margin-top: 1rem;}
+.h_scan .wrap .mandiv .sbtn{padding: 0.12rem 1rem; font-size: 0.24rem;}
+.h_data{ padding: 0.2rem 0 0.8rem;}
+.hdataul li .p1{ font-size: 0.45rem; }
+.hdataul li .p2{ font-size: 0.24rem;}
+.h_case{ padding:0.2rem 0  0.4rem;}
+.hcaseul{padding: 0.04rem 0; }
+.hcaseul li{ width: 100%; margin: 0 0% 0.4rem 0; }
+.hcaseul li a{ padding: 0.15rem 0.34rem 0.34rem; border-radius: 0.1rem; box-shadow: 0 0 0.04rem 0 #ccc;}
+.hcaseul .intro .tp{width: 0.8rem;  height: 0.8rem; }
+.hcaseul .intro .des{ padding-left: 1rem;}
+.hcaseul .intro .des .p1{ font-size: 0.22rem; }
+.hcaseul .intro .des .p2{ font-size: 0.26rem; }
+.hcaseul .level{margin-top: 0.15rem;}
+.hcaseul .level .iconfont{ font-size: 0.24rem;}
+.hcaseul .nr{ font-style: 0.22rem; margin-top: 0.04rem; height: auto; }
+
+.hsbox li{ height: 2.5rem !important;}
+.hsbox li a{ height: 2.5rem !important;}
+.h_supp{ padding: 0.1rem 0 1rem;}
+.hstit span{  font-size: 0.3rem; padding-bottom: 0.1rem; margin-right: 0.45rem;}
+.hscon{ margin-top: 0.3rem;}
+
+.h_join{ padding:0.2rem 0 1rem;}
+.h_join .h_tit .tip2{ font-size: 0.24rem; }
+.h_pos{ padding:0.2rem 0 1rem;}
+.hposul{ margin-right: -5%;}
+.hposul li{ width: 28.33%; margin: 0 5% 0.3rem 0;}
+
+
+
+
+
+
+
+
+.footer{ padding-top: 0.7rem;}
+.fdown .tit{ font-size: 0.3rem; line-height: 1.4; }
+.fdown .nr a{ margin:0 0.2rem;}
+.fdown .nr a img{ height: 0.5rem;}
+.fnav{ margin-top: 0.6rem; overflow: hidden;}
+.fnavul{ margin-right: -5%;}
+.fnavul li{ margin-bottom: 0.4rem; width: 45%; margin-right: 5%; }
+.fnavul li:last-child{ width: 100%;}
+.ftit{ font-size: 0.26rem;}
+.ftit .tp{ height: 0.3rem;}
+.fnav .nr1{ font-size: 0.24rem; margin-top: 0.1rem;padding: 0.1rem 0;}
+.fnav .nr1 .p1{margin-bottom: 0.2rem; }
+.fnav .nr2{ margin-top: 0.1rem;padding: 0.1rem 0;}
+.fnav .nr2 a{ font-size: 0.24rem; margin-bottom: 0.2rem;}
+
+
+.f_b{ }
+.copyright{ padding: 15px 0;  font-size: 16px;}
+.cityName{ font-size:0.24rem;}
+}
+/** max-width:640 **/
+@media only screen and (max-width: 639px) {
+}
+
+/** width:480 **/
+@media only screen and (max-width: 479px) {
+
+}
+
+@media only screen and (max-width: 360px) {
+
+}
+/** width:320px **/
+@media only screen and (max-width: 319px) {	
+}
+
+/*********************************首页结束**********************************/
+
+/*******************************************************************/
+/*width:1200+*/
+@media only screen and (min-width: 1200px){}
+/** max-width:1200 **/
+@media only screen and (max-width: 1365px){
+
+	}
+/** max-width:1200 **/
+@media only screen and (max-width: 1199px){
+.sa_tit1 li:nth-child(1){ top: 153px; left: -257px;}
+.sa_tit1 li:nth-child(2){ top: 302px;left: -290px;}
+.sa_tit1 li:nth-child(3){ top: 452px;left: -257px;}
+.sa_tit1 li:nth-child(4){ top: 153px;right: -257px;}
+.sa_tit1 li:nth-child(5){ top: 302px;right: -290px;}
+.sa_tit1 li:nth-child(6){ top: 452px;right: -257px;}
+
+.amCase .item1,.amCase .item2,.amCase .item3{ width: 100%;}
+.item1aul li{ width: 30.33%; margin:0 3% 3% 0;}
+.item1bul{ width: 100%; }
+.item1bul li{width: 23%; margin:0 2% 3% 0; }
+.item1c{width: 100%;}
+.item1c a{ height: 150px;}
+.item2a{width: 100%; margin: 3% 0; }
+.item2a a{ width: 100%;}
+.item2bul li{width: 23%; margin:0 2% 3% 0;}
+
+.item3a a,.item3b a,.item3c a{ width: 30.33%; margin:0 3% 3% 0; float: left; height: 150px;}
+
+}
+/** width:960px **/
+@media only screen and (max-width: 1023px){
+.i_main{ min-height: 0;}
+.soluArea{ width: 80%; height: auto;}
+.sa_tit li{ width: 100% !important; margin-bottom: 10px; position: relative; left: auto !important; top: 0 !important; right: auto !important; }
+.sa_tit li .box{ padding: 15px 15px 15px 40px !important;}
+.sa_tit li .box .num{ right: auto !important; left: -22px;}
+.sa_con{ margin-top: 20px;}
+
+.feeInfoul .price .div1 .num{ font-size: 50px;}
+.feeInfoul .price .div2 .num{ font-size: 24px; }
+.feeInfoul li .area{ padding:20px;}
+.turnpage{ display: none;}
+.turnpage *,.turnpage a,.turnpage span{ display: none;}
+.turnpage .prev,.turnpage .next{ display: inline-block; font-size: 0.24rem; padding:0.05rem 0.3rem;  margin:0 0.3rem; border: 1px solid #ddd;}
+.newsul li{ width: 48%;}
+.floatpart{ display: none;}
+.tarifful_col3 li{ width: 50%;}
+.fdown .nr a:hover .hdownLay{ display: none !important;}
+}
+/** max-width:960 **/
+@media only screen and (max-width: 959px){}
+/** max-width:768 **/
+@media only screen and (max-width: 767px){
+.i_tit{ padding: 0.2rem 0; font-size: 0.4rem;}
+.videoDel{ padding-bottom: 1.5rem;}
+.solu{ padding-bottom: 1rem;}
+.lm a{padding-bottom: 0.1rem; font-size: 0.3rem;  margin: 0 0.4rem; }
+.soluArea{margin: 0.5rem auto 0; height: auto;}
+/* .sabox .tp{ width: 60%;} */
+.sa_tit li{ margin-bottom: 0.2rem}
+.sa_tit li .box{ padding: 0.15rem 0.15rem 0.15rem 0.6rem !important;}
+.sa_tit li .box .num{ left: -0.22rem;}
+.sa_con{ margin-top: 0.2rem; width: 70%;}
+.sabox{ padding:0.5rem 0.54rem; }
+
+.sa_tit li .box .nr{ font-size: 0.22rem; }
+.sa_tit li .box .num{ font-size: 0.22rem;}
+
+.sDown a{  width: 2rem; padding: 0.04rem 0; box-shadow: 0.02rem 0.02rem 0.08rem 0 #c3b491;  margin: 0 0.1rem;}
+.sDown .iconfont{ font-size: 0.24rem; margin-right: 0.05rem;}
+.sDown .val .p1{ font-size: 0.16rem;}
+.sDown .val .p2{ font-size: 0.22rem; }
+
+.feeInfo{ padding-bottom: 2rem; margin-top: 0.2rem;}
+.feeInfoul li{ margin: 0rem 0 0.2rem; width: 100%; }
+.feeInfoul li .area{ padding: 0.2rem;}
+.feeInfoul .version{  font-size: 0.34rem;}
+.feeInfoul .price{ margin-top: 0.2rem;}
+.feeInfoul .price .div2{ margin-top: 0.1rem;}
+.feeInfoul .price .unit{ font-size: 0.2rem;}
+.feeInfoul .price .div1 .num{ font-size: 0.5rem;}
+.feeInfoul .price .div2 .num{ font-size: 0.34rem; }
+.feeInfoul .price .type{font-size: 0.22rem;}
+.feeInfoul .intro .box1{ margin-top: 0.3rem;}
+.feeInfoul .intro .tit{ font-size: 0.22rem; margin-bottom: 0.1rem;}
+.feeInfoul .intro .box1 .nr{ font-size: 0.22rem; }
+.feeInfoul .intro .box1 .nr .font14{ font-size: 0.2rem;}
+.feeInfoul .intro .box2{margin-top: 0.3rem;}
+.feeInfoul .intro .box2 .nr{ font-size: 0.22rem;}
+.feeInfoul .intro .box2 .nr .list{ padding: 0.05rem 0;}
+.act_feeInfo{ margin-top: 0!important;}
+
+.cooRes{ padding-bottom: 0.6rem;}
+.cooResul{ padding-bottom: 0.4rem; margin-top: 0.2rem;}
+.cooResul li{ width: 33.33%; margin-bottom: 0.4rem; }
+.cooResul .tit{ font-size: 0.22rem;height: 0.616rem;  margin-top: 0.05rem;}
+
+.acItem{ height: 1.6rem !important;}
+
+.cooDelul{ padding: 1rem 0 0.6rem;}
+.cooDelul li{ margin-bottom: 0.6rem;}
+.cooDelul .des .tit{ font-size: 0.26rem;}
+.cooDelul .des .nr{ font-size: 0.22rem; margin-top: 0.1rem;}
+
+.news{  padding-bottom: 0.6rem;}
+.newsul li{ margin:0 2% 0.6rem 0;}
+.newsul .des{ padding: 0.2rem 0.1rem; }
+.newsul .des .tit{ font-size:0.3rem;   height: 0.84rem; }
+.newsul .des .time{ font-size: 0.2rem; margin-top: 0.15rem;}
+.newsul .des .nr{ font-size:0.22rem; height:1.76rem; margin-top: 0.1rem;}
+
+.location{ padding: 0.2rem 0;}
+.location a{ font-size: 0.24rem;}
+.location .cutline{margin: 0 0.1rem;}
+.newDel{ padding-bottom: 1rem;}
+.n_tit .tit{ font-size: 0.4rem;}
+.n_tit .time{ font-size: 0.22rem;  margin-top: 0.15rem;}
+.n_del{ margin-top: 0.3rem;}
+.n_del .wz{font-size:0.22rem; color: #555; }
+
+.feedback{ padding-bottom: 0.6rem;}
+.feedback .item{ margin-bottom: 0.36rem; }
+.feedback .textarea{ padding: 0.15rem;  height: 2rem;  font-size: 0.24rem;}
+.feedback .lastNum{ font-size: 0.24rem; padding: 0.04rem 0.2rem; }
+.feedback .text{ padding: 0.25rem 0.15rem;   font-size: 0.24rem;}
+.feedback .tj{ padding-top: 0.6rem;}
+.feedback .tj .sbtn{ font-size: 0.28rem; padding: 0.1rem 1.5rem;}
+.feedback .msg{ font-size: 0.2rem; padding: 0.05rem 0.15rem; bottom: -0.38rem;}
+
+.join{ padding:0 0 0.8rem;}
+.joindl dt{ font-size:0.24rem; padding:0.25rem 0.8rem 0.25rem 0.3rem; ;}
+.joindl dt .status{ width:0.5rem; height:0.5rem;line-height: 0.5rem; right:0.1rem; top:0.22rem;}
+.joindl dt .status .iconfont{ font-size: 0.3rem;}
+.joindl dd{ padding:0.25rem 0.3rem;}
+.joinnr{ font-size:0.28rem;}
+
+.imainWrap{ margin: 0.8rem 0 1.2rem;  padding: 0 0.3rem 0.4rem;}
+.i_tit2{ font-size: 0.3rem; padding: 0.4rem 0 0.3rem;}
+.policy .wz{ font-size: 0.22rem;}
+.policy .tit{ font-size: 0.22rem;} 
+
+.imain2{ min-height: 100%;background-position: center top; }
+.h20{ height: 0.2rem;}
+.imain2 .wrap{  width: 1015px; max-width: 100%; margin: 0px auto 0; background: url(../images/knowbg1.png) top center repeat-y; background-size: 100% auto;}
+.imain2 .wrap2{ background: url(../images/know_bg2.png) top center no-repeat; background-size: 100% auto;}
+
+.i_tit3{ padding: 0.5rem 0;}
+.i_tit3 .tit{ font-size: 0.5rem;}
+.i_tit3 .tip{ font-size: 0.22rem;}
+.cooGrasp{ padding: 0.3rem 0.4rem 0.6rem;}
+.cooGrasp .item{ margin-bottom: 0.38rem; }
+.cooGrasp .item .attrmc{ font-size: 0.26rem;  margin-bottom: 0.05rem;}
+.cooGrasp .item .attrmc .require{margin-left: 0.1rem;}
+.cooGrasp .item .attrval{ padding: 0 0.2rem;}
+.cooGrasp .item .text{  font-size: 0.24rem;  padding:0.1rem;}
+.cooGrasp .item .msg{ font-size: 0.2rem;; left: 0.2rem; bottom: -0.34rem;}
+.cooGrasp .item.tj { padding-top: 0.2rem;}
+.cooGrasp .item.tj .sbtn{ font-size: 0.24rem;
+	padding: 0.06rem 0.5rem;}
+
+.cooGrasp .seltype{ font-size: 0.24rem;}
+.cooGrasp .seltype .radio{ margin-right: 0.05rem;}
+
+.achieve{ padding: 0.6rem 0 0.4rem;}
+.achieve .nr .p1{ font-size: 0.3rem;}
+.achieve .nr .p2{ font-size: 0.22rem; }
+.achieve .mandiv{ margin-top: 0.8rem;}
+
+.vision{ padding: 1.4rem 0; margin-bottom: 0px;}
+.vision .tit{ font-size: 0.4rem; }
+.vision .nr{  font-size: 0.26rem; margin-top: 0.4rem;}
+.tariff{ box-shadow: 0 0 0.2rem 0 #ccc; margin-bottom: 1.4rem;}
+.t_tit{  padding: 0.4rem 0; }
+.t_tit .tit{ font-size: 0.4rem;}
+.t_tit .p1{ font-size: 0.28rem; margin: 0 0.2rem; }
+.tarifful{ margin-bottom: 0.2rem;}
+.tarifful li{ padding: 0.2rem 0; margin-bottom: 0.1rem; width: 100%;}
+.tarifful li .box{ padding: 0 0.3rem;}
+.tarifful .tit{ font-size: 0.3rem; }
+.tarifful .price{ margin-top: 0.2rem; }
+.tarifful .price .div2{ margin-top: 0.1rem;}
+.tarifful .price .unit{ font-size: 0.26rem;}
+.tarifful .price .div1 .num{ font-size: 0.7rem;}
+.tarifful .price .div2 .num{ font-size: 0.44rem; }
+.tarifful .price .type{font-size: 0.24rem; margin-left: 0.1rem;}
+.tarBotInfo{ padding: 0.2rem 0.3rem;}
+.tarBotInfo .p1{ font-size: 0.3rem; }
+
+.features{ padding: 0.3rem 0.2rem 1rem;}
+.fItem{ margin-bottom: 0.2rem;}
+.fea_tit{ font-size: 0.44rem;  padding: 0.3rem 0;}
+.mobileIntro .p1{ font-size: 0.26rem; }
+.mobileIntro .p2{ font-size: 0.24rem; margin-top: 0.05rem; margin-bottom: 0.15rem;}
+.mobileFul li{  width: 90%; margin: 0 5% 0.4rem;}
+.mobileFul .tparea{ width: 80%; margin: 0 auto; }
+.mobileFul .des .tit{font-size:0.24rem; margin-top:0.1rem; }
+
+.websiteFul{ padding-top: 0.2rem;}
+.websiteFul li{  width: 97%; margin: 0 3% 0.4rem 0;}
+.websiteFul .des .tit{font-size:0.24rem; margin-top:0.1rem; }
+.websiteFul .mandiv{ margin-top: 0.2rem;}
+.websiteFul .mandiv .sbtn{ padding: 0.1rem 0.44rem; font-size: 0.24rem; }
+
+.appFul{padding-top: 0rem; }
+.appFul li{  width: 46%; margin: 0 2% 0.4rem;}
+.appIntro{ font-size: 0.24rem; text-align: left; }
+
+.favCase{ padding-bottom: 0.5rem;}
+.floatpart{right:19px; bottom: 100px;}
+.floatpartul{ width:47px; margin-right:1px;}
+.floatpartul li{ padding-left: 14px; }
+.floatpartul li a{ width:40px; height:40px;}
+.floatpartul li a img{ width:30px;  height:30px; padding-top:5px;}
+.codeLay{ width: 120px; padding: 10px 0; right:42px; top:-52px; }
+.codeLay::after{border-left: 4px solid #fff; border-top: 5px solid transparent; border-bottom: 5px solid transparent; right: -4px; top: 50%; margin-top: -6px;}
+.codeLay .tp{ width:100px; height:100px; }
+.codeLay .tit{ font-size: 12px; margin-top: 8px; padding: 0 0.3rem;}
+
+.messlay{ position:absolute; right:42px; width:6rem;  bottom: -174px; }
+.messlay::after{ border-left: 4px solid #fff; border-top: 5px solid transparent; border-bottom: 5px solid transparent;right: -4px; bottom: 188px;}
+.hmform .tit{ font-size:0.26rem; padding:0.2rem 0;}
+.hmform{  padding: 0 0.2rem 0.2rem; }
+.hmform .item{ margin-bottom: 0.3rem; }
+.hmform .item .attrmc{ font-size: 0.22rem; margin-bottom: 0.05rem;}
+.hmform .item .attrmc .require{ margin-left: 0.08rem;}
+.hmform .item .text{ height: 0.6rem; line-height: 0.6rem; font-size: 0.22rem;padding: 0.14rem 0.2rem;}
+.hmform .item .textarea{  font-size: 0.22rem; padding:0.1rem 0.2rem; height: 0.88rem;}
+.hmform .item .selCountry{  height: 0.6rem; line-height: 0.6rem; font-size: 0.22rem; padding: 0 0.2rem;}
+.hmform .item .msg{ font-size: 0.2rem; padding-left: 0.2rem; }
+.hmform .item.tj { padding-top: 0.2rem;}
+.hmform .item.tj .sbtn{ font-size: 0.24rem; padding: 0.06rem 0.5rem;}
+.subAchieve{font-size:0.26rem; padding:0.18rem 0;}
+.subAchieve .tp{ margin-top: 0.3rem;}
+.subAchieve .tp .iconfont{ font-size: 0.9rem;;}
+.subAchieve .nr .p1{ font-size: 0.22rem; margin-top: 0.1rem;}
+.subAchieve .tj{ margin-top: 0.3rem;}
+.subAchieve .tj .sbtn{ font-size: 0.24rem; padding: 0.06rem 0.5rem;}
+
+input[type='radio'],input[type='checkbox']{  width:0.3rem; height:0.3rem; margin-right: 0.2rem;}
+}
+/** max-width:640 **/
+@media only screen and (max-width: 639px){
+	}
+/** width:480 **/
+@media only screen and (max-width: 479px) {}
+/** width:360px **/
+@media only screen and (max-width: 360px) {}
+
+/** width:320px **/
+@media only screen and (max-width: 319px){}
+/*******************************************************************/
+
+

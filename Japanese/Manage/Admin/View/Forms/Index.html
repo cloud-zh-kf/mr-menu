@@ -1,0 +1,55 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+	<div class="layui-tab layui-tab-brief" lay-filter="tab">
+		<ul class="layui-tab-title">
+			<li class="layui-this"><a href="{my:U('Forms/Index')}">表单管理</a></li>
+			<li><a href="{my:U('Forms/Add')}">表单添加</a></li>
+		</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">
+				<table class="layui-table">
+					<thead>
+					<tr>
+						<th>选择</th>
+						<th>序号</th>
+						<th>名称</th>
+						<th>表名</th>
+						<th>操作</th>
+					</tr>
+					</thead>
+					<tbody>
+					<volist name="list" id="v">
+						<tr>
+							<td><input name="checkid[]" type="checkbox" value="{my$v.id}"></td>
+							<td>{my$v.id}</td>
+							<td>{my$v.title}</td>
+							<td>{my$v.tablename}</td>
+							<td>
+
+								<a href="{my:U(CONTROLLER_NAME.'/Infos',"typeid=".$v['id']."")}" class='layui-btn layui-btn-xs layui-btn-blue' >信息列表</a>
+								<a href="{my:U(CONTROLLER_NAME.'/Fields',"typeid=".$v['id']."")}" class='layui-btn layui-btn-xs layui-btn-danger' >管理字段</a>
+								<a href="{my:get_url($v['id'],'Forms','Add')}" class='layui-btn layui-btn-xs layui-btn-green' >修改</a>
+								<a href='{my:get_url($v['id'],'Forms','FormsDel')}' onclick='return confirm("您确定要删除吗？\n\n删除后不可恢复!")' class='layui-btn layui-btn-xs layui-btn-danger' title='删除'>删除</a>
+							</td>
+						</tr>
+					</volist>
+					</tbody>
+				</table>
+				<div class="page">
+					{my$page}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

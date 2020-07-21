@@ -1,0 +1,59 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+		<div class="layui-tab layui-tab-brief" lay-filter="tab">
+			<input type="hidden" id="url" value="Admin-Backup">
+			<ul class="layui-tab-title">
+				<li class="layui-this"><a href="javascript:;" class="btach" type="1">数据备份</a></li>
+				<li><a href="{my:U('Backup/Import')}" class="btachs">还原数据</a></li>
+				<li><a href="javascript:;" class="btach" type="2">优化数据</a></li>
+				<li><a href="javascript:;" class="btach" type="3">修复数据</a></li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<table class="layui-table">
+						<form action="" method="post" name="formlist" class="layui-form">
+						<thead>
+						<tr>
+							<th><input type="checkbox" name="all" onClick="CheckAll(this);" class="checkbox" title="全选" checked> 全选</th>
+							<th>表名</th>
+							<th>数量</th>
+							<th>大小</th>
+							<th>创建时间</th>
+							<th>操作</th>
+						</tr>
+						</thead>
+						<tbody>
+						<volist name="list" id="v">
+							<tr>
+								<td><input name="id" type="checkbox" value="{my$v.Name}" checked></td>
+								<td>{my$v.Name}</td>
+								<td>{my$v.Rows}</td>
+								<td>{my$v.Data_length|formatBytes}</td>
+								<td>{my$v.Create_time}</td>
+								<td>
+									<a href="javascript:;" type="2" data-name="{my$v.Name}" class='do layui-btn layui-btn-xs layui-btn-danger' title='优化表'>优化表</a>
+									<a href="javascript:;" type="3" data-name="{my$v.Name}" class='do layui-btn layui-btn-xs' title='修复表'>修复表</a>
+								</td>
+							</tr>
+						</volist>
+						</tbody>
+						</form>
+					</table>
+					<div class="page">
+						{my$page}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<?php $Custitle="填写报名表"?>
+<include file="public/header" />
+<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="My97DatePicker/calendar.js"></script>
+
+<div class="wp">
+      <div class="clearfix membelst">
+          <include file="public/uleft" />
+           <div class="memberfr fl">
+                <div class="membfrtit">申请入学信息表<span>请完善您的报名信息，提高录取成功率</span></div>
+                <div class="bmxxtxwp">
+                     <table>
+                          <tr>
+                            <td>
+                               <div class="bmxkb">
+                                    <span><i>*</i> 姓名:</span>
+                                   {my$vs.xs_realname}
+                               </div>
+                            </td>
+                            <td>
+                               <div class="bmxkb">
+                                    <span><i>*</i> 性别:</span>
+                                   {my$vs.sex}
+                               </div>
+                            </td>
+                            <td>
+                               <div class="bmxkb">
+                                    <span><i>*</i> 民族:</span>
+                                   {my$vs.mz}
+                               </div>
+                            </td>
+                            <td>
+                               <div class="bmxkb">
+                                    <span><i>*</i> 出生年月:</span>
+                                   {my$vs.csrq}
+                                </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td>
+                               <div class="bmxkb">
+                                    <span><i>*</i> 国籍:</span>
+                                   {my$vs.gj}
+                                </div>
+                            </td>
+                            <td>
+                               <div class="bmxkb">
+                                    <span><i>*</i> 证件类型:</span>
+                                   {my$vs.zjlx}
+                               </div>
+                            </td>
+                            <td colspan="2">
+                               <div class="bmxkb">
+                                    <span><i>*</i> 证件号码:</span>
+                                   {my$vs.zjhm}
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="4">
+                               <div class="bmxkb bamxkco">
+                                    <span><i>*</i> 家庭住址:</span>
+                                   {my$vs.jtzz}
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td>
+                               <div class="bmxkb">
+                                    <span><i>*</i> 毕业学校全称:</span>
+                                   {my$vs.byxx}
+                               </div>
+                            </td>
+                            <td>
+                               <div class="bmxkb">
+                                    <span><i>*</i> 班级:</span>
+                                   {my$vs.bj}
+                               </div>
+                            </td>
+                            <td>
+                               <div class="bmxkb">
+                                    <span>班主任:</span>
+                                   {my$vs.bzr}
+                               </div>
+                            </td>
+                            <td>
+                               <div class="bmxkb">
+                                    <span>班主任联系方式：</span>
+                                   {my$vs.bzrlxfs}
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td>
+                                <div class="bmxkb">
+                                    <span><i>*</i>毕业学校所在地：</span>
+                                    {my$vs.city}
+                               </div>
+                            </td>
+                            <td>
+                               <div class="bmxkb">
+                                   {my$vs.area}
+                               </div>
+                            </td>
+                            <td colspan="2">
+                                <div class="bmxkb">
+                                    <span>其他地区：</span>
+                                    {my$vs.qtarea}
+                                </div>
+                            </td>
+                         </tr>
+                         <tr>
+                           <td colspan="4">
+                                <table class="lxtable">
+                                    <tr>
+                                       <th>联系人</th>
+                                       <th>姓名</th>
+                                       <th>与学生关系</th>
+                                       <th>文化程度</th>
+                                       <th>工作单位</th>
+                                       <th>职务名称</th>
+                                       <th>工作单位地址</th>
+                                       <th>联系电话</th>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                           <div class="bmxkb"><span><i>*</i>父亲</span></div>
+                                       </td>
+                                       <td>{my$vs.fq_realname}</td>
+                                       <td>{my$vs.fq_gx}</td>
+                                       <td>{my$vs.fq_whcd}</td>
+                                       <td>{my$vs.fq_gzdw}</td>
+                                       <td>{my$vs.fq_zwmc}</td>
+                                       <td>{my$vs.fq_gzdwdz}</td>
+                                       <td>{my$vs.fq_lxdh}</td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                           <div class="bmxkb"><span><i>*</i>母亲</span></div>
+                                       </td>
+                                       <td>{my$vs.mq_realname}</td>
+                                       <td>{my$vs.mq_gx}</td>
+                                       <td>{my$vs.mq_whcd}</td>
+                                       <td>{my$vs.mq_gzdw}</td>
+                                       <td>{my$vs.mq_zwmc}</td>
+                                       <td>{my$vs.mq_gzdwdz}</td>
+                                       <td>{my$vs.mq_lxdh}</td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                           <div class="bmxkb"><span>其他联系人</span></div>
+                                       </td>
+                                       <td><input type="text" name="qt_realname" class="bmxktxt"></td>
+                                       <td><input type="text" name="qt_gx" class="bmxktxt"></td>
+                                       <td><input type="text" name="qt_whcd" class="bmxktxt"></td>
+                                       <td><input type="text" name="qt_gzdw" class="bmxktxt"></td>
+                                       <td><input type="text" name="qt_zwmc" class="bmxktxt"></td>
+                                       <td><input type="text" name="qt_gzdwdz" class="bmxktxt"></td>
+                                       <td><input type="text" name="qt_lxdh" class="bmxktxt"></td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="4">
+                                           <div class="bmxkb">
+                                                <span><i>*</i>优先联系人</span>
+                                                <input type="text" name="yxlxr" class="bmxktxt">
+                                           </div>
+                                       </td>
+                                       <td colspan="4">
+                                           <div class="bmxkb">
+                                                <span><i>*</i>主要监护人姓名</span>
+                                                <input type="text" name="zyjhrxm" class="bmxktxt">
+                                           </div>
+                                       </td>
+                                    </tr>
+                                </table>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="4">
+                               <div class="bmxkb bamxkco">
+                                    <span><i>*</i> 兴趣爱好:</span>
+                                    <textarea class="bamktar" name="xqah"></textarea>
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="4">
+                               <div class="bmxkb">
+                                    <span><i>*</i> 最擅长的学习方式</span>
+                                    <ul class="bmradio clearfix">
+                                        <li>
+                                           <input type="radio" name="xxfs" value="听" class="inbk">
+                                           <label>听</label>
+                                        </li>
+                                        <li>
+                                           <input type="radio" name="xxfs" value="读" lass="inbk">
+                                           <label>读</label>
+                                        </li>
+                                        <li>
+                                           <input type="radio" name="xxfs" value="写" class="inbk">
+                                           <label>写</label>
+                                        </li>
+                                        <li>
+                                           <input type="radio" name="xxfs" value="讨论" class="inbk">
+                                           <label>讨论</label>
+                                        </li>
+                                        <li>
+                                           <input type="radio" name="xxfs" value="体验" class="inbk">
+                                           <label>体验</label>
+                                        </li>
+                                    </ul>
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="4">
+                               <div class="bmxkb bamxkco">
+                                    <span>特长及其水平</span>
+                                    <textarea class="bamktar" name="tc"></textarea>
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="4">
+                               <div class="bmxkb bamxkco">
+                                    <span>获奖情况</span>
+                                    <textarea class="bamktar" name="hj"></textarea>
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="4">
+                               <div class="clzm perinfor">
+                                    <span>上传证明材料:</span>
+                                    <div class="tp">
+                                         <img id="img1" src="images/clzm.jpg">
+                                         <div class="opa">
+                                              <input class="wfile btn1" type="file" name="img1" onchange="PreviewImage(this,'img1','divPreview1')">
+                                         </div>
+                                    </div>
+                                    <div class="tp">
+                                         <img id="img2" src="images/clzm.jpg">
+                                         <div class="opa">
+                                              <input class="wfile btn1" type="file" name="img2" onchange="PreviewImage(this,'img2','divPreview2')">
+                                         </div>
+                                    </div>
+                                    <div class="tp">
+                                         <img id="img3" src="images/clzm.jpg">
+                                         <div class="opa">
+                                              <input class="wfile btn1" type="file" name="img3" onchange="PreviewImage(this,'img3','divPreview3')">
+                                         </div>
+                                    </div>
+                                    <div class="tp">
+                                         <img id="img4" src="images/clzm.jpg">
+                                         <div class="opa">
+                                              <input class="wfile btn1" type="file" name="img4" onchange="PreviewImage(this,'img4','divPreview4')">
+                                         </div>
+                                    </div>
+                                    <div class="tp">
+                                         <img id="img5" src="images/clzm.jpg">
+                                         <div class="opa">
+                                              <input class="wfile btn1" type="file" name="img5" onchange="PreviewImage(this,'img5','divPreview5')">
+                                         </div>
+                                    </div>
+                                    <div class="tp">
+                                         <img id="img6" src="images/clzm.jpg">
+                                         <div class="opa">
+                                              <input class="wfile btn1" type="file" name="img6" onchange="PreviewImage(this,'img6','divPreview6')">
+                                         </div>
+                                    </div>
+                                    <div class="tp">
+                                         <img id="img7" src="images/clzm.jpg">
+                                         <div class="opa">
+                                              <input class="wfile btn1" type="file" name="img7" onchange="PreviewImage(this,'img7','divPreview7')">
+                                         </div>
+                                    </div>
+                                    <div class="tp">
+                                         <img id="img8" src="images/clzm.jpg">
+                                         <div class="opa">
+                                              <input class="wfile btn1" type="file" name="img8" onchange="PreviewImage(this,'img8','divPreview8')">
+                                         </div>
+                                    </div>
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="4">
+                               <div class="bmxkb">
+                                    <span><i>*</i> 您是通过何种渠道获知我校信息</span>
+                                    <ul class="bmradio clearfix">
+                                        <li>
+                                           <input type="radio" name="qd" value="微信公众号" class="inbk">
+                                           <label>微信公众号</label>
+                                        </li>
+                                        <li>
+                                           <input type="radio" name="qd" value="线下广告" class="inbk">
+                                           <label>线下广告</label>
+                                        </li>
+                                        <li>
+                                           <input type="radio" name="qd" value="老师推荐" class="inbk">
+                                           <label>老师推荐</label>
+                                        </li>
+                                        <li>
+                                           <input type="radio" name="qd" value="通过网络广告" class="inbk">
+                                           <label>通过网络广告</label>
+                                        </li>
+                                        <li>
+                                           <input type="radio" name="qd" value="通过朋友介绍" class="inbk">
+                                           <label>通过朋友介绍</label>
+                                        </li>
+                                        <li>
+                                           <input type="radio" name="qd" value="其他" class="inbk">
+                                           <label>其他</label>
+                                        </li>
+                                    </ul>
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="4">
+                               <div class="bmxkb bamxkco">
+                                    <span><i>*</i>您在为孩子选择学校时最关心哪些方面:</span>
+                                    <textarea class="bamktar" name="gx"></textarea>
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="4">
+                               <div class="bmxkb bamxkco">
+                                    <span>备注:</span>
+                                    <textarea class="bamktar" name="bz"></textarea>
+                               </div>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="4" class="tc">
+                                <button class="bmxttj">提交</button>
+                            </td>
+                         </tr>
+                      </table>
+                </div>
+           </div>
+      </div>
+</div>
+
+<include file="public/footer" />
+</body>
+</html>
+

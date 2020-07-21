@@ -1,0 +1,90 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+	<div class="layui-tab layui-tab-brief" lay-filter="tab">
+		<ul class="layui-tab-title">
+			<li class="layui-this"><a href="{my$vs.listurl}">{my$vs.catname}</a></li>
+			<li><a href="{my$vs.addurl}">{my$vs.catname}添加</a></li>
+		</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">
+				<form action="__ACTION__" method="get" class="layui-form">
+					<input type="hidden" name="pid" value="{my$vs.pid}">
+					<input type="hidden" name="ty" value="{my$vs.ty}">
+					<input type="hidden" name="tty" value="{my$vs.tty}">
+					<input type="hidden" name="ttty" value="{my$vs.ttty}">
+					<div class="layui-form-item nospace">
+						<div class="layui-input-inline">
+							<input type="text" name="q" value="<?php echo I('request.q')?>" placeholder="请输入搜索关键字" class="layui-input">
+						</div>
+						<div class="layui-input-inline">
+							<button class="layui-btn" lay-submit>搜索</button>
+							<a class="layui-btn layui-btn-primary"  href="/jxadmin/news.php?pid=2&ty=11">清除搜索</a>
+						</div>
+					</div>
+				</form>
+
+				<form action="{my:U('News/Action')}" method="post" id="contentForm" name="formlist" class="layui-form" onkeydown="if(event.keyCode==13) return false;">
+				<table class="layui-table">
+					<thead>
+					<tr>
+						<th><input type="checkbox" class="checkbox" lay-ignore id="checkall" title="全选"> 全选</th>
+						<th>序号|ID</th>
+						<if condition="$vs['imgnum'] gt 0"><th>缩略图</th></if>
+						<th style="width: 300px;">标题</th>
+						<!-- <if condition="$vs['pid'] eq 3"><th>案例详情内容</th></if> -->
+						<th>排序</th>
+						<th>状态</th>
+						<th>发布时间</th>
+						<th>操作</th>
+					</tr>
+					</thead>
+					<tbody>
+					<volist name="list" id="v">
+						<tr>
+							<td><input type="checkbox" class="checkbox checkitem" lay-ignore name="checkid[]" value="{my$v.id}"></td>
+							<td>{my$i}|{my$v['id']}</td>
+							<if condition="$vs['imgnum'] gt 0"><td><img src="{my$v.img1|default='/Uploads/nopic.jpg'}" width="80" /></td></if>
+							<td>{my$v.title} <if condition="$v['isgood'] eq 1"><font color="red">推荐</font></if> <if condition="$v['istop'] eq 1"><font color="blue">置顶</font></if></td>
+							<!-- <if condition="$vs['pid'] eq 3">
+								<td><a href='Admin-Case-Index-pid-{my$v.id}-ty-{my$v.ty}-tty-{my$v.tty}.html'  class='layui-btn layui-btn-xs'>修改</a></td>
+							</if> -->
+							<td class="table-input">
+ 								<input type="text" name="sorting[]" value="{my$v['disorder']}" class="layui-input">
+							</td>
+							<td>
+								<?php if($v['status']==1){?>
+								<a href='{my:get_url($v['id'],'News','Audit')}'><i class='fa fa-toggle-on' title="点击关闭"></i></a>
+								<?php }else{?>
+								<a href='{my:get_url($v['id'],'News','Audit')}'><i class='fa fa-toggle-off' title="点击开启"></i></a>
+								<?php }?>
+							</td>
+							<td>{my:get_time($v['sendtime'],'Y-m-d')}</td>
+							<td>
+								<a href='{my:get_url($v['id'],'News','Add')}'  class='layui-btn layui-btn-xs'>修改</a>
+								<a href='{my:get_url($v['id'],'News','Del')}' onclick='return confirm("您确定要删除吗？\n\n删除后不可恢复!")' class='layui-btn layui-btn-xs layui-btn-danger' title='删除'>删除</a>
+							</td>
+						</tr>
+					</volist>
+					</tbody>
+				</table>
+				<button type="submit" name="act" value="alldel" onClick="return checkData();" class="layui-btn">批量删除</button>
+				<button type="submit" name="act" value="sorting" onClick="return checkData();" class="layui-btn">保存排序</button>
+				</form>
+				<div class="page">
+					{my$page}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

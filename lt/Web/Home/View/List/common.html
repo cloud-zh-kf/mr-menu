@@ -1,0 +1,195 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+       <div class="wp">
+            <h4 class="i_tit tc">{my:get_sort_zd(16)}</h4>
+            <div class="join wp">
+                <dl class="joindl">
+                    <volist name=":get_news(4,16,0,0,'*',1000)" id="v">
+                        <dt act="{my$v.title}">{my$v.title}<em class="status"><i class="iconfont icon-down2"></i></em></dt>
+                        <dd>
+                            <div class="joinnr clearfix">
+                                {my:get_html($v['content'])}
+                            </div>
+                        </dd>
+                    </volist>
+                </dl>
+            </div>
+            <!-- 问题反馈 -->
+            <form method="post" action="index.php?m=Home&c=List&a=message" style="display: none;" id="wtfk">
+                <div class="qusForm">
+                    <h4 class="i_tit tc">Feedback dei problemi</h4>
+                <div class="feedback">
+                    <input type="hidden" name="typeid" value="2">
+                    <input type="hidden" name="cjwt" value="Feedback dei problemi" class="wtfk">
+                    <div class="item" id="wordCount">
+                        <textarea name="message" required="" oninvalid="setCustomValidity('Inserisci il tuo feedback / intenzione di cooperazione')" oninput="setCustomValidity('')" id="" placeholder="Inserisci il tuo feedback / intenzione di cooperazione" class="textarea rd10"></textarea>
+                        <span class="lastNum"><span class="word">1000</span>/1000</span>
+                    </div>
+                    <div class="item">
+                            <input type="text" required="" oninvalid="setCustomValidity('Inserisci un nome')" oninput="setCustomValidity('')" name="name" placeholder="Nome" class="text rd10">
+                        </div>
+                        <div class="item">
+                            <input type="number" required="" oninvalid="setCustomValidity('Si prega di inserire le informazioni di contatto')" oninput="setCustomValidity('')" placeholder="Informazioni di contatto" id="tel" name="tel" class="text rd10">
+                            <!-- 默认不显示提示 -->
+                            <div class="msg"></div>
+                        </div>
+                        <div class="item">
+                            <input type="text" required="" oninvalid="setCustomValidity('Si prega di inserire e-mail')" oninput="setCustomValidity('')" name="email" id="email" placeholder="e-mail" class="text rd10">
+                            <div class="msg"></div>
+                        </div>
+                    <div class="item tj tc">
+                        <input type="submit" value="Invia" class="sbtn btn rd40 sbtn_green btn_tj">
+                    </div>
+                </div>
+                <script>
+                        // 问题反馈
+                        var wordCount = $("#wordCount"),
+                        textArea = wordCount.find("textarea"),
+                        word = wordCount.find(".word");
+                        //调用
+                        statInputNum(textArea,word);
+                        function statInputNum(textArea,numItem) {
+         
+                            var max = numItem.text(),
+        
+                                curLength;
+        
+                            textArea[0].setAttribute("maxlength", max);
+        
+                            curLength = textArea.val().length;
+        
+                            numItem.text(max - curLength);
+        
+                            textArea.on('input propertychange', function () {
+        
+                                numItem.text(max - $(this).val().length);
+        
+                            });
+        
+                            }
+                    </script>
+                </div>
+            </form>
+            <!-- 意见反馈 -->
+            <form method="post" action="index.php?m=Home&c=List&a=message" style="display: block;" id="yjfk">
+                <div class="qusForm">
+                    <h4 class="i_tit tc">Feedback</h4>
+                <div class="feedback">
+                    <input type="hidden" name="cjwt" value="Feedback">
+                    <input type="hidden" name="typeid" value="2">
+                    <div class="item" id="wordCount">
+                        <textarea name="message" required="" oninvalid="setCustomValidity('Inserisci il tuo feedback / intenzione di cooperazione')" oninput="setCustomValidity('')" id="" placeholder="Inserisci il tuo feedback / intenzione di cooperazione " class="textarea rd10"></textarea>
+                        <span class="lastNum"><span class="word">1000</span>/1000</span>
+                    </div>
+                    <div class="item">
+                            <input type="text" required="" oninvalid="setCustomValidity('Inserisci un nome')" oninput="setCustomValidity('')" name="name1" placeholder="Nome" class="text rd10">
+                        </div>
+                        <div class="item">
+                            <input type="number" required="" oninvalid="setCustomValidity('Si prega di inserire le informazioni di contatto')" oninput="setCustomValidity('')" placeholder="Informazioni di contatto" id="tel1" name="tel" class="text rd10">
+                            <!-- 默认不显示提示 -->
+                            <div class="msg"></div>
+                        </div>
+                        <div class="item">
+                            <input type="text" required="" oninvalid="setCustomValidity('Si prega di inserire e-mail')" oninput="setCustomValidity('')" name="email" id="email1" placeholder="e-mail" class="text rd10">
+                            <div class="msg"></div>
+                        </div>
+                    <div class="item tj tc">
+                        <input type="submit" value="Invia" class="sbtn btn btn_bb rd40 sbtn_green">
+                    </div>
+                </div>
+                <script>
+                        // 问题反馈
+                        var wordCount = $("#wordCount"),
+                        textArea = wordCount.find("textarea"),
+                        word = wordCount.find(".word");
+                        //调用
+                        statInputNum(textArea,word);
+                        function statInputNum(textArea,numItem) {
+         
+                            var max = numItem.text(),
+        
+                                curLength;
+        
+                            textArea[0].setAttribute("maxlength", max);
+        
+                            curLength = textArea.val().length;
+        
+                            numItem.text(max - curLength);
+        
+                            textArea.on('input propertychange', function () {
+        
+                                numItem.text(max - $(this).val().length);
+        
+                            });
+        
+                            }
+                    </script>
+                </div>
+            </form>
+       </div>
+    </div>
+    <!--i_main end-->
+    <script type="text/javascript">
+           $('.btn_bb').click(function(){
+
+                 tel = $('#yjfk #tel1');
+                 // alert(tel.val());
+                 name=$('#yjfk #name1').val();
+                 type=$('#yjfk #type1').val();
+                 add=$('#yjfk #add1').val();
+                 var email=$("#email1").val();
+                var zz = /^[0-9][0-9][0-9]{4,10}$/;
+                var dh=/^[0-9][0-9][0-9]{11}$/;
+
+                    if (!(zz.test(tel.val()) || dh.test(tel.val()))) {
+                            $('#yjfk #tel1').focus();
+                            $('#yjfk #tel1').next('.msg').html('Il formato del tuo numero di cellulare non è corretto!');
+                            return false;
+                          }else{
+                            $('#yjfk #tel1').next('.msg').html('');
+                          }
+
+                        if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/))
+                        {
+                           $('#yjfk #email1').next('.msg').html('Formato errato! Si prega di reinserire');
+                           $("#yjfk #email1").focus();
+                            return false;
+                        }else{
+                           $('#yjfk #email1').next('.msg').html('');
+                        }
+
+                        
+            });
+     </script>
+     <script type="text/javascript">
+           $('.btn_tj').click(function(){
+                 tel = $('#wtfk #tel');
+                 name=$('#wtfk #name').val();
+                 type=$('#wtfk #type').val();
+                 add=$('#wtfk #add').val();
+                 var email=$("#email").val();
+                var zz = /^[0-9][0-9][0-9]{4,9}$/;
+                var dh=/^[0-9][0-9][0-9]{11}$/;
+
+                if (!(zz.test(tel.val()) || dh.test(tel.val()))) {
+                            $('#wtfk #tel').focus();
+                            $('#wtfk #tel').next('.msg').html('Il formato del tuo numero di cellulare non è corretto!');
+                            return false;
+                          }else{
+                            $('#wtfk #tel').next('.msg').html('');
+                          }
+
+                        if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/))
+                        {
+                           $('#wtfk #email').next('.msg').html('Formato errato! Si prega di reinserire');
+                           $("#wtfk #email").focus();
+                            return false;
+                        }else{
+                           $('#wtfk #email').next('.msg').html('');
+                        }
+
+                        
+            });
+     </script>
+<include file='public/footer' />

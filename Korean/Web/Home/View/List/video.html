@@ -1,0 +1,30 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+        <div class="wp">
+            <volist name=":get_view($id)" id="v">
+                <!-- <h4 class="i_tit tc">{my$v.title}</h4> -->
+                <div class="videoDel tc">
+                    <video class="videoBox rd10" poster="./images/videoBg.jpg"  controls loop='loop'  muted autoplay="">
+                        <source src="{my$v.file1}" type="video/mp4">
+                        Your browser does not support video tags. Please upgrade your browser
+                    </video>
+                    <style>
+                        video {
+                            object-fit: cover;
+                            }
+                        .videoDel{ width: 1000px; max-width: 100%; margin: 0 auto; border-radius: 10px; overflow: hidden;}
+                    </style>
+                    <link rel="stylesheet" href="player/mediaelementplayer.css">
+                    <script type="text/javascript" src="player/mediaelement-and-player.min.js"></script>
+                    <script>
+                    jQuery(document).ready(function($){
+                       $('video,audio').mediaelementplayer();
+                    });
+                    </script>
+                </div>
+            </volist>
+        </div>
+    </div>
+    <!--i_main end-->
+<include file='public/footer' />

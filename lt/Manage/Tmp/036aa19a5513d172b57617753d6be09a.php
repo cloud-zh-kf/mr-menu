@@ -1,0 +1,5 @@
+<?php
+//000000000001a:1:{i:0;a:30:{s:2:"id";s:2:"83";s:3:"fid";s:1:"0";s:3:"pid";s:2:"43";s:2:"ty";s:2:"44";s:3:"tty";s:1:"0";s:4:"ttty";s:1:"0";s:5:"title";s:17:"SIAMO MR.MENU ！";s:4:"tags";s:0:"";s:7:"linkurl";s:0:"";s:9:"introduce";s:101:"Vi invitiamo cliccare sul link &quot;Conoscenza di cooperazione&quot; qui sotto per unirvi a Mr. Menu";s:7:"content";s:218:"&lt;p&gt;
+	Ci impegniamo a costruire una piattaforma per gli ordini online e a fornire servizi di catering online. Migliorare l'efficienza del servizio del ristorante e risolvere i problemi di ordinazione!
+&lt;/p&gt;";s:4:"img1";s:24:"/en/images/vision_bg.jpg";s:4:"img2";s:0:"";s:4:"img3";s:0:"";s:4:"img4";s:0:"";s:4:"img5";s:0:"";s:4:"img6";s:0:"";s:5:"file1";s:0:"";s:5:"price";s:0:"";s:6:"source";s:0:"";s:6:"author";s:0:"";s:8:"seotitle";s:0:"";s:11:"seokeywords";N;s:14:"seodescription";N;s:4:"hits";s:1:"0";s:6:"isgood";s:1:"0";s:5:"istop";s:1:"0";s:6:"status";s:1:"1";s:8:"disorder";s:1:"0";s:8:"sendtime";s:10:"1592991269";}}
+?>

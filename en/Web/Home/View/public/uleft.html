@@ -1,0 +1,66 @@
+<div class="side">
+    <img src="{my:get_zd_name('img2','sort',"id=".$vpid."")}">
+    <ul class="sidenav">
+
+        <?php if($vpid==3){?>
+
+        <li>
+            <h3>{my:get_sort_zd(8)}</h3>
+            <volist name=":get_sort_list(8)" id="v">
+            <div id="div_85" class="class1">
+                <a id="cate_85" href="{my:get_sort_url($v['pid'],$v['id'],0,$v['linkurl'])}"><span>></span>{my$v.catname}</a>
+                <div class="class2">
+
+                </div>
+            </div>
+        </volist>
+
+        </li>
+        <li>
+            <h3>产品分类</h3>
+            <volist name=":get_sort_list(3)" id="v">
+            <div class="class1">
+                <a  href="{my:get_sort_url($v['pid'],$v['id'],0,$v['linkurl'])}"><span>></span>{my:get_sort_zd($v['id'])}</a>
+                <div class="class2">
+                    <volist name=":get_sort_list($v['id'])" id="v2">
+                    <a id="cate_92" href="{my:get_sort_url($v['pid'],$v2['pid'],$v2['id'],$v['linkurl'])}"><span>></span>{my:get_sort_zd($v2['id'])}</a>
+                    </volist>
+                </div>
+            </div>
+            </volist>
+
+        </li>
+
+        <?php }else{?>
+		
+        
+			<?php if($vpid==1){?>
+				<volist name=":get_sort_list($vpid)" id="v">
+					<li>
+					<h3>{my$v.catname}</h3>
+					<volist name=":get_sort_list($v['id'])" id="v2">
+						<a href="{my:get_sort_url($vpid,$v2['pid'],$v2['id'],$v['linkurl'])}" <?php if($v2['id']==$vtty) echo 'class="current"';?>><span>></span>{my$v2.catname}</a>
+					</volist>
+					</li>
+				</volist>
+				<?php }else{?>
+				<volist name=":get_sort_list($vpid)" id="v">
+				<li <?php if($vpid==4){?>class="service"<?php }?>><a href="{my:get_sort_url($v['pid'],$v['id'],0,$v['linkurl'])}" <?php if($v['id']==$vty) echo 'class="current"';?>><span>></span>{my$v.catname}</a></li>
+				</volist>
+			<?php }?>
+      
+        <?php }?>
+
+    </ul>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#cate_' + $('#cate').attr('data-id')).addClass('current');
+        });
+    </script>
+
+    <img class="sidecontactimg" src="static/picture/side-top-contact.jpg">
+    <div class="sidecontact">{my:sys('sys_address')}<br>
+        TEL : {my:sys('sys_phone')}<br>
+        FAX : {my:sys('sys_fax')}</div>
+</div>

@@ -1,0 +1,62 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+	<div class="layui-tab layui-tab-brief" lay-filter="tab">
+		<ul class="layui-tab-title">
+			<li class="layui-this"><a href="{my:U('Manager/Index')}">系统用户列表</a></li>
+			<li><a href="{my:U('Manager/Add')}">系统用户添加</a></li>
+		</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">
+				<table class="layui-table">
+					<thead>
+					<tr>
+						<th>序号|ID</th>
+						<th>所属角色</th>
+						<th>姓名</th>
+						<th>用户名</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+					</thead>
+					<tbody>
+					<volist name="list" id="v">
+						<tr>
+							<td>{my$i}|{my$v['id']}</td>
+							<td>{my:get_role_zd($v['role_id'])}</td>
+							<td>{my$v['realname']}</td>
+							<td>{my$v['username']}</td>
+							<td>
+								<?php if($v['status']==1){?>
+								<a href='{my:get_url($v['id'],'Manager','Audit')}'><i class='fa fa-toggle-on' title="点击关闭"></i></a>
+								<?php }else{?>
+								<a href='{my:get_url($v['id'],'Manager','Audit')}'><i class='fa fa-toggle-off' title="点击开启"></i></a>
+								<?php }?>
+							</td>
+							<td>
+								<a href='{my:get_url($v['id'],'Manager','Add')}'  class='layui-btn layui-btn-xs'>修改</a>
+								<?php if($v['id']>1){?>
+								<a href='{my:get_url($v['id'],'Manager','Del')}' onclick='return confirm("您确定要删除吗？")' class='layui-btn layui-btn-xs layui-btn-danger' title='删除'>删除</a>
+								<?php }?>
+							</td>
+						</tr>
+					</volist>
+					</tbody>
+				</table>
+				<div class="page">
+					{my$page}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

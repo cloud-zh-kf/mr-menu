@@ -1,0 +1,61 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+		<div class="layui-tab layui-tab-brief" lay-filter="tab">
+			<ul class="layui-tab-title">
+				<li><a href="javascript:history(-1)">表单管理</a></li>
+				<li class="layui-this"><a href="{my:U('Forms/Add')}">字段添加</a></li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<form action="__ACTION__" method="post" class="layui-form" onSubmit="return check_forms(this);">
+						<input type="hidden" name="table" value="{my:get_forms_zd(I('get.typeid'))}">
+						<input type="hidden" name="typeid" value="{my:I('get.typeid')}">
+
+						<input type="hidden" name="pid" value="{my:I('get.typeid')}">
+						<input type="hidden" name="oldname" value="{my:I('get.zd')}">
+						<input type="hidden" name="act" value="{my:I('get.act')}">
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">字段标题</label>
+							<div class="layui-input-inline">
+								<input type="text" name="title" value="{my:I('get.title')}" lay-verify="required" placeholder="左侧文字" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">字段名称</label>
+							<div class="layui-input-inline">
+								<input type="text" name="name" value="{my:I('get.zd')}" lay-verify="required" placeholder="只支持字母" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">字段名称</label>
+							<div class="layui-input-inline">
+								<input type="text" name="tip" value="{my:I('get.tip')}" lay-verify="required" placeholder="只当该字段为必填时则填写" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit name="dosave">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

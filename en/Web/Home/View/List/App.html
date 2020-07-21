@@ -1,0 +1,32 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main wp">
+         <div class="features">
+             <div class="fItem appF">
+                 <h4 class="fea_tit tc">{my:get_sort_zd(39)}</h4>
+                 <ul class="appFul cle">
+                    <volist name=":get_news(39,40,0,0,'*',4)" id="v">
+                     <li>
+                         <a href="{my$v.linkurl}">
+                             <div class="tparea"><img src="{my$v.img1}" alt="" class="tp"></div>
+                            <!--  <div class="mandiv tc">
+                                <span class="sbtn sbtn_green rd40">click to try</span>
+                            </div> -->
+                         </a>
+                     </li>
+                    </volist>
+                 </ul>
+             </div>
+             <div class="fItem">
+                 <div class="appIntro tc">
+                    <volist name=":get_news(39,41,0,0,'*')" id="v">
+                        {my:get_html($v['content'])}
+                    </volist>
+                 </div>
+             </div>
+         </div>
+    </div>
+
+
+    <!--i_main end-->
+<include file='public/footer' />

@@ -1,0 +1,135 @@
+<include file='public/header' />
+
+<body class="bg_fa">
+    <style>
+        html,body{ height: 100%; }
+    </style>
+   <div class="imain2 bcover" style="background-image: url(./images/cooG_bg.png);">
+        <div class="h20"></div>
+        <div class="wrap">
+                <div class="wrap2">
+                        <div class="cooGrasp">
+                             <div class="i_tit3 tc">
+                                 <h4 class="tit">Mr.Menu Cooperación</h4>
+                                 <p class="tip">
+                                     Por favor rellene el formulario que figura a continuación, y responderemos tan pronto como recibamos su solicitud.
+                                 </p>
+                             </div>
+                            
+                             <form method="post" action="index.php?m=Home&c=List&a=message" >
+                             <div class="form">
+                                
+                                 <div class="item">
+                                     <div class="attrmc">¿Qué es lo que necesitas?<i class="require">*</i></div>
+                                     <div class="attrval">
+                                         <div class="seltype" id="seltype">
+                                             <div class="list"><input type="radio" value="3" name="typeid" class="radio" id="">
+                                                <span class="ibvm">Cooperación restaurante</span>
+                                             </div>
+                                             <div class="list"><input type="radio" value="4" name="typeid" class="radio" id="">
+                                                <span class="ibvm">Otros</span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="field1">
+                                    <div class="item">
+                                        <div class="attrmc">Nombre del restaurante<i class="require">*</i></div>
+                                        <div class="attrval">
+                                            <input type="text" name="name" id="name" required oninvalid="setCustomValidity('Escriba el nombre del restaurante.')" oninput="setCustomValidity('')"  class="text rd10">
+                                            <!-- <div class="msg" style="display:none;">Please enter the correct restaurant name</div> -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">Tipo de restaurante<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="type" id="type" oninvalid="setCustomValidity('Tipo de restaurante')" oninput="setCustomValidity('')"   required  class="text rd10">
+                                            <!-- <div class="msg">Please enter the correct restaurant type</div> -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">Dirección del restaurante<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="add" id="add" oninvalid="setCustomValidity('Introduzca la dirección del restaurante.')" oninput="setCustomValidity('')"   required  class="text rd10">
+                                            <!-- <div class="msg">Please enter the correct contact address</div> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="field2">
+                                    <div class="item">
+                                        <div class="attrmc">dirección<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="email" id="email" oninvalid="setCustomValidity('Por favor, introduzca su dirección de correo electrónico')" oninput="setCustomValidity('')"  required class="text rd10">
+                                            <div class="msg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">Tel.<i class="require">*</i></div>
+                                        <div class="attrval"><input type="number" name="tel" id="tel" oninvalid="setCustomValidity('Por favor, introduzca el teléfono')" oninput="setCustomValidity('')"  required class="text rd10">
+                                            <div class="msg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="attrmc">Los nombres<i class="require">*</i></div>
+                                        <div class="attrval"><input type="text" name="username" required  id="" oninvalid="setCustomValidity('Por favor, introduzca el nombre de la persona de contacto')" oninput="setCustomValidity('')"  class="text rd10">
+                                            <!-- <div class="msg">Please enter the correct contact</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="item tj tc">
+                                     <input type="submit" value="presentación" class="rd10 sbtn sbtn_green btn rd40">
+
+                                 </div>
+                                 
+                             </div></form>
+                             <script type="text/javascript">
+                                   $('.btn').click(function(){
+                                         tel = $('.form #tel');
+                                         name=$('.form #name').val();
+                                         type=$('.form #type').val();
+                                         add=$('.form #add').val();
+                                         var email=$("#email").val();
+                                        var zz = /^[0-9][0-9][0-9]{4,10}$/;
+                                        var dh=/^[0-9][0-9][0-9]{11}$/;
+                                            if(email){
+
+                                                if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/))
+                                                {
+                                                   $('.form #email').next('.msg').html('¡El formato no es correcto! Por favor, vuelva a introducir');
+                                                   $(".form #email").focus();
+                                                    return false;
+                                                }else{
+                                                   $('.form #email').next('.msg').html('');
+                                                }
+
+                                                if (!(zz.test(tel.val()) || dh.test(tel.val()))) {
+                                                    $('.form #tel').focus();
+                                                    $('.form #tel').next('.msg').html('Su número de teléfono celular no está en el formato correcto');
+                                                    return false;
+                                                  }else{
+                                                    $('.form #tel').next('.msg').html('');
+                                                  }
+                                            }
+                                    });
+                             </script>
+                        </div>
+                        <script>
+                            $(function(){
+                                $('#seltype input[type=radio][name=typeid]').change(function() {
+                                        if (this.value == '3') {
+                                           $('.field1,.field2').slideDown();
+                                           $(':input[name="name"]').attr('required','required');
+                                           $(':input[name="type"]').attr('required','required');
+                                           $(':input[name="add"]').attr('required','required');
+                                        }
+                                        else if (this.value == '4') {
+                                            $('.field1').slideUp();
+                                            $('.field2').slideDown();
+                                            $(':input[name="name"]').removeAttr('required');
+                                            $(':input[name="type"]').removeAttr('required');
+                                            $(':input[name="add"]').removeAttr('required');
+                                        }
+                                    });
+                                })
+                        </script>
+                </div>
+        </div>
+   </div>
+<include file='public/footer' />

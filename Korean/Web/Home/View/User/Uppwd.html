@@ -1,0 +1,35 @@
+<?php $Custitle="修改密码"?>
+<include file="public/header" />
+<div class="wp">
+      <div class="clearfix membelst">
+           <include file="public/uleft" />
+           <div class="memberfr fl">
+                <div class="membfrtit">修改密码</div>
+                <div class="signcon">
+                    <form action="__ACTION__" method="post" name="form1" onsubmit="return check_uppwd(this)">
+                    <div class="signtxtm">
+                         <input type="password" name="oldpwd" class="signtxt signps" placeholder="输入原密码">
+                    </div>
+                    <div class="signtxtm clearfix">
+                        <input type="text" name="yzm" class="signtxt signyz fl" placeholder="请输入图片验证码">
+                        <a href="javascript:change_yzm()" class="fr yamImg"><img style="width: 120px;" src="{my:U('User/Yzm')}" onClick="this.src=this.src+'?'" id="vdimgck"></a>
+                    </div>
+                    <div class="signtxtm">
+                         <input type="password" name="userpwd" class="signtxt signps" placeholder="请输入新密码">
+                    </div>
+                    <div class="signtxtm">
+                         <input type="password" name="reuserpwd" class="signtxt signps" placeholder="请重新输入新密码">
+                    </div>
+                    
+                    <div class="signtxtm">
+                         <button class="siglobtn">提交</button>
+                    </div>
+                    </form>
+               </div>
+           </div>
+      </div>
+</div>
+<include file="public/footer" />
+</body>
+</html>
+

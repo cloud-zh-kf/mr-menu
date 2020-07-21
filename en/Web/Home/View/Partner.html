@@ -1,0 +1,18 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="h_pos">
+          <div class="wp">
+               <div class="h_tit">
+                    <h4 class="tit tc">{my:get_sort_zd(45)}</h4>
+               </div>
+               <div class="wrap">
+                    <ul class="hposul cle">
+                         <volist name=":get_news(45,46,0,0,'*',10000)" id="v">
+                              <li><a href="{my$v.linkurl}" target="_blank"><img src="{my$v.img1}" alt=""  class="tp"></a></li>
+                         </volist>
+                    </ul>
+               </div>
+          </div>
+     </div>
+    <!--i_main end-->
+<include file='public/footer' />

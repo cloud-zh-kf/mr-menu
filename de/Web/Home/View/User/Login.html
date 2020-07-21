@@ -1,0 +1,40 @@
+<?php $Custitle="登录"?>
+<include file="public/header" />
+<div class="signwp">
+     <div class="wp">
+          <div class="signbox">
+               <div class="signTop clearfix">
+                   <a href="/User-Reg-pid-5-ty-19.html">新用户注册</a>
+                   <a href="/User-Login-pid-5-ty-19.html" class="on">用户登录</a>
+               </div>
+               <div class="signcon">
+                    <form action="__ACTION__" method="post" name="form1" onsubmit="return check_login(this)">
+                    <div class="signtxtm">
+                         <input type="text" name="username" id="tel" class="signtxt signph" placeholder="请输入手机号码">
+                    </div>
+                    <div class="signtxtm">
+                         <input type="password" name="userpwd" class="signtxt signps" placeholder="请输入密码">
+                    </div>
+
+                    <div class="signtxtm clearfix">
+                         <input type="text" name="yzm" class="signtxt signyz fl" placeholder="请输入图片验证码">
+                         <a href="javascript:change_yzm()" class="fr yamImg"><img style="width: 150px;" src="{my:U('User/Yzm')}" onClick="this.src=this.src+'?'" id="vdimgck"></a>
+
+                    </div>
+
+                    <div class="signtxtm">
+                         <button class="siglobtn">登录</button>
+                    </div>
+                    <div class="signtxtm clearfix">
+                         <a href="/User-Reg-pid-5-ty-19.html" class="fl">我要注册</a>
+                         <a href="/User-Forget-pid-5-ty-19.html" class="fr">忘记密码？</a>
+                    </div>
+                    </form>
+               </div>
+          </div>
+     </div>
+</div>
+<include file="public/footer" />
+</body>
+</html>
+

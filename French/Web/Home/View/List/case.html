@@ -1,0 +1,37 @@
+<include file='public/header' />
+    <div class="i_main wp">
+        <div class="t_tit">
+            <h4 class="tit">{my:get_sort_zd($vty)}</h4>
+            <p class="p1">{my:get_sort_zd($vty,'seotitle')}</p>
+        </div>
+         <?php $num=get_count('news',"pid=$vpid and ty=$vty");?>
+         <div class="tariff rd10">
+            <ul class="tarifful <?php echo $num>=3 ? 'tarifful_col3':'';?> cle">
+
+                <volist name=":get_news($vpid,$vty,0,0,'*')" id="v">
+                    <li>
+                        <div class="box">
+                            <h4 class="tit">{my$v.title}</h4>
+                            <div class="price">
+                                <div class="div1">
+                                    <span class="unit">{my$v.author}</span>
+                                    <span class="num">{my$v.tags}</span>
+                                    <span class="type">frais de configuration</span>
+                                </div>
+                                <div class="div2">
+                                    <span class="unit">{my$v.author}</span>
+                                    <span class="num">{my$v.introduce}</span>
+                                    <span class="type">frais mensuels</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </volist>
+
+            </ul>
+            <div class="tarBotInfo">
+                {my:get_html(get_sort_zd($ty,'introduce'))}
+            </div>
+         </div>
+    </div>
+<include file='public/footer' />

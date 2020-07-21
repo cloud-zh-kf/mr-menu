@@ -1,0 +1,80 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+		<div class="layui-tab layui-tab-brief" lay-filter="tab">
+			<ul class="layui-tab-title">
+				<li><a href="{my:U('Model/Index')}">模型列表</a></li>
+				<li class="layui-this"><a href="{my:U('Model/Add')}">模型添加</a></li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<form action="" method="post" class="layui-form">
+						<input type="hidden" name="id" value="{my$v['id']}">
+						<div class="layui-form-item">
+							<label class="layui-form-label">模型名称</label>
+							<div class="layui-input-inline">
+								<input type="text" name="model_name" value="{my$v['model_name']}" required lay-verify="required" placeholder="请输入模型名称" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">包含字段</label>
+							<div class="layui-input-inline">
+								<div class='layui-col-md9'>
+									{my$model_fields}
+								</div>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">控制器</label>
+							<div class="layui-input-inline">
+								<input type="text" name="model_c" id="model_c" value="{my:get_my_value($v['model_c'],'News')}" lay-verify="required" placeholder="请输入控制器" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">操作方法</label>
+							<div class="layui-input-inline">
+								<input type="text" name="model_a" id="model_a" value="{my:get_my_value($v['model_a'],'Index')}" lay-verify="required" placeholder="请输入操作方法" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">模型排序</label>
+							<div class="layui-input-inline" style="width: 120px;">
+								<input type="text" name="disorder" value="{my$v['disorder']}" placeholder="请输入模型排序" class="layui-input" style="width: 120px;">
+							</div>
+							数字越小越在前
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">状态</label>
+							<div class="layui-input-block">
+								<input type="radio" name="status" value="1" title="启用"  {my:get_my_checked($v['status'],1)}>
+								<input type="radio" name="status" value="0" title="禁用"  {my:get_my_checked($v['status'],0)}>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit name="dosave">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+		<div class="layui-tab layui-tab-brief" lay-filter="tab">
+			<ul class="layui-tab-title">
+				<li><a href="{my:U('Manager/Index')}">系统用户列表</a></li>
+				<li class="layui-this"><a href="{my:U('Manager/Add')}">系统用户添加</a></li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<form action="" method="post" class="layui-form" onSubmit="return check_manager_add(this);">
+						<input type="hidden" name="id" value="{my$v['id']}">
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">管理角色</label>
+							<div class="layui-input-inline">
+								<select name="role_id" lay-filter="model" lay-verify="required">
+									<option value="">请选择管理角色</option>
+									<volist name=":get_table_list('role','','id,role_name')" id="vs">
+										<option value="{my$vs.id}" <if condition="$vs['id'] eq $v['role_id']"> selected</if>>{my$vs.role_name}</option>
+									</volist>
+								</select>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">姓 名</label>
+							<div class="layui-input-inline">
+								<input type="text" name="realname" value="{my$v['realname']}" lay-verify="required" placeholder="请输入管理姓名" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">用户名</label>
+							<div class="layui-input-inline">
+								<input type="text" name="username" value="{my$v['username']}" required lay-verify="required" placeholder="请输入用户名" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">密码</label>
+							<div class="layui-input-inline">
+								<input type="text" name="password"  value="" lay-verify="required" placeholder="请输入密码" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">确认密码</label>
+							<div class="layui-input-inline">
+								<input type="text" name="repassword" value="" lay-verify="required" placeholder="请输入确认密码" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">状态</label>
+							<div class="layui-input-block">
+								<input type="radio" name="status" value="1" title="启用"  {my:get_my_checked($v['status'],1)}>
+								<input type="radio" name="status" value="0" title="禁用"  {my:get_my_checked($v['status'],0)}>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button class="layui-btn" lay-submit name="dosave">立即提交</button>
+								<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>

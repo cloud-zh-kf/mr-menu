@@ -1,0 +1,50 @@
+<include file='public/header' />
+    <!--main-->
+    <div class="i_main mt20">
+       <div class="wp">
+            <h4 class="i_tit tc">{my:get_sort_zd(29)}</h4>
+            <div class="favCase">
+                <ul class="hcaseul cle">
+                  <volist name=":get_news(23,29,0,0,'*')" id="v">
+                    <li>
+                         <a href="javascript:;">
+                              <div class="intro cle">
+                                   <img src="{my$v.img1}" alt="" class="tp rd14">
+                                   <div class="des">
+                                        <p class="p1">{my$v.title}</p>
+                                        <p class="p2">{my$v.content}</p>
+                                   </div>
+                              </div>
+                              <div class="level">
+                                   {my:get_xunhuan($v['tags'])}
+                              </div>
+                              <div class="nr">{my:get_nl2br($v['introduce'])}</div>
+                         </a>
+                    </li>
+                  </volist>  
+               </ul>
+               <!-- turnpage -->
+                <div class="turnpage">
+                    
+                    {my:get_news_fym(6,23,29)}
+
+                    <em class="go">seiten<input type="" name="page" value="<?php echo $_GET['p'] ? $_GET['p']:1;?>" class="num"></em>
+                    <input type="submit" class="tj fytj" value="OK">
+                </div>
+            </div>
+       </div>
+    </div>
+    <script type="text/javascript">
+        $('.fytj').click(function(){
+            var page=$(':input[name="page"]').val();
+            // alert();
+            var sl=$('.turnpage .sl').size();
+            if(page>sl){
+                page=sl;
+            }
+            window.location.href='List-favorabl.html?Home-List-favorabl_html=&pid='+{my:$vpid}+'&ty='+{my:$vty}+'&tty='+{my:$vtty}+'&Home-List-favorabl-pid-'+{my:$vpid}+'-ty-'+{my:$vty}+'-tty-'+{my:$vtty}+'_html=&p='+page;
+
+        });
+    </script>
+    <!--i_main end-->
+<include file='public/footer' />

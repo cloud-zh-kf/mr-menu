@@ -1,0 +1,47 @@
+<include file="public/header" />
+
+<div class="layui-layout layui-layout-admin">
+	<include file="public/left" />
+
+	<div class="layui-body">
+	<div class="layui-tab layui-tab-brief" lay-filter="tab">
+		<ul class="layui-tab-title">
+			<li class="layui-this"><a href="{my:U('Forms/Index')}">表单管理</a></li>
+			<li><a href="{my:U(CONTROLLER_NAME.'/InfoAdd',"typeid=".I('request.typeid')."")}">数据添加</a></li>
+		</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">
+				<table class="layui-table">
+					<thead>
+					<tr>
+						<th>选择</th>
+						<volist name=":get_myfields_list(I('request.typeid'))" id="vs">
+							<th>{my$vs.title}</th>
+						</volist>
+					</tr>
+					</thead>
+					<tbody>
+					<volist name="list" id="v">
+						<tr>
+							<td><input name="checkid[]" type="checkbox" value="{my$v.id}"></td>
+							<volist name=":get_myfields_list(I('request.typeid'))" id="vs">
+								<td>{my$v[$vs['Field']]}</td>
+							</volist>
+						</tr>
+					</volist>
+					</tbody>
+				</table>
+				<div class="page">
+					{my$page}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<include file="public/footer" />
+
+</div>
+
+</body>
+</html>
